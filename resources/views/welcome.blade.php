@@ -79,20 +79,106 @@
             <div class="row">
                 <div class="col-md-2"></div>
                     <div class="col-md-8 col-sm-12">
-                        <div class="card card-booking">
+                        <div class="card card-booking ">
                             <div class="card-body">
-                                <form action="" class="col s12 active"></form>
+                                <form action="" class="form-cek ">
+                                    <div class="row">
+                                    <div class="input-group mb-3 col-md-4 col-sm-5">
+                                        <div class="input-group-prepend">
+                                            <label class="input-group-text" for="inputGroupSelect01">
+                                                    <i class="fas fa-clipboard-check"></i>
+                                            </label>
+                                        </div>
+                                        <select class="custom-select" id="inputGroupSelect01">
+                                            <option selected>Pilih Paket..</option>
+                                            <option value="1">half day</option>
+                                            <option value="2">2 day 1 dight</option>
+                                            <option value="3">3 day 2 night</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-group mb-3 col-md-4 col-sm-5">
+                                        <div class="input-group-prepend">
+                                            <label class="input-group-text" for="inputGroupSelect01">
+                                                <i class="fas fa-list-ol"></i>
+                                            </label>
+                                        </div>
+                                        <select class="custom-select" id="inputGroupSelect01">
+                                            <option selected>Pilih Tipe Paket ..</option>
+                                            <option value="1">half day</option>
+                                            <option value="2">2 day 1 dight</option>
+                                            <option value="3">3 day 2 night</option>
+                                        </select>
+                                    </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-group mb-3 col-md-4 col-sm-5">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="basic-addon1">
+                                                        <i class="far fa-calendar-alt"></i>
+                                                </span>
+                                            </div>
+                                                <input type="date" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                                        </div>
+                                        <div class="input-group mb-3 col-md-4 col-sm-5">
+                                                <div class="input-group-prepend">
+                                                    <label class="input-group-text" for="inputGroupSelect01">
+                                                        <i class="fas fa-users"></i>
+                                                    </label>
+                                                </div>
+                                                <select class="custom-select" id="inputGroupSelect01">
+                                                    <option selected>Jumalah Orang ..</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                </select>
+                                        </div>
+                                        <div class="col-md-4 col-sm-3">
+                                            <button type="button" class="btn btn-info btn-block">Search</button>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>    
-                <div class="col-md-2"></div>               
+                <div class="col-md-2"></div>  
+                {{-- end    --}}
+
+                <div class="panel booking-us">
+                    <div class="tittle-fasilitas">Why Choose Penida Trip ?</div>
+                    <div class="contenct-fasilitas">
+                        <div class="row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8">
+                            <div class="row">
+                            <div class="easy-booking col-md-4 col-sm-12">
+                                <i class="far fa-bookmark" id="logobook"></i>
+                                <h3 class="logobook2">Mudah Booking</h3>
+                                <p class="logobook3">Anda dapat melakukan booking dengan login dan mengecek status tersedianya paket</p>
+                            </div>
+                            <div class="easy-booking col-md-4 col-sm-12">
+                                    <i class="far fa-bookmark" id="logobook55"></i>
+                                    <h3 class="logobook2">Mudah Booking</h3>
+                                    <p class="logobook3">Anda dapat melakukan booking dengan login dan mengecek status tersedianya paket</p>
+                                </div>
+                            </div>
+                            <div class="easy-booking col-md-4 col-sm-12">
+                                    <i class="far fa-bookmark" id="logobook555"></i>
+                                    <h3 class="logobook2">Mudah Booking</h3>
+                                    <p class="logobook3">Anda dapat melakukan booking dengan login dan mengecek status tersedianya paket</p>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="col-md-2"></div>
+                        </div>
+                    </div>
+                </div>
             </div>  
         </div>
-
-  
-        
-        @extends('layouts.footer')
-  
         <script src="{{asset('js/app.js')}}"></script>
         <script src="{{asset('js/main.js')}}"></script>
     </body>
