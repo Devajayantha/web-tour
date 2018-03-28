@@ -51,7 +51,7 @@
                     @else
                     <li><a href="#">Booking Now</a></li>  
                     <li><a href="#">Gallery</a></li>  
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="{{ url('contact') }}">Contact</a></li>
                     <li><a href="#">Paket</a></li>  
                     <li><a href="{{ route('login') }}">Login</a></li>
                     <li><a href="{{ route('register') }}">Register</a></li>

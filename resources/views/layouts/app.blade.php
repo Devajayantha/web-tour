@@ -43,7 +43,7 @@
             @else
             <li><a href="#">Booking Now</a></li>  
             <li><a href="#">Gallery</a></li>  
-            <li><a href="#">Contact</a></li>
+            <li><a href="{{ url('contact') }}">Contact</a></li>
             <li><a href="#">Paket</a></li> 
             <li class="nav-item dropdown">
                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -70,6 +70,9 @@
     <main class="py-4">
         @yield('content')
     </main>
+    <div>
+        @yield('contact')
+    </div>
     <footer>
         @yield('footer')
     </footer>
