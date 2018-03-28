@@ -95,12 +95,15 @@ ul li a:hover{
 	font-size: 28px;
 	text-align: center;
 	padding-left: 5px;
+	padding-bottom: 5px;
 }
 .easy-booking{
-	padding-top: 80px;
+	padding-top: 50px;
+	margin-bottom: 60px;
 	color: rgb(58, 15, 138);
-	padding-left: 90px;
-	padding right: 5px;
+	padding-left: 45px;
+	padding-right: 5px;
+	/* padding-bottom: 10px; */
 }
 
 .logobook2{
@@ -109,11 +112,11 @@ ul li a:hover{
 .logobook3{
 	text-align: center;
 }
-
-
-
-
-
+.logobook{
+	font-size: 80px;
+	padding-left: 97px;
+	padding-bottom: 20px;
+}
  /*resnponsive*/   
  @media(max-width: 800px ){
 	.toggle{
@@ -135,6 +138,9 @@ ul li a:hover{
 		display: block;
 	}
 	.py-4{
+		display: block;
+	}
+	.footer-basic-centered{
 		display: block;
 	}
 }

@@ -6,10 +6,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="{{asset('css/app.css')}}">
         <link rel="stylesheet" href="{{asset('css/main.css') }}">
-        <link rel="shortcut icon" href="{{asset('img/logo.jpg')}}">
+        <link rel="shortcut icon" href="{{asset('img/logo.png')}}">
         <link rel="stylesheet" href="{{asset('css/fontawesome-all.css')}}">
-
-        <title>Tour and Travel</title>
+        <link rel="stylesheet" href="{{asset('css/footer.css')}}">
+        <title>Penida Trip&trade;
+        </title>
 
         <!-- Fonts -->
         {{--  <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">  --}}
@@ -152,33 +153,50 @@
                     <div class="tittle-fasilitas">Why Choose Penida Trip ?</div>
                     <div class="contenct-fasilitas">
                         <div class="row">
-                            <div class="col-md-2"></div>
-                            <div class="col-md-8">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-10">
                             <div class="row">
-                            <div class="easy-booking col-md-4 col-sm-12">
-                                <i class="far fa-bookmark" id="logobook"></i>
-                                <h3 class="logobook2">Mudah Booking</h3>
-                                <p class="logobook3">Anda dapat melakukan booking dengan login dan mengecek status tersedianya paket</p>
-                            </div>
-                            <div class="easy-booking col-md-4 col-sm-12">
-                                    <i class="far fa-bookmark" id="logobook55"></i>
+                                <div class="easy-booking col-md-4 col-sm-12">
+                                    <i class="far fa-bookmark logobook"></i>
+                                    <h3 class="logobook2">Mudah Booking</h3>
+                                    <p class="logobook3">Anda dapat melakukan booking dengan login dan mengecek status tersedianya paket</p>
+                                </div>
+                                <div class="easy-booking col-md-4 col-sm-12">
+                                        <i class="fas fa-globe logobook"></i>
+                                        <h3 class="logobook2">Mudah Booking</h3>
+                                        <p class="logobook3">Anda dapat melakukan booking dengan login dan mengecek status tersedianya paket</p>
+                                </div>
+                                <div class="easy-booking col-md-4 col-sm-12">
+                                    <i class="fas fa-suitcase logobook"></i>
                                     <h3 class="logobook2">Mudah Booking</h3>
                                     <p class="logobook3">Anda dapat melakukan booking dengan login dan mengecek status tersedianya paket</p>
                                 </div>
                             </div>
-                            <div class="easy-booking col-md-4 col-sm-12">
-                                    <i class="far fa-bookmark" id="logobook555"></i>
-                                    <h3 class="logobook2">Mudah Booking</h3>
-                                    <p class="logobook3">Anda dapat melakukan booking dengan login dan mengecek status tersedianya paket</p>
-                                </div>
                             </div>
-                            </div>
-                            <div class="col-md-2"></div>
+                            <div class="col-md-1"></div>
                         </div>
                     </div>
                 </div>
             </div>  
         </div>
+
+
+
+        <footer class="footer-basic-centered">
+                <p class="footer-company-motto">Penida Trip Tour & Travel</p>
+                <p class="footer-links">
+                    <a href="#">Home</a>
+                    ·
+                    <a href="#">Paket</a>
+                    ·
+                    <a href="#">Booking</a>
+                    ·
+                    <a href="#">About</a>
+                    ·
+                    <a href="#">Gallery</a>
+                </p>
+                <p class="footer-company-name">&copy; 2018 Penida Trip Tour & Travel</p>
+            </footer>
         <script src="{{asset('js/app.js')}}"></script>
         <script src="{{asset('js/main.js')}}"></script>
     </body>

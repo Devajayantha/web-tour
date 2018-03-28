@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{asset('css/main.css') }}">
-    <link rel="shortcut icon" href="{{asset('img/logo.jpg')}}">
+    <link rel="shortcut icon" href="{{asset('img/logo.png')}}">
     <link rel="stylesheet" href="{{asset('css/footer.css') }}">
+    <link rel="stylesheet" href="{{asset('css/contact.css') }}">
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -35,7 +36,7 @@
             @guest
             <li><a href="#">Booking Now</a></li>  
             <li><a href="#">Gallery</a></li>  
-            <li><a href="#">Contact</a></li>
+            <li><a href="{{ url('contact') }}">Contact</a></li>
             <li><a href="#">Paket</a></li> 
             <li><a href="{{ route('login') }}">{{ __('Login') }}</a></li>
             <li><a href="{{ route('register') }}">{{ __('Register') }}</a></li>

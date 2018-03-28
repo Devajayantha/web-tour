@@ -10,9 +10,7 @@
             ·
             <a href="#">About</a>
             ·
-            <a href="#">Faq</a>
-            ·
-            <a href="#">Contact</a>
+            <a href="#">Gallery</a>
         </p>
         <p class="footer-company-name">&copy; 2018 Penida Trip Tour & Travel</p>
     </footer>
