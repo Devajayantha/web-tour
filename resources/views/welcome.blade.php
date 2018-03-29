@@ -147,40 +147,60 @@
                         </div>
                     </div>    
                 <div class="col-md-2"></div>  
-                {{-- end    --}}
-
+                {{--  end    --}}
                 <div class="panel booking-us">
-                    <div class="tittle-fasilitas">Why Choose Penida Trip ?</div>
+                    <div class="tittle-fasilitas">Why Choose Penida Trip </div>
                     <div class="contenct-fasilitas">
                         <div class="row">
                             <div class="col-md-1"></div>
                             <div class="col-md-10">
-                            <div class="row">
-                                <div class="easy-booking col-md-4 col-sm-12">
-                                    <i class="far fa-bookmark logobook"></i>
-                                    <h3 class="logobook2">Mudah Booking</h3>
-                                    <p class="logobook3">Anda dapat melakukan booking dengan login dan mengecek status tersedianya paket</p>
-                                </div>
-                                <div class="easy-booking col-md-4 col-sm-12">
-                                        <i class="fas fa-globe logobook"></i>
+                                <div class="row">
+                                    <div class="easy-booking col-md-4 col-sm-12">
+                                        <i class="far fa-bookmark logobook"></i>
                                         <h3 class="logobook2">Mudah Booking</h3>
                                         <p class="logobook3">Anda dapat melakukan booking dengan login dan mengecek status tersedianya paket</p>
+                                    </div>
+                                    <div class="easy-booking col-md-4 col-sm-12">
+                                            <i class="fas fa-globe logobook"></i>
+                                            <h3 class="logobook2">Mudah Booking</h3>
+                                            <p class="logobook3">Anda dapat melakukan booking dengan login dan mengecek status tersedianya paket</p>
+                                    </div>
+                                    <div class="easy-booking col-md-4 col-sm-12">
+                                        <i class="fas fa-suitcase logobook"></i>
+                                        <h3 class="logobook2">Mudah Booking</h3>
+                                        <p class="logobook3">Anda dapat melakukan booking dengan login dan mengecek status tersedianya paket</p>
+                                    </div>
                                 </div>
-                                <div class="easy-booking col-md-4 col-sm-12">
-                                    <i class="fas fa-suitcase logobook"></i>
-                                    <h3 class="logobook2">Mudah Booking</h3>
-                                    <p class="logobook3">Anda dapat melakukan booking dengan login dan mengecek status tersedianya paket</p>
-                                </div>
-                            </div>
                             </div>
                             <div class="col-md-1"></div>
                         </div>
                     </div>
                 </div>
+                {{-- end   --}}
+
+                <div class="subscribe">
+                    <div class="row">
+                        <div class="col-md-7 col-sm-12">
+                            <div class="text-subsribe">
+                                <h2>Subsribe to Our newsletter</h2>
+                                <p>Sign up here to get the lastest news,updates and spesial promo in Penida Trip delivered directly to your inbox</p>
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" placeholder="submit ur fucking email" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-primary far fa-envelope" type="button"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-sm-12">
+                            <div class="logo">
+                                <img class="logo-subsribe" src="{{asset('img/email.png')}}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>  
         </div>
-
-
 
         <footer class="footer-basic-centered">
                 <p class="footer-company-motto">Penida Trip Tour & Travel</p>
@@ -197,6 +217,8 @@
                 </p>
                 <p class="footer-company-name">&copy; 2018 Penida Trip Tour & Travel</p>
             </footer>
+
+
         <script src="{{asset('js/app.js')}}"></script>
         <script src="{{asset('js/main.js')}}"></script>
     </body>

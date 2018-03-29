@@ -87,7 +87,7 @@ ul li a:hover{
 .booking-us{
 	width: 100%;
 	background-color: rgb(253, 253, 247);
-	height: 200px;
+	height: 340px;
 }
 
 .tittle-fasilitas{
@@ -116,6 +116,21 @@ ul li a:hover{
 	font-size: 80px;
 	padding-left: 97px;
 	padding-bottom: 20px;
+}
+.subscribe{
+	width: 100%;
+	height: 300px;
+	background-color: #1dc0cf;
+	padding-top: 30px;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-bottom: 15px;
+	color: azure;
+}
+.logo-subsribe{
+	width: 250px;
+	height: 250px;
+	margin-left: 100px;
 }
  /*resnponsive*/   
  @media(max-width: 800px ){
