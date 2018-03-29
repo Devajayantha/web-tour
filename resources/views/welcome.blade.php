@@ -6,10 +6,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="{{asset('css/app.css')}}">
         <link rel="stylesheet" href="{{asset('css/main.css') }}">
-        <link rel="shortcut icon" href="{{asset('img/logo.jpg')}}">
+        <link rel="shortcut icon" href="{{asset('img/logo.png')}}">
         <link rel="stylesheet" href="{{asset('css/fontawesome-all.css')}}">
-
-        <title>Tour and Travel</title>
+        <link rel="stylesheet" href="{{asset('css/footer.css')}}">
+        <!-- CSRF Token -->
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+        <title>Penida Trip&trade;
+        </title>
 
         <!-- Fonts -->
         {{--  <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">  --}}
@@ -29,8 +32,8 @@
                     <li><a href="{{ url('/home') }}">Home</a></li>
                     <li><a href="#">Booking Now</a></li>  
                     <li><a href="#">Gallery</a></li>  
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="/paket">Paket</a></li>
+                    <li><a href="{{ url('contact') }}">Contact</a></li>
+                    <li><a href="{{ url('/paket') }}">Paket</a></li>
                     <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }} <span class="caret"></span>
@@ -50,8 +53,10 @@
                     @else
                     <li><a href="#">Booking Now</a></li>  
                     <li><a href="#">Gallery</a></li>  
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="/paket">Paket</a></li>  
+
+                    <li><a href="{{ url('contact') }}">Contact</a></li>
+                    <li><a href="{{ url('paket') }}">Paket</a></li>  
+
                     <li><a href="{{ route('login') }}">Login</a></li>
                     <li><a href="{{ route('register') }}">Register</a></li>
                 @endif
@@ -76,48 +81,157 @@
 
         {{--  content  --}}
         <div class="container">
-            <div class="row promo">
-                <div class="col-sm-4"></div>
-                <div class="col-md-4 col-md-offset-4"><h3>Today's Hot Promo</h3></div>
-            </div>
             <div class="row">
-                <div class="col-sm-4">
-                    <div class="card">
-                        <img class="card-img-top" src="{{asset('img/gambarpaket1.jpg')}}"> <!--gambar bisa diganti lagi-->
-                        <div class="card-body">
-                            <h5 class="card-title">HALF-DAY</h5>
-                            <s class="card-text">Rp xxx.xxx/orang</s>
-                            <p class="promo-text">Rp xxx.xxx/orang</p>
-                            <a href="#" class="btn btn-primary">Lihat Selengkapnya</a>
-                        </div> 
+                <div class="col-md-2"></div>
+                    <div class="col-md-8 col-sm-12">
+                        <div class="card card-booking ">
+                            <div class="card-body">
+                                <form action="" class="form-cek ">
+                                    <div class="row">
+                                    <div class="input-group mb-3 col-md-4 col-sm-5">
+                                        <div class="input-group-prepend">
+                                            <label class="input-group-text" for="inputGroupSelect01">
+                                                    <i class="fas fa-clipboard-check"></i>
+                                            </label>
+                                        </div>
+                                        <select class="custom-select" id="inputGroupSelect01">
+                                            <option selected>Pilih Paket..</option>
+                                            <option value="1">half day</option>
+                                            <option value="2">2 day 1 dight</option>
+                                            <option value="3">3 day 2 night</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-group mb-3 col-md-4 col-sm-5">
+                                        <div class="input-group-prepend">
+                                            <label class="input-group-text" for="inputGroupSelect01">
+                                                <i class="fas fa-list-ol"></i>
+                                            </label>
+                                        </div>
+                                        <select class="custom-select" id="inputGroupSelect01">
+                                            <option selected>Pilih Tipe Paket ..</option>
+                                            <option value="1">half day</option>
+                                            <option value="2">2 day 1 dight</option>
+                                            <option value="3">3 day 2 night</option>
+                                        </select>
+                                    </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-group mb-3 col-md-4 col-sm-5">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="basic-addon1">
+                                                        <i class="far fa-calendar-alt"></i>
+                                                </span>
+                                            </div>
+                                                <input type="date" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                                        </div>
+                                        <div class="input-group mb-3 col-md-4 col-sm-5">
+                                                <div class="input-group-prepend">
+                                                    <label class="input-group-text" for="inputGroupSelect01">
+                                                        <i class="fas fa-users"></i>
+                                                    </label>
+                                                </div>
+                                                <select class="custom-select" id="inputGroupSelect01">
+                                                    <option selected>Jumlah Orang ..</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                </select>
+                                        </div>
+                                        <div class="col-md-4 col-sm-3">
+                                            <button type="button" class="btn btn-info btn-block">Search</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>    
+                <div class="col-md-2"></div>  
+                {{-- end    --}}
+                
+                <div class="panel promo">
+                    <h2 class="text-sm-center title-promo">Hottest Promo</h2>
+                    <div class="promo-content">
+                        <div class="row">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-4">
+                                <div class="card">
+                                    <img class="card-img-top" src="{{asset('img/gambarpaket2.jpg')}}"> 
+                                        <div class="card-body">
+                                        <h5 class="card-title">1 DAY 1 NIGHT</h5>
+                                        <s class="card-text">Rp xxx.xxx/orang</s>
+                                        <p class="promo-text">Rp xxx.xxx/orang</p>
+                                        <a href="#" class="btn btn-primary">Lihat Selengkapnya</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="card">
+                                    <img class="card-img-top" src="{{asset('img/gambarpaket3.jpg')}}"> 
+                                    <div class="card-body">
+                                        <h5 class="card-title">3 DAYS 2 NIGHTS</h5>
+                                        <s class="card-text">Rp x.xxx.xxx/orang</s>
+                                        <p class="promo-text">Rp xxx.xxx/orang</p>
+                                        <a href="#" class="btn btn-primary">Lihat Selengkapnya</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="panel booking-us">
+                    <div class="tittle-fasilitas">Why Choose Penida Trip ?</div>
+                    <div class="contenct-fasilitas">
+                        <div class="row">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-10">
+                            <div class="row">
+                                <div class="easy-booking col-md-4 col-sm-12">
+                                    <i class="far fa-bookmark logobook"></i>
+                                    <h3 class="logobook2">Mudah Booking</h3>
+                                    <p class="logobook3">Anda dapat melakukan booking dengan login dan mengecek status tersedianya paket</p>
+                                </div>
+                                <div class="easy-booking col-md-4 col-sm-12">
+                                        <i class="fas fa-globe logobook"></i>
+                                        <h3 class="logobook2">Mudah Booking</h3>
+                                        <p class="logobook3">Anda dapat melakukan booking dengan login dan mengecek status tersedianya paket</p>
+                                </div>
+                                <div class="easy-booking col-md-4 col-sm-12">
+                                    <i class="fas fa-suitcase logobook"></i>
+                                    <h3 class="logobook2">Mudah Booking</h3>
+                                    <p class="logobook3">Anda dapat melakukan booking dengan login dan mengecek status tersedianya paket</p>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="col-md-1"></div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-sm-4">
-                    <div class="card">
-                        <img class="card-img-top" src="{{asset('img/gambarpaket2.jpg')}}"> <!--gambar bisa diganti lagi-->
-                          <div class="card-body">
-                            <h5 class="card-title">1 DAY 1 NIGHT</h5>
-                            <s class="card-text">Rp xxx.xxx/orang</s>
-                            <p class="promo-text">Rp xxx.xxx/orang</p>
-                            <a href="#" class="btn btn-primary">Lihat Selengkapnya</a>
-                          </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="card">
-                        <img class="card-img-top" src="{{asset('img/gambarpaket3.jpg')}}"> <!--gambar bisa diganti lagi-->
-                          <div class="card-body">
-                            <h5 class="card-title">3 DAYS 2 NIGHTS</h5>
-                            <s class="card-text">Rp x.xxx.xxx/orang</s>
-                            <p class="promo-text">Rp xxx.xxx/orang</p>
-                            <a href="#" class="btn btn-primary">Lihat Selengkapnya</a>
-                          </div>
-                    </div>
-                </div>
-            </div> 
-        </div> 
-        @extends('layouts.footer')
-  
+            </div>  
+        </div>
+
+
+
+            <footer class="footer-basic-centered">
+                <p class="footer-company-motto">Penida Trip Tour & Travel</p>
+                <p class="footer-links">
+                    <a href="#">Home</a>
+                    ·
+                    <a href="#">Paket</a>
+                    ·
+                    <a href="#">Booking</a>
+                    ·
+                    <a href="#">About</a>
+                    ·
+                    <a href="#">Gallery</a>
+                </p>
+                <p class="footer-company-name">&copy; 2018 Penida Trip Tour & Travel</p>
+            </footer>
         <script src="{{asset('js/app.js')}}"></script>
         <script src="{{asset('js/main.js')}}"></script>
     </body>

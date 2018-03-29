@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{asset('css/main.css') }}">
-    <link rel="shortcut icon" href="{{asset('img/logo.jpg')}}">
+    <link rel="shortcut icon" href="{{asset('img/logo.png')}}">
     <link rel="stylesheet" href="{{asset('css/footer.css') }}">
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="{{asset('css/contact.css') }}">
+    <link rel="stylesheet" href="{{asset('css/fontawesome-all.css')}}">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -35,15 +36,19 @@
             @guest
             <li><a href="#">Booking Now</a></li>  
             <li><a href="#">Gallery</a></li>  
-            <li><a href="#">Contact</a></li>
-            <li><a href="/paket">Paket</a></li> 
+
+            <li><a href="{{ url('contact') }}">Contact</a></li>
+            <li><a href="{{ url('paket') }}">Paket</a></li> 
+
             <li><a href="{{ route('login') }}">{{ __('Login') }}</a></li>
             <li><a href="{{ route('register') }}">{{ __('Register') }}</a></li>
             @else
             <li><a href="#">Booking Now</a></li>  
             <li><a href="#">Gallery</a></li>  
-            <li><a href="#">Contact</a></li>
-            <li><a href="/paket">Paket</a></li> 
+
+            <li><a href="{{ url('contact') }}">Contact</a></li>
+            <li><a href="{{ url('paket') }}">Paket</a></li> 
+
             <li class="nav-item dropdown">
                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                     {{ Auth::user()->name }} <span class="caret"></span>
@@ -69,6 +74,9 @@
     <main class="py-4">
         @yield('content')
     </main>
+    <div>
+        @yield('contact')
+    </div>
     <footer>
         @yield('footer')
     </footer>

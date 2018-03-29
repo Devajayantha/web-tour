@@ -19,7 +19,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-
 Route::get('/paket', function(){
 	return view('paket');
+});
+
+Route::get('/contact', function () {
+    return view('contact');
 });

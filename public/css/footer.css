@@ -1,5 +1,6 @@
 .footer-basic-centered{
-	background-color: #292c2f;
+
+	margin-top: 180px;	background-color:  rgb(58, 15, 138);
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 	box-sizing: border-box;
 	width: 100%;
@@ -7,7 +8,7 @@
 	font: normal 18px sans-serif;
 
 	padding: 45px;
-	margin-top: 80px;
+	margin-top: 180px;
 }
 
 .footer-basic-centered .footer-company-motto{
@@ -36,9 +37,8 @@
 	color: inherit;
 }
 
-/* If you don't want the footer to be responsive, remove these media queries */
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
 
 	.footer-basic-centered{
 		padding: 35px;
