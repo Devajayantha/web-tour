@@ -36,14 +36,14 @@
             <li><a href="#">Booking Now</a></li>  
             <li><a href="#">Gallery</a></li>  
             <li><a href="#">Contact</a></li>
-            <li><a href="#">Paket</a></li> 
+            <li><a href="/paket">Paket</a></li> 
             <li><a href="{{ route('login') }}">{{ __('Login') }}</a></li>
             <li><a href="{{ route('register') }}">{{ __('Register') }}</a></li>
             @else
             <li><a href="#">Booking Now</a></li>  
             <li><a href="#">Gallery</a></li>  
             <li><a href="#">Contact</a></li>
-            <li><a href="#">Paket</a></li> 
+            <li><a href="/paket">Paket</a></li> 
             <li class="nav-item dropdown">
                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                     {{ Auth::user()->name }} <span class="caret"></span>

@@ -30,7 +30,7 @@
                     <li><a href="#">Booking Now</a></li>  
                     <li><a href="#">Gallery</a></li>  
                     <li><a href="#">Contact</a></li>
-                    <li><a href="#">Paket</a></li>
+                    <li><a href="/paket">Paket</a></li>
                     <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }} <span class="caret"></span>
@@ -51,7 +51,7 @@
                     <li><a href="#">Booking Now</a></li>  
                     <li><a href="#">Gallery</a></li>  
                     <li><a href="#">Contact</a></li>
-                    <li><a href="#">Paket</a></li>  
+                    <li><a href="/paket">Paket</a></li>  
                     <li><a href="{{ route('login') }}">Login</a></li>
                     <li><a href="{{ route('register') }}">Register</a></li>
                 @endif
@@ -76,21 +76,46 @@
 
         {{--  content  --}}
         <div class="container">
+            <div class="row promo">
+                <div class="col-sm-4"></div>
+                <div class="col-md-4 col-md-offset-4"><h3>Today's Hot Promo</h3></div>
+            </div>
             <div class="row">
-                <div class="col-md-2"></div>
-                    <div class="col-md-8 col-sm-12">
-                        <div class="card card-booking">
-                            <div class="card-body">
-                                <form action="" class="col s12 active"></form>
-                            </div>
-                        </div>
-                    </div>    
-                <div class="col-md-2"></div>               
-            </div>  
-        </div>
-
-  
-        
+                <div class="col-sm-4">
+                    <div class="card">
+                        <img class="card-img-top" src="{{asset('img/gambarpaket1.jpg')}}"> <!--gambar bisa diganti lagi-->
+                        <div class="card-body">
+                            <h5 class="card-title">HALF-DAY</h5>
+                            <s class="card-text">Rp xxx.xxx/orang</s>
+                            <p class="promo-text">Rp xxx.xxx/orang</p>
+                            <a href="#" class="btn btn-primary">Lihat Selengkapnya</a>
+                        </div> 
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <img class="card-img-top" src="{{asset('img/gambarpaket2.jpg')}}"> <!--gambar bisa diganti lagi-->
+                          <div class="card-body">
+                            <h5 class="card-title">1 DAY 1 NIGHT</h5>
+                            <s class="card-text">Rp xxx.xxx/orang</s>
+                            <p class="promo-text">Rp xxx.xxx/orang</p>
+                            <a href="#" class="btn btn-primary">Lihat Selengkapnya</a>
+                          </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <img class="card-img-top" src="{{asset('img/gambarpaket3.jpg')}}"> <!--gambar bisa diganti lagi-->
+                          <div class="card-body">
+                            <h5 class="card-title">3 DAYS 2 NIGHTS</h5>
+                            <s class="card-text">Rp x.xxx.xxx/orang</s>
+                            <p class="promo-text">Rp xxx.xxx/orang</p>
+                            <a href="#" class="btn btn-primary">Lihat Selengkapnya</a>
+                          </div>
+                    </div>
+                </div>
+            </div> 
+        </div> 
         @extends('layouts.footer')
   
         <script src="{{asset('js/app.js')}}"></script>
