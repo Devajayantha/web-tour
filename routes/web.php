@@ -21,3 +21,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/contact', function () {
     return view('contact');
 });
+Route::get('/checking', function () {
+    return view('cekboking');
+});
+Route::get('/booking', function () {
+    return view('bookingnow');
+});

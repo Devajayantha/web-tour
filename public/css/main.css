@@ -15,8 +15,9 @@ body{
     position: fixed;
 }
 ul{
-	width: 50%;
+	width: 90%;
 	margin: 0 auto;
+	margin-left: 500px;
 	padding: 0;
 }
 /*.ul-navbar{
@@ -49,8 +50,8 @@ ul li a:hover{
 
 .logo-brand{
     position: absolute;
-    width: 209px;
-    top: 20px;
+    width: 200px;
+    top: 15px;
     left: 54px;
 }
 
@@ -141,6 +142,7 @@ ul li a:hover{
 	ul{
 		width: 100%;
 		display: none;
+		margin: auto;
 	}
 	ul li{
 		display: block;

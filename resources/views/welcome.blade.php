@@ -9,7 +9,7 @@
         <link rel="shortcut icon" href="{{asset('img/logo.png')}}">
         <link rel="stylesheet" href="{{asset('css/fontawesome-all.css')}}">
         <link rel="stylesheet" href="{{asset('css/footer.css')}}">
-        <title>Penida Trip&trade;
+        <title>Penida Hill Tour N Travel
         </title>
 
         <!-- Fonts -->
@@ -22,16 +22,17 @@
                 <i class="fa fa-bars menu" aria-hidden="true"></i>
             </div>
             <a href="http://">
-            <img class="logo-brand" src="{{ asset('img/penida-trip.jpg') }}">
+            <img class="logo-brand" src="{{ asset('img/penida-hill.png') }}">
             </a>
             @if (Route::has('login'))
             <ul class="ul-navbar">
                 @auth
                     <li><a href="{{ url('/home') }}">Home</a></li>
-                    <li><a href="#">Booking Now</a></li>  
+                    <li><a href="{{ url('booking') }}">Booking Now</a></li>  
                     <li><a href="#">Gallery</a></li>  
                     <li><a href="#">Contact</a></li>
                     <li><a href="#">Paket</a></li>
+                    <li><a href="{{ url('checking') }}">Check Booking</a></li>
                     <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }} <span class="caret"></span>
@@ -49,10 +50,11 @@
                             </div>
                         </li> 
                     @else
-                    <li><a href="#">Booking Now</a></li>  
+                    <li><a href="{{ url('booking') }}">Booking Now</a></li>  
                     <li><a href="#">Gallery</a></li>  
                     <li><a href="{{ url('contact') }}">Contact</a></li>
-                    <li><a href="#">Paket</a></li>  
+                    <li><a href="#">Paket</a></li> 
+                    <li><a href="{{ url('checking') }}">Check Booking</a></li> 
                     <li><a href="{{ route('login') }}">Login</a></li>
                     <li><a href="{{ route('register') }}">Register</a></li>
                 @endif
