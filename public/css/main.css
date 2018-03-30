@@ -133,6 +133,19 @@ ul li a:hover{
 	height: 250px;
 	margin-left: 100px;
 }
+
+.promo-title{
+	padding-left: 5px;
+	padding-bottom: 5px;
+}
+
+.promo-text{
+	color: #FF0000;
+}
+.promo-content{
+	padding-top: 20px;
+}
+
  /*resnponsive*/   
  @media(max-width: 800px ){
 	.toggle{

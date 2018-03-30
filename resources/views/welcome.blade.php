@@ -203,7 +203,40 @@
                 </div>
             </div>  
         </div>
-
+        {{--  start  --}}
+        <div class="container">
+            <div class="panel promo">
+                <h2 class="text-sm-center title-promo">Hottest Promo</h2>
+                <div class="promo-content">
+                    <div class="row">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-4">
+                            <div class="card">
+                                <img class="card-img-top" src="{{asset('img/tour2.jpg')}}"> 
+                                    <div class="card-body">
+                                    <h5 class="card-title">HALF-DAY</h5>
+                                    <s class="card-text">Rp 500.000/orang</s>
+                                    <p class="promo-text">Rp 400.000/orang</p>
+                                    <a href="#" class="btn btn-primary">Lihat Selengkapnya</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card">
+                                <img class="card-img-top" src="{{asset('img/tour1.jpg')}}"> 
+                                <div class="card-body">
+                                    <h5 class="card-title">3 DAYS 2 NIGHTS</h5>
+                                    <s class="card-text">Rp 3.000.000/orang</s>
+                                    <p class="promo-text">Rp 2.500.000/orang</p>
+                                    <a href="#" class="btn btn-primary">Lihat Selengkapnya</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{--  end  --}}
         <footer class="footer-basic-centered">
                 <p class="footer-company-motto">Penida Trip Tour & Travel</p>
                 <p class="footer-links">

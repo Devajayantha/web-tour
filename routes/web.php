@@ -27,3 +27,6 @@ Route::get('/checking', function () {
 Route::get('/booking', function () {
     return view('bookingnow');
 });
+Route::get('/paket', function () {
+    return view('paket');
+});
