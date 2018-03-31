@@ -9,10 +9,11 @@
         <link rel="shortcut icon" href="{{asset('img/logo.png')}}">
         <link rel="stylesheet" href="{{asset('css/fontawesome-all.css')}}">
         <link rel="stylesheet" href="{{asset('css/footer.css')}}">
+
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <title>Penida Trip&trade;
-        </title>
+
+        <title>Penida Hill Tour N Travel</title>
 
         <!-- Fonts -->
         {{--  <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">  --}}
@@ -24,16 +25,19 @@
                 <i class="fa fa-bars menu" aria-hidden="true"></i>
             </div>
             <a href="http://">
-            <img class="logo-brand" src="{{ asset('img/penida-trip.jpg') }}">
+            <img class="logo-brand" src="{{ asset('img/penida-hill.png') }}">
             </a>
             @if (Route::has('login'))
             <ul class="ul-navbar">
                 @auth
                     <li><a href="{{ url('/home') }}">Home</a></li>
-                    <li><a href="#">Booking Now</a></li>  
+                    <li><a href="{{ url('booking') }}">Booking Now</a></li>  
                     <li><a href="#">Gallery</a></li>  
+
                     <li><a href="{{ url('contact') }}">Contact</a></li>
                     <li><a href="{{ url('/paket') }}">Paket</a></li>
+                    <li><a href="{{ url('checking') }}">Check Booking</a></li>
+
                     <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }} <span class="caret"></span>
@@ -51,11 +55,15 @@
                             </div>
                         </li> 
                     @else
-                    <li><a href="#">Booking Now</a></li>  
+                    <li><a href="{{ url('booking') }}">Booking Now</a></li>  
                     <li><a href="#">Gallery</a></li>  
 
                     <li><a href="{{ url('contact') }}">Contact</a></li>
+
                     <li><a href="{{ url('paket') }}">Paket</a></li>  
+
+
+                    <li><a href="{{ url('checking') }}">Check Booking</a></li> 
 
                     <li><a href="{{ route('login') }}">Login</a></li>
                     <li><a href="{{ route('register') }}">Register</a></li>
@@ -151,6 +159,7 @@
                         </div>
                     </div>    
                 <div class="col-md-2"></div>  
+
                 {{-- end    --}}
                 
                 <div class="panel promo">
@@ -160,11 +169,11 @@
                             <div class="col-sm-2"></div>
                             <div class="col-sm-4">
                                 <div class="card">
-                                    <img class="card-img-top" src="{{asset('img/gambarpaket2.jpg')}}"> 
+                                    <img class="card-img-top" src="{{asset('img/gambarpaket1.jpg')}}"> 
                                         <div class="card-body">
-                                        <h5 class="card-title">1 DAY 1 NIGHT</h5>
-                                        <s class="card-text">Rp xxx.xxx/orang</s>
-                                        <p class="promo-text">Rp xxx.xxx/orang</p>
+                                        <h5 class="card-title">HALF-DAY</h5>
+                                        <s class="card-text">Rp 500.000/orang</s>
+                                        <p class="promo-text">Rp 400.000/orang</p>
                                         <a href="#" class="btn btn-primary">Lihat Selengkapnya</a>
                                     </div>
                                 </div>
@@ -174,8 +183,8 @@
                                     <img class="card-img-top" src="{{asset('img/gambarpaket3.jpg')}}"> 
                                     <div class="card-body">
                                         <h5 class="card-title">3 DAYS 2 NIGHTS</h5>
-                                        <s class="card-text">Rp x.xxx.xxx/orang</s>
-                                        <p class="promo-text">Rp xxx.xxx/orang</p>
+                                        <s class="card-text">Rp 3.000.000/orang</s>
+                                        <p class="promo-text">Rp 2.500.000/orang</p>
                                         <a href="#" class="btn btn-primary">Lihat Selengkapnya</a>
                                     </div>
                                 </div>
@@ -184,31 +193,57 @@
                     </div>
                     
                 </div>
+
+                {{--  end    --}}
+
                 <div class="panel booking-us">
-                    <div class="tittle-fasilitas">Why Choose Penida Trip ?</div>
+                    <div class="tittle-fasilitas">Why Choose Penida Trip </div>
                     <div class="contenct-fasilitas">
                         <div class="row">
                             <div class="col-md-1"></div>
                             <div class="col-md-10">
-                            <div class="row">
-                                <div class="easy-booking col-md-4 col-sm-12">
-                                    <i class="far fa-bookmark logobook"></i>
-                                    <h3 class="logobook2">Mudah Booking</h3>
-                                    <p class="logobook3">Anda dapat melakukan booking dengan login dan mengecek status tersedianya paket</p>
-                                </div>
-                                <div class="easy-booking col-md-4 col-sm-12">
-                                        <i class="fas fa-globe logobook"></i>
+                                <div class="row">
+                                    <div class="easy-booking col-md-4 col-sm-12">
+                                        <i class="far fa-bookmark logobook"></i>
                                         <h3 class="logobook2">Mudah Booking</h3>
                                         <p class="logobook3">Anda dapat melakukan booking dengan login dan mengecek status tersedianya paket</p>
+                                    </div>
+                                    <div class="easy-booking col-md-4 col-sm-12">
+                                            <i class="fas fa-globe logobook"></i>
+                                            <h3 class="logobook2">Mudah Booking</h3>
+                                            <p class="logobook3">Anda dapat melakukan booking dengan login dan mengecek status tersedianya paket</p>
+                                    </div>
+                                    <div class="easy-booking col-md-4 col-sm-12">
+                                        <i class="fas fa-suitcase logobook"></i>
+                                        <h3 class="logobook2">Mudah Booking</h3>
+                                        <p class="logobook3">Anda dapat melakukan booking dengan login dan mengecek status tersedianya paket</p>
+                                    </div>
                                 </div>
-                                <div class="easy-booking col-md-4 col-sm-12">
-                                    <i class="fas fa-suitcase logobook"></i>
-                                    <h3 class="logobook2">Mudah Booking</h3>
-                                    <p class="logobook3">Anda dapat melakukan booking dengan login dan mengecek status tersedianya paket</p>
-                                </div>
-                            </div>
                             </div>
                             <div class="col-md-1"></div>
+                        </div>
+                    </div>
+                </div>
+                {{-- end   --}}
+
+                <div class="subscribe">
+                    <div class="row">
+                        <div class="col-md-7 col-sm-12">
+                            <div class="text-subsribe">
+                                <h2>Subsribe to Our newsletter</h2>
+                                <p>Sign up here to get the lastest news,updates and spesial promo in Penida Trip delivered directly to your inbox</p>
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" placeholder="submit ur fucking email" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-primary far fa-envelope" type="button"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-sm-12">
+                            <div class="logo">
+                                <img class="logo-subsribe" src="{{asset('img/email.png')}}" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -216,8 +251,8 @@
         </div>
 
 
+        <footer class="footer-basic-centered">
 
-            <footer class="footer-basic-centered">
                 <p class="footer-company-motto">Penida Trip Tour & Travel</p>
                 <p class="footer-links">
                     <a href="#">Home</a>
@@ -232,6 +267,8 @@
                 </p>
                 <p class="footer-company-name">&copy; 2018 Penida Trip Tour & Travel</p>
             </footer>
+
+
         <script src="{{asset('js/app.js')}}"></script>
         <script src="{{asset('js/main.js')}}"></script>
     </body>

@@ -29,17 +29,17 @@
             <i class="fa fa-bars menu" aria-hidden="true"></i>
         </div>
         <a href="{{ url('/') }}">
-            <img class="logo-brand" src="{{ asset('img/penida-trip.jpg') }}">
+            <img class="logo-brand" src="{{ asset('img/penida-hill.png') }}">
         </a>
        {{--  @if (Route::has('login'))    --}}
         <ul class="ul-navbar">
             @guest
-            <li><a href="#">Booking Now</a></li>  
+            <li><a href="{{ url('booking') }}">Booking Now</a></li>  
             <li><a href="#">Gallery</a></li>  
 
             <li><a href="{{ url('contact') }}">Contact</a></li>
             <li><a href="{{ url('paket') }}">Paket</a></li> 
-
+            <li><a href="{{ url('checking') }}">Check Booking</a></li> 
             <li><a href="{{ route('login') }}">{{ __('Login') }}</a></li>
             <li><a href="{{ route('register') }}">{{ __('Register') }}</a></li>
             @else
@@ -47,8 +47,10 @@
             <li><a href="#">Gallery</a></li>  
 
             <li><a href="{{ url('contact') }}">Contact</a></li>
+
             <li><a href="{{ url('paket') }}">Paket</a></li> 
 
+            <li><a href="#">Check Booking</a></li>
             <li class="nav-item dropdown">
                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                     {{ Auth::user()->name }} <span class="caret"></span>
@@ -76,6 +78,12 @@
     </main>
     <div>
         @yield('contact')
+    </div>
+    <div>
+        @yield('cekboking')
+    </div>
+    <div>
+        @yield('bookingnow')
     </div>
     <footer>
         @yield('footer')
