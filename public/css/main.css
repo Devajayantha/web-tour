@@ -6,8 +6,8 @@
 }
 body{
     background: #fff;
-
 }
+
 .navbar{
 	width: 100%;
 	background:#fff;
@@ -60,6 +60,11 @@ body{
     bottom: 50%;
 }
 
+/*card*/
+.row-card{ 
+	padding-bottom: 20px;
+}
+
 .card {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 	background-color: #fff;
@@ -79,6 +84,7 @@ body{
     /* padding-left: 20px;
     padding-right: 20px; */
 }
+/*end of card*/
 
 .tabs-booking{
 	color: rgb(69, 11, 102);
@@ -86,7 +92,7 @@ body{
 	padding-right: 75%;
 }
 
-
+/*Promo menu utama*/
 .promo{
 	width: 100%;
 	background-color: #fff;
@@ -104,6 +110,7 @@ body{
 .promo-content{
 	padding-top: 20px;
 }
+/*End of promo*/
 
 .booking-us{
 	width: 100%;
@@ -156,6 +163,54 @@ body{
 	margin-left: 100px;
 }
 
+/*detail paket*/
+.jumbotron{
+	margin-bottom: 0px !important;
+}
+
+.tujuan-tour{
+	height: 100%;
+	width:100%;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	background-color: #22A7F0;
+	color: #fff;
+	/*text-align: center;*/
+}
+
+.fasilitas-tour{
+	height: 100%;
+	width:100%;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	background-color: #F5D76E;
+}
+
+.itinerary{
+	height: 100%;
+	width:100%;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+/*end of detail paket*/
+
+/*carousel card*/
+@media (min-width: 768px) {
+    .carousel-multi-item-2 .col-md-4 {
+        float: left;
+    } 
+}
+
+.carousel-multi-item-2 .card img {
+    border-radius: 2px; 
+}
+
+.controls-top{
+	text-align: center;
+	padding-bottom: 10px;
+}
+/*end of carousel card*/
+
  /*resnponsive*/   
  @media(max-width: 800px ){
 	.toggle{
@@ -178,6 +233,9 @@ body{
 		display: block;
 	}
 	.py-4{
+		display: block;
+	}
+	.sampul{
 		display: block;
 	}
 	.footer-basic-centered{

@@ -33,6 +33,17 @@ Route::get('/booking', function () {
     return view('bookingnow');
 });
 
-Route::get('/detail-paket', function () {
-    return view('detailpaket');
+Route::get('/gallery', function () {
+    return view('gallery');
+});
+
+
+Route::get('/paket-half-day', function () {
+    return view('pakethalfday');
+});
+Route::get('/paket-2-days-1-night', function () {
+    return view('paket2days1night');
+});
+Route::get('/paket-3-days-2-nights', function () {
+    return view('paket3days2nights');
 });

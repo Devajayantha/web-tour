@@ -32,10 +32,10 @@
                 @auth
                     <li><a href="{{ url('/home') }}">Home</a></li>
                     <li><a href="{{ url('booking') }}">Booking Now</a></li>  
-                    <li><a href="#">Gallery</a></li>  
+                    <li><a href="{{ url('gallery') }}">Gallery</a></li>  
 
                     <li><a href="{{ url('contact') }}">Contact</a></li>
-                    <li><a href="{{ url('/paket') }}">Paket</a></li>
+                    <li><a href="{{ url('paket') }}">Paket</a></li>
                     <li><a href="{{ url('checking') }}">Check Booking</a></li>
 
                     <li class="nav-item dropdown">
@@ -60,8 +60,7 @@
 
                     <li><a href="{{ url('contact') }}">Contact</a></li>
 
-                    <li><a href="{{ url('paket') }}">Paket</a></li>  
-
+                    <li><a href="{{ url('paket') }}">Paket</a></li> 
 
                     <li><a href="{{ url('checking') }}">Check Booking</a></li> 
 
@@ -162,39 +161,6 @@
 
                 {{-- end    --}}
                 
-                <div class="panel promo">
-                    <h2 class="text-sm-center title-promo">Hottest Promo</h2>
-                    <div class="promo-content">
-                        <div class="row">
-                            <div class="col-sm-2"></div>
-                            <div class="col-sm-4">
-                                <div class="card">
-                                    <img class="card-img-top" src="{{asset('img/gambarpaket1.jpg')}}"> 
-                                        <div class="card-body">
-                                        <h5 class="card-title">HALF-DAY</h5>
-                                        <s class="card-text">Rp 500.000/orang</s>
-                                        <p class="promo-text">Rp 400.000/orang</p>
-                                        <a href="#" class="btn btn-primary">Lihat Selengkapnya</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="card">
-                                    <img class="card-img-top" src="{{asset('img/gambarpaket3.jpg')}}"> 
-                                    <div class="card-body">
-                                        <h5 class="card-title">3 DAYS 2 NIGHTS</h5>
-                                        <s class="card-text">Rp 3.000.000/orang</s>
-                                        <p class="promo-text">Rp 2.500.000/orang</p>
-                                        <a href="#" class="btn btn-primary">Lihat Selengkapnya</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-
-                {{--  end    --}}
 
                 <div class="panel booking-us">
                     <div class="tittle-fasilitas">Why Choose Penida Trip </div>
@@ -250,6 +216,40 @@
             </div>  
         </div>
 
+        {{--  start  --}}
+        <div class="container">
+            <div class="panel promo">
+                <h2 class="text-sm-center title-promo">Hottest Promo</h2>
+                <div class="promo-content">
+                    <div class="row">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-4">
+                            <div class="card">
+                                <img class="card-img-top" src="{{asset('img/tour2.jpg')}}"> 
+                                    <div class="card-body">
+                                    <h5 class="card-title">HALF-DAY</h5>
+                                    <s class="card-text">Rp 500.000/orang</s>
+                                    <p class="promo-text">Rp 400.000/orang</p>
+                                    <a href="#" class="btn btn-primary">Lihat Selengkapnya</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card">
+                                <img class="card-img-top" src="{{asset('img/tour1.jpg')}}"> 
+                                <div class="card-body">
+                                    <h5 class="card-title">3 DAYS 2 NIGHTS</h5>
+                                    <s class="card-text">Rp 3.000.000/orang</s>
+                                    <p class="promo-text">Rp 2.500.000/orang</p>
+                                    <a href="#" class="btn btn-primary">Lihat Selengkapnya</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{--  end  --}}
 
         <footer class="footer-basic-centered">
 
