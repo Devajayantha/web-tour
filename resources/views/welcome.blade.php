@@ -86,7 +86,7 @@
                             <div class="card-body">
                                 <form action="" class="form-cek ">
                                     <div class="row">
-                                    <div class="input-group mb-3 col-md-4 col-sm-5">
+                                    <div class="input-group mb-3 col-md-4 col-sm-6">
                                         <div class="input-group-prepend">
                                             <label class="input-group-text" for="inputGroupSelect01">
                                                     <i class="fas fa-clipboard-check"></i>
@@ -99,7 +99,7 @@
                                             <option value="3">3 day 2 night</option>
                                         </select>
                                     </div>
-                                    <div class="input-group mb-3 col-md-4 col-sm-5">
+                                    <div class="input-group mb-3 col-md-4 col-sm-6">
                                         <div class="input-group-prepend">
                                             <label class="input-group-text" for="inputGroupSelect01">
                                                 <i class="fas fa-list-ol"></i>
@@ -114,7 +114,7 @@
                                     </div>
                                     </div>
                                     <div class="row">
-                                        <div class="input-group mb-3 col-md-4 col-sm-5">
+                                        <div class="input-group mb-3 col-md-4 col-sm-6">
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text" id="basic-addon1">
                                                         <i class="far fa-calendar-alt"></i>
@@ -122,7 +122,7 @@
                                             </div>
                                                 <input type="date" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
                                         </div>
-                                        <div class="input-group mb-3 col-md-4 col-sm-5">
+                                        <div class="input-group mb-3 col-md-4 col-sm-6">
                                                 <div class="input-group-prepend">
                                                     <label class="input-group-text" for="inputGroupSelect01">
                                                         <i class="fas fa-users"></i>
@@ -140,7 +140,7 @@
                                                     <option value="8">8</option>
                                                 </select>
                                         </div>
-                                        <div class="col-md-4 col-sm-3">
+                                        <div class="col-md-4 col-sm-4">
                                             <button type="button" class="btn btn-info btn-block">Search</button>
                                         </div>
                                     </div>
@@ -150,8 +150,42 @@
                     </div>    
                 <div class="col-md-2"></div>  
                 {{--  end    --}}
+                {{--  start  --}}
+                <div class="container">
+                    <div class="panel promo">
+                        <h2 class="text-sm-center title-promo">Hottest Promo</h2>
+                        <div class="promo-content">
+                            <div class="row">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-4">
+                                    <div class="card">
+                                        <img class="card-img-top" src="{{asset('img/tour2.jpg')}}"> 
+                                            <div class="card-body">
+                                            <h5 class="card-title">HALF-DAY</h5>
+                                            <s class="card-text">Rp 500.000/orang</s>
+                                            <p class="promo-text">Rp 400.000/orang</p>
+                                            <a href="#" class="btn btn-primary">Lihat Selengkapnya</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="card">
+                                        <img class="card-img-top" src="{{asset('img/tour1.jpg')}}"> 
+                                        <div class="card-body">
+                                            <h5 class="card-title">3 DAYS 2 NIGHTS</h5>
+                                            <s class="card-text">Rp 3.000.000/orang</s>
+                                            <p class="promo-text">Rp 2.500.000/orang</p>
+                                            <a href="#" class="btn btn-primary">Lihat Selengkapnya</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{--  end  --}}
                 <div class="panel booking-us">
-                    <div class="tittle-fasilitas">Why Choose Penida Trip </div>
+                    <div class="tittle-fasilitas">Why Choose Penida Hill </div>
                     <div class="contenct-fasilitas">
                         <div class="row">
                             <div class="col-md-1"></div>
@@ -203,42 +237,9 @@
                 </div>
             </div>  
         </div>
-        {{--  start  --}}
-        <div class="container">
-            <div class="panel promo">
-                <h2 class="text-sm-center title-promo">Hottest Promo</h2>
-                <div class="promo-content">
-                    <div class="row">
-                        <div class="col-sm-2"></div>
-                        <div class="col-sm-4">
-                            <div class="card">
-                                <img class="card-img-top" src="{{asset('img/tour2.jpg')}}"> 
-                                    <div class="card-body">
-                                    <h5 class="card-title">HALF-DAY</h5>
-                                    <s class="card-text">Rp 500.000/orang</s>
-                                    <p class="promo-text">Rp 400.000/orang</p>
-                                    <a href="#" class="btn btn-primary">Lihat Selengkapnya</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="card">
-                                <img class="card-img-top" src="{{asset('img/tour1.jpg')}}"> 
-                                <div class="card-body">
-                                    <h5 class="card-title">3 DAYS 2 NIGHTS</h5>
-                                    <s class="card-text">Rp 3.000.000/orang</s>
-                                    <p class="promo-text">Rp 2.500.000/orang</p>
-                                    <a href="#" class="btn btn-primary">Lihat Selengkapnya</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        {{--  end  --}}
+
         <footer class="footer-basic-centered">
-                <p class="footer-company-motto">Penida Trip Tour & Travel</p>
+                <p class="footer-company-motto">Penida Hill Trip & Tour</p>
                 <p class="footer-links">
                     <a href="#">Home</a>
                     ·
@@ -246,7 +247,7 @@
                     ·
                     <a href="#">Booking</a>
                     ·
-                    <a href="#">About</a>
+                    <a href="#">Contact</a>
                     ·
                     <a href="#">Gallery</a>
                 </p>

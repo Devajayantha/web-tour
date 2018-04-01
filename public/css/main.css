@@ -89,9 +89,11 @@ ul li a:hover{
 	width: 100%;
 	background-color: rgb(253, 253, 247);
 	height: 340px;
+	margin-bottom: 30px;
 }
 
 .tittle-fasilitas{
+	padding-top: 35px;
 	color: rgb(58, 15, 138);
 	font-size: 28px;
 	text-align: center;
@@ -112,6 +114,7 @@ ul li a:hover{
 }
 .logobook3{
 	text-align: center;
+	margin-bottom: 30px;
 }
 .logobook{
 	font-size: 80px;

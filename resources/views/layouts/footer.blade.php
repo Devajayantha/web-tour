@@ -1,6 +1,6 @@
 @section('footer')
     <footer class="footer-basic-centered">
-        <p class="footer-company-motto">Penida Trip Tour & Travel</p>
+        <p class="footer-company-motto">Penida Hill Trip & Tour</p>
         <p class="footer-links">
             <a href="#">Home</a>
             ·
@@ -8,7 +8,7 @@
             ·
             <a href="#">Booking</a>
             ·
-            <a href="#">About</a>
+            <a href="#">Contact</a>
             ·
             <a href="#">Gallery</a>
         </p>
