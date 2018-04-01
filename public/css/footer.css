@@ -1,6 +1,5 @@
 .footer-basic-centered{
-
-	margin-top: 180px;	background-color:  rgb(58, 15, 138);
+	background-color:  rgb(58, 15, 138);
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 	box-sizing: border-box;
 	width: 100%;
@@ -8,7 +7,7 @@
 	font: normal 18px sans-serif;
 
 	padding: 45px;
-	margin-top: 180px;
+	margin-top: 50px;
 }
 
 .footer-basic-centered .footer-company-motto{
