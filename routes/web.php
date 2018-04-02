@@ -37,7 +37,12 @@ Route::get('/gallery', function () {
     return view('gallery');
 });
 
-
+Route::get('/nusa-penida', function () {
+    return view('nusapenida');
+});
+Route::get('/nusa-lembongan', function () {
+    return view('nusalembongan');
+});
 Route::get('/paket-half-day', function () {
     return view('pakethalfday');
 });
