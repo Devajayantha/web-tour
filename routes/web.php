@@ -31,7 +31,7 @@ Route::get('/checking', function () {
 });
 Route::get('/booking', function () {
     return view('bookingnow');
-});
+})->middleware('auth');
 
 Route::get('/gallery', function () {
     return view('gallery');
