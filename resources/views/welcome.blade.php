@@ -48,6 +48,9 @@
                                     document.getElementById('logout-form').submit();">
                                      {{ __('Logout') }}
                                 </a>
+                                <a class="dropdown-item" href="#">
+                                    Dashboard
+                                </a>
             
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 @csrf
@@ -103,9 +106,8 @@
                                         </div>
                                         <select class="custom-select" id="inputGroupSelect01">
                                             <option selected>Pilih Paket..</option>
-                                            <option value="1">half day</option>
-                                            <option value="2">2 day 1 dight</option>
-                                            <option value="3">3 day 2 night</option>
+                                            <option value="1">Nusa Penida</option>
+                                            <option value="2">Nusa Lembongan</option>
                                         </select>
                                     </div>
                                     <div class="input-group mb-3 col-md-4 col-sm-6">
@@ -121,37 +123,9 @@
                                             <option value="3">3 day 2 night</option>
                                         </select>
                                     </div>
+                                    <div class="col-md-4 col-sm-4">
+                                        <button type="button" class="btn btn-info btn-block">Search</button>
                                     </div>
-                                    <div class="row">
-                                        <div class="input-group mb-3 col-md-4 col-sm-6">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text" id="basic-addon1">
-                                                        <i class="far fa-calendar-alt"></i>
-                                                </span>
-                                            </div>
-                                                <input type="date" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-                                        </div>
-                                        <div class="input-group mb-3 col-md-4 col-sm-6">
-                                                <div class="input-group-prepend">
-                                                    <label class="input-group-text" for="inputGroupSelect01">
-                                                        <i class="fas fa-users"></i>
-                                                    </label>
-                                                </div>
-                                                <select class="custom-select" id="inputGroupSelect01">
-                                                    <option selected>Jumlah Orang ..</option>
-                                                    <option value="1">1</option>
-                                                    <option value="2">2</option>
-                                                    <option value="3">3</option>
-                                                    <option value="4">4</option>
-                                                    <option value="5">5</option>
-                                                    <option value="6">6</option>
-                                                    <option value="7">7</option>
-                                                    <option value="8">8</option>
-                                                </select>
-                                        </div>
-                                        <div class="col-md-4 col-sm-4">
-                                            <button type="button" class="btn btn-info btn-block">Search</button>
-                                        </div>
                                     </div>
                                 </form>
                             </div>
@@ -189,31 +163,6 @@
                 </div>
                 {{-- end   --}}
 
-                <div class="subscribe">
-                    <div class="row">
-                        <div class="col-md-7 col-sm-12">
-                            <div class="text-subsribe">
-                                <h2>Subsribe to Our newsletter</h2>
-                                <p>Sign up here to get the lastest news,updates and spesial promo in Penida Trip delivered directly to your inbox</p>
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="submit ur fucking email" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                                    <div class="input-group-append">
-                                        <button class="btn btn-primary far fa-envelope" type="button"></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-5 col-sm-12">
-                            <div class="logo">
-                                <img class="logo-subsribe" src="{{asset('img/email.png')}}" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>  
-        </div>
-
-
         {{--  start  --}}
         <div class="container">
             <div class="panel promo">
@@ -248,7 +197,29 @@
             </div>
         </div>
 
-
+        <div class="subscribe">
+            <div class="row">
+                <div class="col-md-7 col-sm-12">
+                    <div class="text-subsribe">
+                        <h2>Subsribe to Our newsletter</h2>
+                        <p>Sign up here to get the lastest news,updates and spesial promo in Penida Trip delivered directly to your inbox</p>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="submit ur fucking email" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary far fa-envelope" type="button"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 col-sm-12">
+                    <div class="logo">
+                        <img class="logo-subsribe" src="{{asset('img/email.png')}}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+</div>
 
         <footer class="footer-basic-centered">
                 <p class="footer-company-motto">Penida Hill Trip & Tour</p>

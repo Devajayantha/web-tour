@@ -116,11 +116,11 @@ body{
 	width: 100%;
 	background-color: rgb(253, 253, 247);
 	height: 340px;
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 }
 
 .tittle-fasilitas{
-	padding-top: 35px;
+	padding-top: 15px;
 	color: rgb(58, 15, 138);
 	font-size: 28px;
 	text-align: center;
@@ -195,7 +195,14 @@ body{
 	padding-top: 30px;
 	padding-bottom: 30px;
 }
+.paketpenida{
+	
+}
 /*end of detail paket*/
+
+
+
+
 
 /*carousel card*/
 @media (min-width: 768px) {
