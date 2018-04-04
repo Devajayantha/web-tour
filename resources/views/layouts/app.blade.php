@@ -14,8 +14,6 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-
-
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
@@ -39,16 +37,13 @@
 
             <li><a href="{{ url('contact') }}">Contact</a></li>
             <li><a href="{{ url('paket') }}">Paket</a></li> 
-            <li><a href="{{ url('checking') }}">Check Booking</a></li> 
             <li><a href="{{ route('login') }}">{{ __('Login') }}</a></li>
             <li><a href="{{ route('register') }}">{{ __('Register') }}</a></li>
             @else
             <li><a href="{{ url('booking') }}">Booking Now</a></li>  
             <li><a href="#">Gallery</a></li>  
-
             <li><a href="{{ url('contact') }}">Contact</a></li>
             <li><a href="{{ url('paket') }}">Paket</a></li> 
-            <li><a href="{{ url('check') }}">Check Booking</a></li>
             <li class="nav-item dropdown">
                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                     {{ Auth::user()->name }} <span class="caret"></span>
@@ -59,7 +54,7 @@
                         document.getElementById('logout-form').submit();">
                          {{ __('Logout') }}
                     </a>
-                    <a class="dropdown-item" href="#">
+                    <a class="dropdown-item" href="{{ url('home-user') }}">
                         Dashboard
                     </a>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

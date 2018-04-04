@@ -1,8 +1,11 @@
 @extends('layouts.app')
 @section ('content')
+<div class="image-contact">
+	<img src="{{asset('img/paket.jpg')}}" alt="image-contact" class="sampul">
+</div>
 <div class="container">
 	<div class="row">
-	  <div class="col-sm-4 offset-md-2">
+	  <div class="col-md-5 offset-md-1 col-sm-6">
 	    <div class="card">
 	      <img class="card-img-top" src="{{asset('img/paket1.jpg')}}"> 
 	      <div class="card-body">
@@ -11,7 +14,7 @@
 	      </div>
 	    </div>
 	  </div>
-	  <div class="col-sm-4">
+	  <div class="col-md-5 col-sm-6">
 	    <div class="card">
 	      <img class="card-img-top" src="{{asset('img/paket2.jpg')}}"> 
 	      <div class="card-body">

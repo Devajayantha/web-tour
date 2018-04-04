@@ -195,14 +195,6 @@ body{
 	padding-top: 30px;
 	padding-bottom: 30px;
 }
-.paketpenida{
-	
-}
-/*end of detail paket*/
-
-
-
-
 
 /*carousel card*/
 @media (min-width: 768px) {
@@ -222,7 +214,7 @@ body{
 /*end of carousel card*/
 
  /*resnponsive*/   
- @media(max-width: 800px ){
+ @media(max-width: 600px ){
 	.toggle{
 		display: block;
 	}
@@ -233,10 +225,12 @@ body{
 		margin: auto;
 	}
 	ul li{
-		display: block;
+		/* display: block; */
 		text-align: center;
 	}
     .active{
+		/* padding: 0; */
+		text-align: center;
 		display: block;
     }
     .logo-brand{

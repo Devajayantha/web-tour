@@ -26,9 +26,6 @@ Route::get('/paket', function(){
 Route::get('/contact', function () {
     return view('contact');
 });
-Route::get('/checking', function () {
-    return view('cekboking');
-});
 Route::get('/booking', function () {
     return view('bookingnow');
 })->middleware('auth');
@@ -51,4 +48,7 @@ Route::get('/paket-2-days-1-night', function () {
 });
 Route::get('/paket-3-days-2-nights', function () {
     return view('paket3days2nights');
+});
+Route::get('/home-user', function () {
+    return view('dashboard-user.home-user');
 });

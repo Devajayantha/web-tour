@@ -30,7 +30,6 @@
             @if (Route::has('login'))
             <ul class="ul-navbar">
                 @auth
-                    <li><a href="{{ url('/home') }}">Home</a></li>
                     <li><a href="{{ url('booking') }}">Booking Now</a></li>  
                     <li><a href="{{ url('gallery') }}">Gallery</a></li>  
 
@@ -48,7 +47,7 @@
                                     document.getElementById('logout-form').submit();">
                                      {{ __('Logout') }}
                                 </a>
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="{{ url('home-user') }}">
                                     Dashboard
                                 </a>
             
@@ -59,7 +58,7 @@
                         </li> 
                     @else
                     <li><a href="{{ url('booking') }}">Booking Now</a></li>  
-                    <li><a href="#">Gallery</a></li>  
+                    <li><a href="{{ url('gallery') }}">Gallery</a></li>  
 
                     <li><a href="{{ url('contact') }}">Contact</a></li>
 

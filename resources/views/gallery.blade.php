@@ -1,5 +1,8 @@
 @extends('layouts.app')
 @section ('content')
+<div class="image-contact">
+    <img src="{{asset('img/gallery.jpg')}}" alt="image-contact" class="sampul">
+</div>
 <div class="container">
 <h1 class="display-4" style="text-align: center;">Gallery</h1>
 <div id="multi-item-example" class="carousel slide carousel-multi-item carousel-multi-item-2" data-ride="carousel">
