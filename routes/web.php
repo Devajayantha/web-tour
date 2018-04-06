@@ -19,36 +19,16 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/paket', function(){
-	return view('paket');
-});
+Route::view('/paket', 'paket')->name('paket-tour');
+Route::view('/contact', 'contact')->name('contact');
+Route::view('/gallery', 'gallery')->name('gallery');
+Route::view('/nusa-penida', 'nusapenida')->name('nusapenida');
+Route::view('/nusa-lembongan', 'nusalembongan')->name('nusalembongan');
+Route::view('/paket-half-day', 'paket-half-day')->name('paket-half-day');
+Route::view('/paket-2-days-1-night', 'paket-2-days-1-night')->name('paket-2-days-1-night');
+Route::view('/paket-3-days-2-nights', 'paket-3-days-2-nights')->name('paket-3-days-2-nights');
+Route::view('/home-user', 'dashboard-user.homeuser')->name('homeuser');
 
-Route::get('/contact', function () {
-    return view('contact');
-});
 Route::get('/booking', function () {
     return view('bookingnow');
 })->middleware('auth');
-
-Route::get('/gallery', function () {
-    return view('gallery');
-});
-
-Route::get('/nusa-penida', function () {
-    return view('nusapenida');
-});
-Route::get('/nusa-lembongan', function () {
-    return view('nusalembongan');
-});
-Route::get('/paket-half-day', function () {
-    return view('pakethalfday');
-});
-Route::get('/paket-2-days-1-night', function () {
-    return view('paket2days1night');
-});
-Route::get('/paket-3-days-2-nights', function () {
-    return view('paket3days2nights');
-});
-Route::get('/home-user', function () {
-    return view('dashboard-user.home-user');
-});

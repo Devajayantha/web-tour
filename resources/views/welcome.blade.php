@@ -35,7 +35,6 @@
 
                     <li><a href="{{ url('contact') }}">Contact</a></li>
                     <li><a href="{{ url('paket') }}">Paket</a></li>
-                    <li><a href="{{ url('checking') }}">Check Booking</a></li>
 
                     <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -59,13 +58,8 @@
                     @else
                     <li><a href="{{ url('booking') }}">Booking Now</a></li>  
                     <li><a href="{{ url('gallery') }}">Gallery</a></li>  
-
                     <li><a href="{{ url('contact') }}">Contact</a></li>
-
                     <li><a href="{{ url('paket') }}">Paket</a></li> 
-
-                    <li><a href="{{ url('checking') }}">Check Booking</a></li> 
-
                     <li><a href="{{ route('login') }}">Login</a></li>
                     <li><a href="{{ route('register') }}">Register</a></li>
                 @endif
@@ -171,7 +165,7 @@
                         <div class="col-sm-2"></div>
                         <div class="col-sm-4">
                             <div class="card">
-                                <img class="card-img-top" src="{{asset('img/tour2.jpg')}}"> 
+                                <img class="card-img-top" src="{{asset('img/Promo_NP_HD.jpg')}}"> 
                                     <div class="card-body">
                                     <h5 class="card-title">HALF-DAY</h5>
                                     <s class="card-text">Rp 500.000/orang</s>
@@ -182,7 +176,7 @@
                         </div>
                         <div class="col-sm-4">
                             <div class="card">
-                                <img class="card-img-top" src="{{asset('img/tour1.jpg')}}"> 
+                                <img class="card-img-top" src="{{asset('img/Promo_NP_3D2N.jpg')}}"> 
                                 <div class="card-body">
                                     <h5 class="card-title">3 DAYS 2 NIGHTS</h5>
                                     <s class="card-text">Rp 3.000.000/orang</s>
