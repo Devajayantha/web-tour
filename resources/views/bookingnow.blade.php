@@ -9,17 +9,17 @@
         <div class="col-md-8">
         <form>
             <div class="card-mb-3">
-                <div class="card-header">Fill Your Imformation below</div>
+                <div class="card-header">Fill Your Information Below</div>
             </div>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon1">@</span>
+                <span class="input-group-text" id="basic-addon1"><i class="fas fa-envelope"></i></span>
                 </div>
-                <input type="text" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1">
+                <input type="text" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1" value="{{ Auth::user()->email }}">
             </div>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon1">@</span>
+                <span class="input-group-text" id="basic-addon1"><i class="fas fa-phone"></i></span>
                 </div>
                 <input type="text" class="form-control" placeholder="Phone Number" aria-label="phone" aria-describedby="basic-addon1">
             </div>
@@ -56,7 +56,7 @@
             </div>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon1">@</span>
+                    <span class="input-group-text" id="basic-addon1"><i class="far fa-calendar-alt"></i></span>
                 </div>
                 <input type="date" class="form-control" placeholder="Depature" aria-label="phone" aria-describedby="basic-addon1">
             </div>
