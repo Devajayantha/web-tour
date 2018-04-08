@@ -263,6 +263,67 @@ body{
 	margin: 0;
 	line-height: 1; 
 }
+
+.list{
+	background-color: #FFFFFF;
+    height: 72px;
+    display: block;
+    text-decoration: none;
+    box-sizing: content-box;
+    border-bottom: 1px solid #F2F2F2;
+    position: relative;
+}
+
+.list-payment-logo {
+    padding: 16px;
+    float: left;
+    border-bottom: 1px solid #FFFFFF;
+}
+
+.list-content{
+	vertical-align: middle;
+    width: calc(100% - 116px);
+    height: 72px;
+    float: left;
+}
+
+.list-title{
+	padding-top: 18px;
+}
+
+.text-actionable-bold{
+	font-weight: 700;
+    font-size: 1rem;
+    color: #666666;
+    margin: 0;
+    line-height: 1;
+}
+.list-caption {
+    padding-top: 4px;
+}
+.text-actionable-caption {
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: #666666;
+    margin: 0;
+    line-height: 1;
+}
+
+.list-next{
+	padding: 16px;
+	float: right;
+}
+
+.text-no-rek{
+	font-weight: 400px;
+	font-size: 1.3rem;
+	color: #666666;
+	margin: 0;
+	line-height: 1;
+	padding-bottom: 4px;
+}
+
+
  /*resnponsive*/   
  @media(max-width: 600px ){
 	.toggle{
