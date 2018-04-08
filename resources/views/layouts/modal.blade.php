@@ -92,32 +92,6 @@
                   </a>
                 </div>
                 <div>
-                  <a class="list" href="#BRIModal" data-toggle="modal" data-target="#BRIModal" data-dismiss="modal">
-                    <div class="list-payment-logo">
-                      <i class="fas fa-credit-card"></i>
-                    </div>
-                    <div class="list-content">
-                      <div class="list-title text-actionable-bold">BRI</div>
-                      <div class="list-caption text-actionable-caption">Bayar dengan Kartu BRI</div>
-                    </div>
-                    <div class="list-next">
-                      <i class="fas fa-chevron-right"></i>
-                    </div>
-                  </a>
-                </div>
-                <div>
-                  <a class="list" href="#/bank-transfer">
-                    <div class="list-payment-logo">
-                        <i class="fas fa-credit-card"></i>                      
-                    </div>
-                    <div class="list-content">
-                      <div class="list-title text-actionable-bold">Bank Lainnya</div>
-                      <div class="list-caption text-actionable-caption">Bayar dari ATM Bersama</div>
-                    </div>
-                    <div class="list-next">
-                      <i class="fas fa-chevron-right"></i>
-                    </div>
-                  </a>
                 </div>
                 
               </div>
