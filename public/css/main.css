@@ -165,6 +165,9 @@ body{
 	height: 250px;
 	margin-left: 100px;
 }
+/* .display-4{
+	margin-bottom: 20px;
+} */
 
 /*detail paket*/
 .jumbotron{
@@ -195,7 +198,9 @@ body{
 	padding-top: 30px;
 	padding-bottom: 30px;
 }
-
+.btn-book{
+	margin-top: 20px;
+}
 /*carousel card*/
 @media (min-width: 768px) {
     .carousel-multi-item-2 .col-md-4 {
@@ -213,6 +218,51 @@ body{
 }
 /*end of carousel card*/
 
+
+/* modal css */
+.card-container{
+	background-color: #fff;
+	margin: 5px;
+	width: calc(100% - 16px);
+	border-bottom: 1px solid #ccc;
+}
+.amount-title{
+	padding : 14px 16px;
+}
+.pull-left{
+	float: left;
+}
+.amount-content{
+	margin-right: 16px;
+	line-height: 60px;
+}
+.pull-right{
+	float: right;
+}
+.amount{
+	background-color: #fff;
+	border-bottom: 1px solid #102C42;
+	height: 60px; 
+}
+.text-amount-title{
+	font-weight: 400px;
+	font-size: 1.3rem;
+	color: #102C42;
+	margin: 0;
+	line-height: 1;
+	padding-bottom: 4px;
+}
+.text-amount-rp{
+	margin-right: 4px;
+	vertical-align: 2px;
+}
+.text-amount-amount{
+	font-weight: 400px;
+	font-size: 20px;
+	color: #102C42;
+	margin: 0;
+	line-height: 1; 
+}
  /*resnponsive*/   
  @media(max-width: 600px ){
 	.toggle{

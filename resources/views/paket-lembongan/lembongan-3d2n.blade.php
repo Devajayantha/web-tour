@@ -1,10 +1,22 @@
 @extends('layouts.app')
 @section ('content')
 <div class="jumbotron">
-  <div class="container">
-    <h1 class="display-4">Paket 3 Days 2 Nights</h1>
-    <p class="lead"><s>Rp 3.000.000</s> Rp 2.500.000</p>
-  </div>
+    <div class="container">
+	    <div class="row">
+	    	<div class="col-md-6">
+				<td><h1 class="display-4">Paket 3 Days 2 Nights</h1></td>
+				<p class="lead">Rp 2.500.000/Person</p>
+			</div>
+			<div class="col-md-4"></div>
+			<div class="col-md-2">
+				<div class="btn-group btn-book">
+					<a href="\booking" class="btn btn-info">
+						<i class="fas fa-shopping-cart" aria-hidden="true"></i> BOOKING NOW 
+					</a>
+				</div>				
+			</div>
+		</div>
+    </div>
 </div>
 <div class="panel tujuan-tour">
 	<div class="container">

@@ -60,13 +60,15 @@
                 </div>
                 <input type="date" class="form-control" placeholder="Depature" aria-label="phone" aria-describedby="basic-addon1">
             </div>
-            <div  class="btn btn-info">SUBMIT</div>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                BOOKING NOW
+            </button>  
         </form>
         </div>
-
         <div class="col-md-2"></div>
     </div>
 </div>
 @endsection
 
+@extends('layouts.modal')
 @extends('layouts.footer')

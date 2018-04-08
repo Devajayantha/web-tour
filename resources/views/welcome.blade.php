@@ -170,7 +170,7 @@
                                     <h5 class="card-title">HALF-DAY</h5>
                                     <s class="card-text">Rp 500.000/orang</s>
                                     <p class="promo-text">Rp 400.000/orang</p>
-                                    <a href="#" class="btn btn-primary">Lihat Selengkapnya</a>
+                                    <a href="/nusa-penida/halfday" class="btn btn-primary">Lihat Selengkapnya</a>
                                 </div>
                             </div>
                         </div>
@@ -181,7 +181,7 @@
                                     <h5 class="card-title">3 DAYS 2 NIGHTS</h5>
                                     <s class="card-text">Rp 3.000.000/orang</s>
                                     <p class="promo-text">Rp 2.500.000/orang</p>
-                                    <a href="#" class="btn btn-primary">Lihat Selengkapnya</a>
+                                    <a href="/nusa-penida/3d2n" class="btn btn-primary">Lihat Selengkapnya</a>
                                 </div>
                             </div>
                         </div>

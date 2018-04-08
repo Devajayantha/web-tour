@@ -80,6 +80,12 @@
     <div>
         @yield('bookingnow')
     </div>
+    <div>
+        @yield('modal')
+    </div>
+    <div>
+        @yield('modal-bank')
+    </div>
     <footer>
         @yield('footer')
     </footer>

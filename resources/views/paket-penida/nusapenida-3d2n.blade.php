@@ -2,20 +2,27 @@
 @section ('content')
 <div class="jumbotron">
   <div class="container">
-    <h1 class="display-4">Paket 2 Days 1 Night</h1>
-    <p class="lead">Rp 1.000.000</p>
+	    <div class="row">
+					<div class="col-md-6">
+						<td><h1 class="display-4">Paket 3 Days 2 Nights</h1></td>
+						<p class="lead"><s>Rp 3.000.000</s> Rp 2.500.000</p>
+					</div>
+					<div class="col-md-4"></div>
+					<div class="col-md-2">
+						<div class="btn-group btn-book">
+							<a href="\booking" class="btn btn-info">
+								<i class="fas fa-shopping-cart" aria-hidden="true"></i> BOOKING NOW 
+							</a>
+						</div>				
+					</div>
+				</div>
   </div>
 </div>
 <div class="panel tujuan-tour">
 	<div class="container">
 		<h3>Tujuan Tour</h3>
 			<ul>
-				<li>Atuh Cliff (Bukit Atuh)</li>
-				<li>Atuh Beach (Pantai Atuh)</li>
-				<li>Pulau Seribu/Raja Lima</li>
-				<li>Rumah Pohon (Molenteng)</li>
-				<li>Bukit Teletubies</li>
-				<li>Crystal Bay Beach (Sunset Panorama)</li>
+				<li>Broken Beach</li>
 				<li>Angel Billabong</li>
 				<li>Kelingking Beach</li>
 				<li>Pohon Cinta (Love Tree)</li>
@@ -43,6 +50,7 @@
 		  <div class="nav nav-tabs" id="nav-tab" role="tablist">
 		    <a class="nav-item nav-link active" id="nav-hari1-tab" data-toggle="tab" href="#nav-hari1" role="tab" aria-controls="nav-home" aria-selected="true">Hari 1</a>
 		    <a class="nav-item nav-link" id="nav-hari2-tab" data-toggle="tab" href="#nav-hari2" role="tab" aria-controls="nav-profile" aria-selected="false">Hari 2</a>
+		    <a class="nav-item nav-link" id="nav-hari3-tab" data-toggle="tab" href="#nav-hari3" role="tab" aria-controls="nav-contact" aria-selected="false">Hari 3</a>
 		  </div>
 		</nav>
 		<div class="tab-content" id="nav-tabContent">
@@ -134,6 +142,53 @@
 			    <tr>
 			      <th scope="row">14.00</th>
 			      <td>tiba di kelingking beach</td>
+			    </tr>
+			    <tr>
+			      <th scope="row">15.00</th>
+			      <td>kembali ke dermaga</td>
+			    </tr>
+			    <tr>
+			      <th scope="row">15.30</th>
+			      <td>kembali ke pantai sanur menggunakan speed boat</td>
+			    </tr>
+			    <tr>
+			      <th scope="row">16.30</th>
+			      <td>tiba di pantai sanur</td>
+			    </tr>
+			  </tbody>
+			</table>
+		  </div>
+		  <div class="tab-pane fade" id="nav-hari3" role="tabpanel" aria-labelledby="nav-contact-tab">
+		  			  	<table class="table">
+			  <thead>
+			    <tr>
+			      <th scope="col">Jam</th>
+			      <th scope="col">Kegiatan</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <tr>
+			      <th scope="row">07.30</th>
+			      <td>sarapan pagi</td>
+			    </tr>
+			    <tr>
+			      <th scope="row">08.30</th>
+			      <td>berangkat dari hotel</td>
+			    </tr>
+			    <tr>
+			      <th scope="row">09.30</th>
+			      <td>snorkeling (pilih 3 dari lokasi berikut)
+					<ul>
+						<li>crystal bay beach</li>
+						<li>gamal bay beach</li>
+						<li>wall point</li>
+						<li>bhuda temple</li>
+						<li>manta bay (min. 5 orang)</li>
+					</ul>
+			      </td>
+			    </tr>
+			      <th scope="row">14.00</th>
+			      <td>diantarkan ke lokasi makan siang</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">15.00</th>
