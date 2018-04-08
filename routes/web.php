@@ -36,7 +36,8 @@ Route::view('/nusa-lembongan/2d1n', 'paket-lembongan.lembongan-2d1n')->name('lem
 Route::view('/nusa-lembongan/3d2n', 'paket-lembongan.lembongan-3d2n')->name('lembongan-3d2n');
 
 // route view dashboard user
-Route::view('/home-user', 'dashboard-user.homeuser')->name('homeuser');
+Route::view('/payment-user', 'dashboard-user.dashboard-user')->name('dashboard-user');
+Route::view('/home-user', 'dashboard-user.cek-booking-user')->name('cel-booking-user');
 
 Route::get('/booking', function () {
     return view('bookingnow');

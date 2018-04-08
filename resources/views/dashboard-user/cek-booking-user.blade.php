@@ -19,13 +19,13 @@
 
 		<ul class="nav-item">
 			<li>
-				<a href="/home-user">
+				<a class="selected" href="/home-user">
 					<i class="fas fa-shopping-cart"></i>
 					<span>Booking</span>
 				</a>
 			</li>
 			<li>
-				<a  class="selected" href="/payment-user">
+				<a  href="/payment-user">
 					<i class="fa fa-print"></i>
 					<span>Payment</span>
 				</a>
@@ -50,7 +50,7 @@
 			</li>
 			<li class="font-judul">
 				<a href="#">	
-					<span>Payment</span>
+					<span>Booking</span>
 				</a>
 			</li>
 			<li class="logout">
@@ -68,16 +68,16 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="card">
-						<h4 class="tittle">List History of Payment Order Package</h4>
-						<p class="category">Dashboard History Payment</p>
+						<h4 class="tittle">News Booking Payment</h4>
+						<p class="category">Dashboard Payment</p>
 					</div>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-12">
 					<div class="card card-modif">
-						<h4 class="tittle">List History of Payment Order Package</h4>
-						<p class="category">Seacrh and Print proof of payment when you want to travel in accordance with your ID</p>
+						<h4 class="tittle">News Booking Payment</h4>
+						<p class="category">Find Your ID. Get Apload proof of payment and Waiting for checking about your payment</p>
                         <table class="table table-responsive table-striped" id="tbl-list-mhs">
                             <thead>
                                 <th>No</th>
@@ -89,7 +89,7 @@
                                 <th>Person</th>
                                 <th>Amount</th>
                                 <th>Status</th>
-                                <th>Payment</th>
+                                <th>Action</th>
                             </thead>
                             <tbody>
                                 <tr>
@@ -101,21 +101,9 @@
                                     <td>2 Day 1 Night</td>
                                     <td>4</td>
                                     <td>1.000.000</td>
-                                    <td><button class="btn btn-success">Success</button></td>
-                                    <td><button class="btn btn-outline-dark">Token</button></td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>#0098888999</td>
-                                    <td>01/03/2018</td>
-                                    <td>21/03/2018</td>
-                                    <td>Nusa Penida</td>
-                                    <td>Half Day</td>
-                                    <td>4</td>
-                                    <td>1.000.000</td>
-                                    <td><button class="btn btn-danger">Cancel </button></td>
-                                    <td><button class="btn btn-outline-dark">Token</button></td>
-                                </tr>                                
+                                    <td><button class="btn btn-info">respon</button></td>
+                                    <td><button class="btn btn-outline-primary">Apload</button></td>
+                                </tr>                            
                             </tbody>
                         </table>
 					</div>

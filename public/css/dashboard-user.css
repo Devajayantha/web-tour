@@ -1,0 +1,253 @@
+*{
+    margin :0px;
+    padding: 0px;
+
+}
+body{
+    background-color: #F3E5F5;
+}
+
+
+/* side bar */
+.sidebar{
+    width: 250px;
+    position: fixed;
+    height: 100%;
+    float: left;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    overflow-x: hidden;
+
+    background-color: #37474F;
+    transition: all 0.6s ease;
+}
+
+
+.sidebar-close {
+    left: -250px;
+}
+
+.nav-header-close {
+    left: 0 !important;
+}
+.content-close {
+    padding-left: 20px !important;
+}
+
+.logo{
+    background-color: #37474F;
+    width: 100%;
+    height: 60px;
+
+    display: flex;
+    justify-content: center;
+}
+    
+.simple-text{
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: arial;
+    letter-spacing: 5px;
+
+    height: 90px;
+    line-height: 70px;
+    display: block;
+    margin-right: 15px;
+    cursor: pointer;
+
+}
+
+ul.nav-item li{
+    padding-bottom: : 8px;
+    margin-top: 13px;
+    list-style: none;
+    padding: 0px;
+    position: relative;
+
+
+}
+ul.nav-item li a{
+    color: #ccc;
+    margin-bottom: 3px;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px; 
+    display: block;
+    padding: 15px;
+    font-size: 18px;
+    font-family: sans-serif;
+    text-decoration: none;
+    transition: all 0.2s;
+    /*border-bottom: 1px solid #BDC3C7;*/
+
+}
+ul.nav-item li a:hover {
+    background-color: #40C4FF;
+    color: #fff;
+    padding-left: 20px; 
+}
+ul.nav-item li a.selected{
+    background-color: #40C4FF;
+    color: #fff;  
+} 
+.nav-item span{
+    margin-right: 25px;
+}
+
+/*header */
+.nav-header{
+    background-color: #FFFFFF;
+    position: absolute;
+    left: 250px;
+    top: 0;
+    right: 0;
+    height: 60px;
+    border-bottom: 1px solid #e5e5e5;
+    transition: all 0.6s ease;
+}
+ul.nav-menu #navToggle {
+    font-size: 25px;
+    margin-left: 10px;
+     
+}
+
+ul.nav-menu .font-judul{
+    font-size: 24px;
+    margin-left: 15px;
+    font-family: sans-serif;
+}
+ul.nav-menu .logout{
+    margin-left:74%;  
+    line-height: 60px;
+    font-size: 1em;
+}
+
+
+ul.nav-menu li{
+    list-style: none;
+    padding: 0px;
+    position: relative;
+    cursor: pointer;
+    display: inline;
+    line-height: 50px; 
+}
+
+
+
+ul.nav-menu li a{
+    color: #ccc;
+    text-decoration: none;
+    -webkit-transition: 0.2s;
+    -moz-transition :0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+
+}
+ul.nav-menu li a:hover {
+    color: #40C4FF;
+}
+
+/* contennnn // isi website*/
+.content {
+    height: auto;
+    width: 100%;
+    background-color: #F3E5F5;
+    margin-top: 60px;
+    transition: all 0.6s ease;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-left: 270px;
+}
+.card {
+  border-radius: 6px;
+  box-shadow: 0 2px 2px rgba(204, 197, 185, 0.5);
+  margin-bottom: 20px;
+  position: relative; 
+  background-color: #F5F5F5;
+
+  padding-top: 12px;
+  padding-left: 5px;
+}
+
+
+/*  Class h4 heading */
+.tittle{ 
+    padding-top: 7px;
+    padding-left: 15px;
+    font-size: 24px;
+    font-family:sans-serif;
+}
+
+/*  Class <P> paragraff */
+.category{
+    padding-left: 15px;
+    font-size: 24;
+    font-family: sans-serif;
+}
+.txt-color{
+    color: #007bff;
+}
+
+/*class box - attention box box dashborad konten*/
+ul.box-attention li{
+    border-top: 1.5px solid #ccc;
+    list-style: none;
+    padding: 0px;
+    position: relative;
+}
+ul.box-attention li a{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #000000;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-right: 10px; 
+    display: block;
+    font-size: 18px;
+    font-family: sans-serif;
+    text-decoration: none;
+    transition: all 0.6s ease;
+}
+ul.box-attention  li p:hover {
+    color: #2196F3;
+}
+.box-attention p{
+    margin-left: 20px;
+    font-size: 15px;
+}
+
+/* Menu Aprove////////////////////////////////////////////////////*/
+
+.ket-group{
+    position: relative;
+    text-decoration: none;
+    padding-top: 25px;
+    padding-left: 10px;
+}
+.card-modif{
+    padding-bottom: 15px;
+    padding-right: 15px;
+}
+
+/* apload tabel*/
+.card-daftar{
+    padding-left: 10px;
+    padding-bottom: 15px;
+    padding-right: 15px;    
+}
+/* modal dahsboard*/
+.gmbr-berita{
+    width: 465px;
+    height: 311px;
+  /*  padding-left: 79px;*/
+    text-align: center;
+}
+
+.isi-berita{
+    text-align: justify;
+    font-size: 15px;
+    font-family: sans-serif;
+}
