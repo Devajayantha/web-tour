@@ -323,7 +323,15 @@ body{
 	padding-bottom: 4px;
 }
 
-
+.content-text-block{
+	padding-top: 16px;
+	background-color: #fff;
+	display: table;
+	opacity: 1;
+	width: 100%;
+	transition: opacity 2s;	
+	margin-bottom: 30px;
+}
  /*resnponsive*/   
  @media(max-width: 600px ){
 	.toggle{

@@ -66,47 +66,43 @@
 			  <tbody>
 			    <tr>
 			      <th scope="row">07.30</th>
-			      <td>meeting point di pelabuhan sanur</td>
+			      <td>meeting point in Sanur Harbour</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">08.00</th>
-			      <td>berangkat menuju nusa penida dengan speed boat</td>
+			      <td>berangkat menuju nusa lembongan dengan speed boat</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">08.30</th>
-			      <td>tiba di pulau nusa penida</td>
+			      <td>tiba di pulau nusa lembongan</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">09.00</th>
-			      <td>tiba di hotel</td>
+			      <td>tiba di penginapan</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">09.30</th>
-			      <td>tiba di spot pertama rumah pohon</td>
+			      <td>tiba di spot pertama seaweed farm</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">12.00</th>
-			      <td>tiba di pulau seribu</td>
+			      <td>tiba di yellow bridge</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">13.00</th>
 			      <td>diantarkan ke lokasi makan siang</td>
 			    </tr>
 			    <tr>
-			      <th scope="row">14.00</th>
-			      <td>tiba di atuh beach</td>
-			    </tr>
-			    <tr>
-			      <th scope="row">15.00</th>
-			      <td>tiba di bukit teletubies</td>
+			      <th scope="row">14.30</th>
+			      <td>tiba di devil tears Point</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">16.00</th>
-			      <td>tiba di crystal bay beach</td>
+			      <td>tiba di Sunset Jungut Batu</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">18.30</th>
-			      <td>kembali ke hotel</td>
+			      <td>kembali ke penginapan</td>
 			    </tr>
 			  </tbody>
 			</table>
@@ -125,16 +121,16 @@
 			      <td>sarapan pagi</td>
 			    </tr>
 			    <tr>
-			      <th scope="row">08.30</th>
+			      <th scope="row">09.00</th>
 			      <td>berangkat dari hotel</td>
 			    </tr>
 			    <tr>
-			      <th scope="row">09.30</th>
-			      <td>tiba di broken beach/pasih uug</td>
+			      <th scope="row">10.00</th>
+			      <td>Tiba di Secret Beach</td>
 			    </tr>
 			    <tr>
-			      <th scope="row">12.00</th>
-			      <td>iba di pohon cinta</td>
+			      <th scope="row">11.00</th>
+			      <td>Snorkling di Secret Beach</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">13.00</th>
@@ -142,7 +138,7 @@
 			    </tr>
 			    <tr>
 			      <th scope="row">14.00</th>
-			      <td>tiba di kelingking beach</td>
+			      <td>Tiba di Mushroom Bay Beach</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">15.00</th>

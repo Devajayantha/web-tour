@@ -10,8 +10,8 @@
 	      <img class="card-img-top" src="{{asset('img/paket/Promo_NP_3D2N.jpg')}}"> 
 	      <div class="card-body">
 	        <h5 class="card-title">HALF-DAY</h5>
-	        <s class="card-text">Rp 500.000/orang</s>
-            <p class="promo-text">Rp 400.000/orang</p>
+	        <s class="card-text">Rp 500.000/person</s>
+            <p class="promo-text">Rp 400.000/person</p>
             <div class="card-header">Fasilitas:</div>
             <ul class="list-group list-group-flush">
 			    <li class="list-group-item">Tiket Speed Boat</li>
@@ -33,7 +33,7 @@
 	      <img class="card-img-top" src="{{asset('img/paket/Promo_NP_2D1N.jpg')}}"> 
 	      <div class="card-body">
 	        <h5 class="card-title">2 DAYS 1 NIGHT</h5>
-			<p class="card-text">Rp 1.000.000/orang</p><br>	
+			<p class="card-text">Rp 1.000.000/person</p><br>	
 			<div class="card-header">Fasilitas:</div>
             <ul class="list-group list-group-flush">
 			    <li class="list-group-item">Tiket Speed Boat</li>
@@ -54,8 +54,8 @@
 	      <img class="card-img-top" src="{{asset('img/paket/Promo_NP_HD.jpg')}}"> 
 	      <div class="card-body">
 	        <h5 class="card-title">3 DAYS 2 NIGHTS</h5>
-	        <s class="card-text">Rp 3.000.000/orang</s>
-            <p class="promo-text">Rp 2.500.000/orang</p>  
+	        <s class="card-text">Rp 3.000.000/person</s>
+            <p class="promo-text">Rp 2.500.000/person</p>  
             <div class="card-header">Fasilitas:</div>
             <ul class="list-group list-group-flush">
 			    <li class="list-group-item">Tiket Speed Boat</li>
