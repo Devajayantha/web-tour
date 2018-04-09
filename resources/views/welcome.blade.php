@@ -197,7 +197,7 @@
                         <h2>Subsribe to Our newsletter</h2>
                         <p>Sign up here to get the lastest news,updates and spesial promo in Penida Trip delivered directly to your inbox</p>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="submit ur fucking email" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <input type="text" class="form-control" placeholder="submit your email" aria-label="Recipient's username" aria-describedby="basic-addon2">
                             <div class="input-group-append">
                                 <button class="btn btn-primary far fa-envelope" type="button"></button>
                             </div>

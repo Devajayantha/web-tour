@@ -7,7 +7,8 @@
 	<meta name="viewport" content="width=device-width" />
 	<link rel="shortcut icon" href="{{asset('img/logo.png')}}">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('css/fontawesome-all.css')}}">     
+	<link rel="stylesheet" href="{{asset('css/fontawesome-all.css')}}">
+	<link rel="stylesheet" href="{{asset('css/star-rating.css')}}">      
 	<link rel="stylesheet" type="text/css" href="{{asset('css/dashboard-user.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{asset('css/dataTables.bootstrap4.min.css')}}">
 </head>
@@ -19,7 +20,7 @@
 
 		<ul class="nav-item">
 			<li>
-				<a class="selected" href="/home-user">
+				<a href="/home-user">
 					<i class="fas fa-shopping-cart"></i>
 					<span>Booking</span>
 				</a>
@@ -31,7 +32,7 @@
 				</a>
             </li>
 			<li>
-                <a href="/rating-user">
+                <a href="/rating-user" class="selected">
                     <i class="far fa-comments"></i>
                     <span>Message</span>
                 </a>
@@ -78,46 +79,47 @@
 					<div class="card card-modif">
 						<h4 class="tittle">News Booking Payment</h4>
 						<p class="category">Find Your ID. Get Apload proof of payment and Waiting for checking about your payment</p>
-                        <table class="table table-responsive table-striped" id="tbl-list-mhs">
-                            <thead>
-                                <th>No</th>
-                                <th>ID Booking</th>
-                                <th>Depature</th>
-                                <th>Return</th>
-                                <th>Paket</th>
-                                <th>Daily</th>
-                                <th>Person</th>
-                                <th>Amount</th>
-                                <th>Status</th>
-                                <th>Action</th>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>#0098888999</td>
-                                    <td>01/03/2018</td>
-                                    <td>21/03/2018</td>
-                                    <td>Nusa Penida</td>
-                                    <td>2 Day 1 Night</td>
-                                    <td>4</td>
-                                    <td>1.000.000</td>
-                                    <td><button class="btn btn-info">respon</button></td>
-                                    <td><button class="btn btn-outline-primary">Apload</button></td>
-                                </tr>                            
-                            </tbody>
-                        </table>
+						<form action="" method="post">
+							<input id="rating-input" type="text" title=""/>
+							<button id="btn-rating-input" type="button" class="btn btn-primary">Toggle Disable</button>							
+						</form>
+
 					</div>
 				</div>
 			</div>
 		</div>
 	</div> 
   </div>
+  <script>
+	$(document).ready(function(){
+		var $inp = $('#rating-input');
 
-    <script src="{{asset('js/app.js')}}"></script>
+		$inp.rating({
+			min: 0,
+			max: 5,
+			step: 1,
+			size: 'lg',
+			showClear: false
+		});
+
+		$('#btn-rating-input').on('click', function () {
+			$inp.rating('refresh', {
+				showClear: true,
+				disabled: !$inp.attr('disabled')
+			});
+		});
+	});
+</script>
+	<script src="{{asset('js/app.js')}}"></script>
+	<script src="{{asset('js/star-rating.js')}}"></script>
+	<script src="{{asset('js/rating-stars.js')}}"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
 	<script type="text/javascript" src="{{asset('js/jquery.dataTables.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/dataTables.bootstrap4.min.js')}}"></script>
-    <script type="text/javascript" src="{{asset('js/dashboard-user.js')}}"></script>
+	<script type="text/javascript" src="{{asset('js/dashboard-user.js')}}"></script>
+	
+	
     
 </body>
 </html>

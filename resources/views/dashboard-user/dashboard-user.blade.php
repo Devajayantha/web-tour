@@ -31,7 +31,7 @@
 				</a>
             </li>
 			<li>
-                <a href="apload.php">
+                <a href="/rating-user">
                     <i class="far fa-comments"></i>
                     <span>Message</span>
                 </a>
