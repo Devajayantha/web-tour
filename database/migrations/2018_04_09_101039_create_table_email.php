@@ -15,7 +15,7 @@ class CreateTableEmail extends Migration
     {
         Schema::create('email', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('email', 30);
+            $table->strin('email')->unique();
             $table->timestamps();
         });
     }

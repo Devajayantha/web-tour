@@ -11,6 +11,10 @@
 	<link rel="stylesheet" href="{{asset('css/star-rating.css')}}">      
 	<link rel="stylesheet" type="text/css" href="{{asset('css/dashboard-user.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{asset('css/dataTables.bootstrap4.min.css')}}">
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<script src="{{asset('js/app.js')}}"></script>
+	<script src="{{asset('js/rating-stars.js')}}"></script>
+	<script src="{{asset('js/star-rating.js')}}"></script>
 </head>
 <body>
 	<div class="sidebar" id="sidebar">
@@ -83,40 +87,16 @@
 							<input id="rating-input" type="text" title=""/>
 							<button id="btn-rating-input" type="button" class="btn btn-primary">Toggle Disable</button>							
 						</form>
-
 					</div>
 				</div>
 			</div>
 		</div>
 	</div> 
   </div>
-  <script>
-	$(document).ready(function(){
-		var $inp = $('#rating-input');
-
-		$inp.rating({
-			min: 0,
-			max: 5,
-			step: 1,
-			size: 'lg',
-			showClear: false
-		});
-
-		$('#btn-rating-input').on('click', function () {
-			$inp.rating('refresh', {
-				showClear: true,
-				disabled: !$inp.attr('disabled')
-			});
-		});
-	});
-</script>
-	<script src="{{asset('js/app.js')}}"></script>
-	<script src="{{asset('js/star-rating.js')}}"></script>
-	<script src="{{asset('js/rating-stars.js')}}"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
 	<script type="text/javascript" src="{{asset('js/jquery.dataTables.min.js')}}"></script>
-    <script type="text/javascript" src="{{asset('js/dataTables.bootstrap4.min.js')}}"></script>
+	<script type="text/javascript" src="{{asset('js/dataTables.bootstrap4.min.js')}}"></script>
+
 	<script type="text/javascript" src="{{asset('js/dashboard-user.js')}}"></script>
 	
 	

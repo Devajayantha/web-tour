@@ -73,23 +73,45 @@
 		</div>
 	</div>
 	<h2><center>Location Nusa Penida</center></h2>
-	<div id="map"></div>
-	<script>
-				function initMap() {
-					var dps = {lat: -8.674623, lng: 115.546488};
-					var map = new google.maps.Map(document.getElementById('map'), {
-						zoom: 15,
-						center: dps
+	<div id="mypeta"></div>
+	<script type="text/javascript">
+			var markers = [
+				['Kelingking Beach',-8.752661, 115.471887],
+				['Crystal Bay Nusa Penida',-8.715547, 115.459156],
+				['Broken Beach Nusa Penida Bali',-8.732439, 115.451203]
+		];
+
+		function loadpeta(){
+			//membuat peta sederhana
+			var mapOption ={
+				mapTypeId : google.maps.mapTypeId.ROADMAP,
+			}
+			var map = new google.maps.Map(document.getElementById("mypeta"), mapOption);
+			var bounds = new google.maps.LatLngBounds();
+			var info = new google.maps.InfoWindow();
+			var titik, i;
+
+			for(i=0; i< markers.length; i++){
+					//mebuat makers
+					pos = new google.maps.LatLng(markers[i][1],markers[i][2]);
+					bounds.extend(pos);
+					titik = new google.maps.Marker({
+						position : pos,
+						map : map
 					});
-					var marker = new google.maps.Marker({
-						position: dps,
-						map: map
-					});
+					google.maps.event.addListener(titik, 'click', (function(titik,i){
+						return function(){
+							info.setContent(markers[i][0]);
+							info.open(map,titik);
+						}
+					})(titik,i));
 				}
-			</script>
-			<script async defer
-			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7MbYys7PWpzyY9xQcwlW88styrWjH-JM&callback=initMap">
-	</script>
+				map.fitBounds(bounds);
+		}
+		google.maps.event.addDomListener(window,loadpeta);
+
+		</script>
+			
 </div>
 @endsection
 
