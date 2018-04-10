@@ -40,6 +40,10 @@ Route::view('/payment-user', 'dashboard-user.dashboard-user')->name('dashboard-u
 Route::view('/home-user', 'dashboard-user.cek-booking-user')->name('cek-booking-user');
 Route::view('/rating-user', 'dashboard-user.rating-user')->name('rating-user');
 
-Route::get('/booking', function () {
+/*Route::get('/booking', function () {
     return view('bookingnow');
-})->middleware('auth');
+})->middleware('auth');*/
+
+//Route::get('/booking','BookingController@index')->middleware('auth');
+Route::get('/booking','BookingController@create')->middleware('auth');
+Route::post('/booking','BookingController@store')->middleware('auth');
