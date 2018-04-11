@@ -21,12 +21,14 @@
                 <input type="hidden" name="id_user" value="{{ Auth::user()->id}}">
                 <input type="hidden" name="booking_no" value="{{ rand() }}">
             </div>
+
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><i class="fas fa-phone"></i></span>
                 </div>
                 <input type="text" name="telp" class="form-control" placeholder="Phone Number" aria-label="phone" aria-describedby="basic-addon1">
             </div>
+
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <label class="input-group-text" for="inputGroupSelect01">Paket</label>
@@ -40,6 +42,7 @@
                     
                 </select>
             </div>
+
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <label class="input-group-text" for="inputGroupSelect01">Daily</label>
