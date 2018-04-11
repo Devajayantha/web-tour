@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Booking;
+use App\Paket;
+use App\Subpaket;
+use Session;
 use Illuminate\Http\Request;
-use App\Subsribe;
 
-class SubscribeController extends Controller
+class BookingController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -24,8 +27,10 @@ class SubscribeController extends Controller
      */
     public function create()
     {
-        $subsribe = Subsribe::all();
-        return view('/', compact('/'));
+        $booking=Booking::all();
+        $paket = Paket::all();
+        $subpaket= Subpaket::all();
+        return view('bookingnow', compact('booking', 'paket','subpaket'));
     }
 
     /**
@@ -36,30 +41,39 @@ class SubscribeController extends Controller
      */
     public function store(Request $request)
     {
-        $subsribe = new Subsribe();
-        $subsribe->email = $request->email;
-        $subsribe->save();
-        return redirect ('/');
+        $booking= new Booking();
+        $booking->booking_no = $request->booking_no;
+        $booking->id_user = $request->id_user;
+        $booking->telp = $request->telp;
+        $booking->id_paket = $request->id_paket;
+        $booking->id_subpaket = $request->id_subpaket;
+        $booking->person = $request->person;
+        $booking->departure = $request->departure;
+        $booking->amount = $request->amount;
+        $booking->save();
+        return redirect()->back()->with('openModal', 'true');
+        
+
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Booking  $booking
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Booking $booking)
     {
-        //
+        
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Booking  $booking
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Booking $booking)
     {
         //
     }
@@ -68,10 +82,10 @@ class SubscribeController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Booking  $booking
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Booking $booking)
     {
         //
     }
@@ -79,10 +93,10 @@ class SubscribeController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Booking  $booking
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Booking $booking)
     {
         //
     }

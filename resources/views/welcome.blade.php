@@ -196,12 +196,15 @@
                     <div class="text-subsribe">
                         <h2>Subsribe to Our newsletter</h2>
                         <p>Sign up here to get the lastest news,updates and spesial promo in Penida Trip delivered directly to your inbox</p>
+                        <form action="/" method="post">
+                            {{csrf_field()}}
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="submit your email" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <input type="text" class="form-control"name="email" placeholder="submit your email" aria-label="Recipient's username" aria-describedby="basic-addon2">
                             <div class="input-group-append">
-                                <button class="btn btn-primary far fa-envelope" type="button"></button>
+                                <button class="submit btn btn-primary far fa-envelope" type="submit"></button>
                             </div>
                         </div>
+                        </form>
                     </div>
                 </div>
                 <div class="col-md-5 col-sm-12">
