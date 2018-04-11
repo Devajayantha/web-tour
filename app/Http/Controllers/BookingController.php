@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use App\Booking;
 use App\Paket;
 use App\Subpaket;
+use App\detpakets;
 use Session;
+use DB;
 use Illuminate\Http\Request;
 
 class BookingController extends Controller
@@ -17,7 +19,7 @@ class BookingController extends Controller
      */
     public function index()
     {
-        //
+        
     }
 
     /**
@@ -41,6 +43,10 @@ class BookingController extends Controller
      */
     public function store(Request $request)
     {
+        $validatedData = $request->validate([
+            'telp' => 'required',
+        ]);
+        
         $booking= new Booking();
         $booking->booking_no = $request->booking_no;
         $booking->id_user = $request->id_user;
