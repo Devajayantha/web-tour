@@ -98,24 +98,9 @@
 		  </tbody>
 		</table>
 		<h2><center>Location Nusa Penida</center></h2>
-		<div id="map"></div>
-		<script>
-					function initMap() {
-						var dps = {lat: -8.732204, lng: 115.450929};
-						var map = new google.maps.Map(document.getElementById('map'), {
-							zoom: 15,
-							center: dps
-						});
-						var marker = new google.maps.Marker({
-							position: dps,
-							map: map
-						});
-					}
-
-				</script>
-				<script async defer
-				src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7MbYys7PWpzyY9xQcwlW88styrWjH-JM&callback=initMap">
-		</script>
+		<div id="map_wrapper">
+			<div id="nusapenida-hd" class="mapping"></div>
+	</div>
 	</div>
 </div>
 
