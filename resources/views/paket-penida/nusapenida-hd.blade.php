@@ -97,10 +97,10 @@
 		    </tr>
 		  </tbody>
 		</table>
-		<h2><center>Location Nusa Penida</center></h2>
+		<h2><center>The Tourist Attraction</center></h2>
 		<div id="map_wrapper">
 			<div id="nusapenida-hd" class="mapping"></div>
-	</div>
+		</div>
 	</div>
 </div>
 

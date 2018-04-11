@@ -70,24 +70,6 @@
 	    </div>
 	  </div>
 	</div>
-	<h2><center>Location Lembongan</center></h2>
-	<div id="map"></div>
-	<script>
-		function initMap() {
-			var dps = {lat: -8.6926734, lng: 115.4510021};
-			var map = new google.maps.Map(document.getElementById('map'), {
-				zoom: 15,
-				center: dps
-			});
-			var marker = new google.maps.Marker({
-				position: dps,
-				map: map
-			});
-		}
-		</script>
-		<script async defer
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7MbYys7PWpzyY9xQcwlW88styrWjH-JM&callback=initMap">
-		</script>
 </div>
 @endsection
 

@@ -22,11 +22,12 @@
 	<div class="container">
 		<h3>Tujuan Tour</h3>
 			<ul>
-				<li>Broken Beach</li>
-				<li>Angel Billabong</li>
-				<li>Kelingking Beach</li>
-				<li>Pohon Cinta (Love Tree)</li>
-				<li>Crystal Bay Beach</li>
+				<li>Mushroom Bay Beach</li>
+				<li>Devil Tears Beach</li>
+				<li>Yellow Bridge</li>
+				<li>Secret Beach</li>
+				<li>Blue Langoon</li>
+				<li>Mangrove Forest</li>
 			</ul>
 	</div>
 </div>
@@ -205,6 +206,10 @@
 			  </tbody>
 			</table>
 		  </div>
+		</div>
+		<h2><center>The Tourist Attraction</center></h2>
+		<div id="map_wrapper">
+			<div id="lembongan-3d2n" class="mapping"></div>
 		</div>
 	</div>
 </div>

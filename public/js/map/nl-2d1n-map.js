@@ -13,28 +13,49 @@ function initialize() {
     };
                     
     // Display a map on the page
-    map = new google.maps.Map(document.getElementById("nusapenida-hd"), mapOptions);
+    map = new google.maps.Map(document.getElementById("lembongan-2d1n"), mapOptions);
     map.setTilt(45);
         
     // Multiple Markers
     var markers = [
-        ['London Eye, London', -8.7153088,115.4547143],
-        ['Palace of Westminster, London', -8.7327633,115.449248],
-        ['Love Tree, London', -8.6824984,115.5136637]
+        ['Mushroom Bay Beach, Nusa Lembongan', -8.6821941,115.4314241],
+        ['Yellow Bridge, Nusa Lembongan', -8.6941269,115.4487418],
+        ['Devil Tears, Nusa Lembongan', -8.690743,115.4271795],
+        ['Bakau Forest Lembongan, Nusa Lembongan', -8.6671404,115.465806],
+        ['Blue Lagoon, Nusa Lembongan', -8.7076739,115.4364864],
+        ['Secret Beach, Nusa Ceningan', -8.7079528,115.4399747],
+        ['Ceningan Snorkling, Nusa Ceningan', -8.6989283,115.4471067]
+
     ];
                         
     // Info Window Content
     var infoWindowContent = [
         ['<div class="info_content">' +
-        '<h3>London Eye</h3>' +
-        '<p>The London Eye is a giant Ferris wheel situated on the banks of the River Thames. The entire structure is 135 metres (443 ft) tall and the wheel has a diameter of 120 metres (394 ft).</p>' +        '</div>'],
+        '<h3>Mushroom Bay Beach</h3>' +
+        '<p> Harbour Nusa Lembongan. Located in Jungut Batu Village. That Famous Village in Lembongan.</p>' +        '</div>'],
         ['<div class="info_content">' +
-        '<h3>Palace of Westminster</h3>' +
-        '<p>The Palace of Westminster is the meeting place of the House of Commons and the House of Lords, the two houses of the Parliament of the United Kingdom. Commonly known as the Houses of Parliament after its tenants.</p>' +
+        '<h3>Yellow Bridge</h3>' +
+        '<p>Relation Nusa Lembongan and Nusa Ceningan</p>' +
         '</div>'],
         ['<div class="info_content">' +
-        '<h3>Palace of Westminster</h3>' +
-        '<p>The Palace of Westminster is the meeting place of the House of Commons and the House of Lords, the two houses of the Parliament of the United Kingdom. Commonly known as the Houses of Parliament after its tenants.</p>' +
+        '<h3>Devil Tears</h3>' +
+        '<p>Position Near Atuh Beach Located in Pejukutan Village.</p>' +
+        '</div>'],
+        ['<div class="info_content">' +
+        '<h3>Bakau Forest Lembongan </h3>' +
+        '<p>Position Near Atuh Beach Located in Pejukutan Village.</p>' +
+        '</div>'],
+        ['<div class="info_content">' +
+        '<h3>Blue Lagoon</h3>' +
+        '<p>Position Near Atuh Beach Located in Pejukutan Village.</p>' +
+        '</div>'],
+        ['<div class="info_content">' +
+        '<h3>Secret Beach</h3>' +
+        '<p>Position Near Atuh Beach Located in Pejukutan Village.</p>' +
+        '</div>'],
+        ['<div class="info_content">' +
+        '<h3>Ceningan Snorkling</h3>' +
+        '<p>Position Near Atuh Beach Located in Pejukutan Village.</p>' +
         '</div>']
     ];
         

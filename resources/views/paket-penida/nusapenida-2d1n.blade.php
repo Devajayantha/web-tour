@@ -23,16 +23,12 @@
 	<div class="container">
 		<h3>Tujuan Tour</h3>
 			<ul>
-				<li>Atuh Cliff (Bukit Atuh)</li>
 				<li>Atuh Beach (Pantai Atuh)</li>
-				<li>Pulau Seribu/Raja Lima</li>
 				<li>Rumah Pohon (Molenteng)</li>
 				<li>Bukit Teletubies</li>
-				<li>Crystal Bay Beach (Sunset Panorama)</li>
-				<li>Angel Billabong</li>
-				<li>Kelingking Beach</li>
-				<li>Pohon Cinta (Love Tree)</li>
 				<li>Crystal Bay Beach</li>
+				<li>Kelingking Beach</li>
+				<li>Broken Beach /Pasih Uug</li>
 			</ul>
 	</div>
 </div>
@@ -82,15 +78,11 @@
 			    </tr>
 			    <tr>
 			      <th scope="row">09.00</th>
-			      <td>tiba di hotel</td>
+			      <td>tiba di penginapan</td>
 			    </tr>
 			    <tr>
-			      <th scope="row">09.30</th>
+			      <th scope="row">10.30</th>
 			      <td>tiba di spot pertama rumah pohon</td>
-			    </tr>
-			    <tr>
-			      <th scope="row">12.00</th>
-			      <td>tiba di pulau seribu</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">13.00</th>
@@ -101,16 +93,12 @@
 			      <td>tiba di atuh beach</td>
 			    </tr>
 			    <tr>
-			      <th scope="row">15.00</th>
+			      <th scope="row">16.00</th>
 			      <td>tiba di bukit teletubies</td>
 			    </tr>
 			    <tr>
-			      <th scope="row">16.00</th>
-			      <td>tiba di crystal bay beach</td>
-			    </tr>
-			    <tr>
 			      <th scope="row">18.30</th>
-			      <td>kembali ke hotel</td>
+			      <td>kembali ke penginapan</td>
 			    </tr>
 			  </tbody>
 			</table>
@@ -130,23 +118,23 @@
 			    </tr>
 			    <tr>
 			      <th scope="row">08.30</th>
-			      <td>berangkat dari hotel</td>
+			      <td>berangkat dari penginapan</td>
 			    </tr>
 			    <tr>
-			      <th scope="row">09.30</th>
+			      <th scope="row">10.30</th>
 			      <td>tiba di broken beach/pasih uug</td>
 			    </tr>
 			    <tr>
-			      <th scope="row">12.00</th>
-			      <td>iba di pohon cinta</td>
-			    </tr>
-			    <tr>
-			      <th scope="row">13.00</th>
+			      <th scope="row">12.30</th>
 			      <td>diantarkan ke lokasi makan siang</td>
 			    </tr>
 			    <tr>
-			      <th scope="row">14.00</th>
+			      <th scope="row">13.00</th>
 			      <td>tiba di kelingking beach</td>
+					</tr>
+			    <tr>
+			      <th scope="row">14.30</th>
+			      <td>tiba di Crystal Bay Beach</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">15.00</th>
@@ -163,6 +151,10 @@
 			  </tbody>
 			</table>
 		  </div>
+		</div>
+		<h2><center>The Tourist Attraction</center></h2>
+		<div id="map_wrapper">
+			<div id="nusapenida-2d1n" class="mapping"></div>
 		</div>
 	</div>
 </div>

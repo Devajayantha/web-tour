@@ -26,6 +26,7 @@
 				<li>Mushroom Bay Beach</li>
 				<li>Yellow Brigde</li>
 				<li>Bakau Forest Lembongan</li>
+				<li>Devil Tears</li>
 			</ul>
 	</div>
 </div>
@@ -70,21 +71,25 @@
 		      <td>tiba di tempat wisata pertama Mushroom Bay Beach</td>
 		    </tr>
 		    <tr>
-		      <th scope="row">12.00</th>
+		      <th scope="row">10.30</th>
 		      <td>tiba di yellow bridge</td>
 		    </tr>
 		    <tr>
-		      <th scope="row">13.00</th>
+		      <th scope="row">11.00</th>
 		      <td>diantarkan ke lokasi makan siang</td>
 		    </tr>
 		    <tr>
-		      <th scope="row">14.00</th>
+		      <th scope="row">12.00</th>
 		      <td>tiba di hutan bakau dan menikmati menggunakan perahu</td>
 		    </tr>
 		    <tr>
-		      <th scope="row">15.00</th>
-		      <td> kembali ke dermaga</td>
-		    </tr>
+		      <th scope="row">13.30</th>
+		      <td>iiba di tebing devi tears untuk mengabadikan momen</td>
+				</tr>
+		    <tr>
+						<th scope="row">15.00</th>
+						<td> kembali ke dermaga</td>
+					</tr>
 		    <tr>
 		      <th scope="row">15.30</th>
 		      <td>kembali ke pantai sanur menggunakan speed boat</td>
@@ -95,6 +100,10 @@
 		    </tr>
 		  </tbody>
 		</table>
+		<h2><center>The Tourist Attraction</center></h2>
+		<div id="map_wrapper">
+			<div id="lembongan-hd" class="mapping"></div>
+		</div>
 	</div>
 </div>
 

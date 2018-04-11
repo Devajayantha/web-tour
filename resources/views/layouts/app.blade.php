@@ -92,7 +92,14 @@
         {{--  <script src="{{ asset('js/app.js') }}" defer></script>    --}}
     <script src="{{asset('js/app.js')}}"></script>
     <script src="{{asset('js/main.js')}}"></script>
-    <script type="text/javascript" src="{{asset('js/np-hd-map.js')}}"></script>
+
+    {{--paket google api maps  --}}
+    <script type="text/javascript" src="{{asset('js/map/np-hd-map.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/map/np-2d1n-map.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/map/np-3d2n-map.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/map/nl-hd-map.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/map/nl-2d1n-map.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/map/nl-3d2n-map.js')}}"></script>
 
     @if(Session::has('openModal'))
     <script type="text/javascript">

@@ -22,11 +22,17 @@
 	<div class="container">
 		<h3>Tujuan Tour</h3>
 			<ul>
+				<li>Atuh Beach</li>
 				<li>Broken Beach</li>
 				<li>Angel Billabong</li>
 				<li>Kelingking Beach</li>
-				<li>Pohon Cinta (Love Tree)</li>
+				<li>Teletubis Hills</li>
+				<li>Tree House</li>
+				<li>Tembeling Beach and Forest</li>
+				<li>Paluang Cliff</li>
 				<li>Crystal Bay Beach</li>
+				<li>Manta Point</li>
+				
 			</ul>
 	</div>
 </div>
@@ -77,15 +83,11 @@
 			    </tr>
 			    <tr>
 			      <th scope="row">09.00</th>
-			      <td>tiba di hotel</td>
+			      <td>tiba di penginapan</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">09.30</th>
 			      <td>tiba di spot pertama rumah pohon</td>
-			    </tr>
-			    <tr>
-			      <th scope="row">12.00</th>
-			      <td>tiba di pulau seribu</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">13.00</th>
@@ -97,15 +99,15 @@
 			    </tr>
 			    <tr>
 			      <th scope="row">15.00</th>
-			      <td>tiba di bukit teletubies</td>
+			      <td>tiba di tree house</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">16.00</th>
-			      <td>tiba di crystal bay beach</td>
+			      <td>tiba di bukit teletubis</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">18.30</th>
-			      <td>kembali ke hotel</td>
+			      <td>kembali ke penginapan</td>
 			    </tr>
 			  </tbody>
 			</table>
@@ -125,15 +127,15 @@
 			    </tr>
 			    <tr>
 			      <th scope="row">08.30</th>
-			      <td>berangkat dari hotel</td>
+			      <td>berangkat dari penginapan</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">09.30</th>
 			      <td>tiba di broken beach/pasih uug</td>
 			    </tr>
 			    <tr>
-			      <th scope="row">12.00</th>
-			      <td>iba di pohon cinta</td>
+			      <th scope="row">11.00</th>
+			      <td>Tiba di Angel Bilabong</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">13.00</th>
@@ -145,15 +147,15 @@
 			    </tr>
 			    <tr>
 			      <th scope="row">15.00</th>
-			      <td>kembali ke dermaga</td>
-			    </tr>
-			    <tr>
-			      <th scope="row">15.30</th>
-			      <td>kembali ke pantai sanur menggunakan speed boat</td>
+			      <td>Tiba di Paluang Cliff</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">16.30</th>
-			      <td>tiba di pantai sanur</td>
+			      <td>Tiba di Crystal Bay Beach</td>
+			    </tr>
+			    <tr>
+			      <th scope="row">17.30</th>
+			      <td>Kembali ke penginapan</td>
 			    </tr>
 			  </tbody>
 			</table>
@@ -173,26 +175,18 @@
 			    </tr>
 			    <tr>
 			      <th scope="row">08.30</th>
-			      <td>berangkat dari hotel</td>
+			      <td>berangkat dari penginapan</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">09.30</th>
-			      <td>snorkeling (pilih 3 dari lokasi berikut)
-					<ul>
-						<li>crystal bay beach</li>
-						<li>gamal bay beach</li>
-						<li>wall point</li>
-						<li>bhuda temple</li>
-						<li>manta bay (min. 5 orang)</li>
-					</ul>
-			      </td>
+			      <td>snorkeling Manta Point</td>
 			    </tr>
-			      <th scope="row">14.00</th>
+			      <th scope="row">13.00</th>
 			      <td>diantarkan ke lokasi makan siang</td>
 			    </tr>
 			    <tr>
-			      <th scope="row">15.00</th>
-			      <td>kembali ke dermaga</td>
+			      <th scope="row">14.00</th>
+			      <td>Tiba di Tembeling beach and Forest</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">15.30</th>
@@ -205,6 +199,10 @@
 			  </tbody>
 			</table>
 		  </div>
+		</div>
+		<h2><center>The Tourist Attraction</center></h2>
+		<div id="map_wrapper">
+			<div id="nusapenida-3d2n" class="mapping"></div>
 		</div>
 	</div>
 </div>

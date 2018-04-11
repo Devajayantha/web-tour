@@ -26,7 +26,7 @@
 				<li>Devil Tears Point</li>
 				<li>Yellow Bridge</li>
 				<li>Secrets Beach</li>
-				<li>Sunset Jungut Batu</li>
+				<li>Blue Lagoon</li>
 				<li>Seaweed farm</li>
 				<li>Snorkling </li>
 			</ul>
@@ -155,6 +155,10 @@
 			  </tbody>
 			</table>
 		  </div>
+		</div>
+		<h2><center>The Tourist Attraction</center></h2>
+		<div id="map_wrapper">
+			<div id="lembongan-2d1n" class="mapping"></div>
 		</div>
 	</div>
 </div>
