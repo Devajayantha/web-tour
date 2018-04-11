@@ -19,10 +19,8 @@ class CreateBookingsTable extends Migration
             $table->integer('id_user')->unsigned();
             $table->foreign('id_user')->references('id')->on('users');
             $table->string('telp');
-            $table->integer('id_paket')->unsigned();
-            $table->foreign('id_paket')->references('id')->on('pakets');
-            $table->integer('id_subpaket')->unsigned();
-            $table->foreign('id_subpaket')->references('id')->on('subpakets');
+            $table->integer('id_detpaket')->unsigned();
+            $table->foreign('id_detpaket')->references('id')->on('detpakets');
             $table->integer('person');
             $table->date('departure');
             $table->integer('amount')->nullable();

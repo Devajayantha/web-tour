@@ -19,7 +19,7 @@ class BookingController extends Controller
      */
     public function index()
     {
-        
+        //
     }
 
     /**
@@ -30,9 +30,8 @@ class BookingController extends Controller
     public function create()
     {
         $booking=Booking::all();
-        $paket = Paket::all();
-        $subpaket= Subpaket::all();
-        return view('bookingnow', compact('booking', 'paket','subpaket'));
+        $detpaket = detpakets::all();       
+        return view('bookingnow', compact('booking', 'detpaket'));
     }
 
     /**
@@ -51,11 +50,10 @@ class BookingController extends Controller
         $booking->booking_no = $request->booking_no;
         $booking->id_user = $request->id_user;
         $booking->telp = $request->telp;
-        $booking->id_paket = $request->id_paket;
-        $booking->id_subpaket = $request->id_subpaket;
+        $booking->id_detpaket = $request->id_detpaket;
         $booking->person = $request->person;
         $booking->departure = $request->departure;
-        $booking->amount = $request->amount;
+        $booking->amount = $booking->detpaket->price*$booking->person;
         $booking->save();
         return redirect()->back()->with('openModal', 'true');
         

@@ -33,28 +33,16 @@
                 <div class="input-group-prepend">
                     <label class="input-group-text" for="inputGroupSelect01">Paket</label>
                 </div>
-                <select class="custom-select" id="inputGroupSelect01" name="id_paket">
+                <select class="custom-select" id="inputGroupSelect01" name="id_detpaket">
                     <option selected>Choose...</option>
-                    @foreach ($paket as $p)
-                    <option value="{{$p->id}}">{{$p->name}}</option>
-                   
+                    @foreach ($detpaket as $dp)
+                    <option value="{{$dp->id}}">{{$dp->paket->name}} / {{$dp->subpaket->name}}</option>
                     @endforeach
                     
                 </select>
             </div>
-
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <label class="input-group-text" for="inputGroupSelect01">Daily</label>
-                </div>
-                <select class="custom-select" id="inputGroupSelect01" name="id_subpaket">
-                    <option selected>Choose...</option>
-                    @foreach ($subpaket as $sp)
-                    <option value="{{$sp->id}}">{{$sp->name}}</option>
-                    @endforeach
-                    
-                </select>
-            </div>
+            
+         
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <label class="input-group-text" for="inputGroupSelect01">Person</label>
@@ -71,6 +59,8 @@
                 </div>
                 <input type="date" class="form-control" placeholder="Departure" aria-label="phone" aria-describedby="basic-addon1" name="departure">
             </div>
+
+
             <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                 BOOKING NOW
             </button>  
