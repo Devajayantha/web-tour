@@ -38,6 +38,8 @@ Route::view('/nusa-lembongan/3d2n', 'paket-lembongan.lembongan-3d2n')->name('lem
 
 Route::view('/admin/home', 'dashboard-admin.home-admin')->name('admin-home');
 Route::view('/admin/broadcast', 'dashboard-admin.broadcast-admin')->name('admin-broadcast');
+Route::view('/admin/reminder', 'dashboard-admin.reminder-admin')->name('admin-reminder');
+Route::view('/admin/rating', 'dashboard-admin.rating-admin')->name('admin-rating');
 
 /*Route::get('/booking', function () {
     return view('bookingnow');

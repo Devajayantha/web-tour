@@ -60,13 +60,13 @@
                             <span>Reminder</span>
                         </a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="rating">
                             <i class="material-icons">star</i>
                             <span>Rating</span>
                         </a>
                     </li>
-                    <li  class="active">
+                    <li>
                         <a href="broadcast">
                             <i class="material-icons">speaker_notes</i>
                             <span>Broadcast</span>
@@ -86,27 +86,7 @@
 
     <section class="content">
         <div class="container-fluid">
-        <form>
-            <div class="form-group">
-                <label for="exampleFormControlInput1">Recipients</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="email@example.com">
-            </div>
-            <div class="form-group">
-                <label for="exampleFormControlInput1">Subject</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" rows="3" placeholder="Subject">
-            </div>
-            <div class="form-group">
-                <label for="exampleFormControlTextarea1">Message</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
-            </div>
-            <form>
-                <div class="form-group">
-                    <label for="exampleFormControlFile1">Input Picture</label>
-                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                </div>
-                </form>
-            <button type="submit" class="btn btn-primary mb-2">Broadcast</button>
-            </form>
+        <div style="font-size:30px;color:black">Rating</div><br>
         </div>
     </section>
 @endsection
