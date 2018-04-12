@@ -1,7 +1,7 @@
 jQuery(function($) {
     // Asynchronously Load the map API 
     var script = document.createElement('script');
-    script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCK4p58C2JCyvZdHbY14R8yF7Rybpeu3UM&callback=initialize";
+    script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCyZ0-Zb8oMUelQQv9q77aEJ0jeyXiaMY0&callback=initialize";
     document.body.appendChild(script);
 });
 
@@ -15,7 +15,6 @@ function initialize() {
     // Display a map on the page
     map = new google.maps.Map(document.getElementById("nusapenida-2d1n"), mapOptions);
     map.setTilt(45);
-        
     // Multiple Markers
     var markers = [
         ['Crystal Bay Beach, Nusa Penida', -8.7153141,115.4547143],

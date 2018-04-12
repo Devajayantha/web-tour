@@ -1,20 +1,16 @@
-jQuery(function($) {
-    // Asynchronously Load the map API 
-    var script = document.createElement('script');
-    script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBMrviyXzOSOZ-9QZggNeH3EQGvxhwzxAQ&callback=initialize";
-    document.body.appendChild(script);
-});
 
 function initialize() {
     var map;
     var bounds = new google.maps.LatLngBounds();
     var mapOptions = {
         mapTypeId: 'roadmap'
+        
     };
                     
     // Display a map on the page
     map = new google.maps.Map(document.getElementById("nusapenida-hd"), mapOptions);
     map.setTilt(45);
+    
         
     // Multiple Markers
     var markers = [

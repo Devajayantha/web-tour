@@ -94,13 +94,20 @@
     <script src="{{asset('js/main.js')}}"></script>
 
     {{--paket google api maps  --}}
+    <script>
+            jQuery(function($) {
+                // Asynchronously Load the map API 
+                var script = document.createElement('script');
+                script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCyZ0-Zb8oMUelQQv9q77aEJ0jeyXiaMY0&callback=initialize";
+                document.body.appendChild(script);
+            });
+    </script>
     <script type="text/javascript" src="{{asset('js/map/np-hd-map.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/map/np-2d1n-map.js')}}"></script>
-    <script type="text/javascript" src="{{asset('js/map/np-3d2n-map.js')}}"></script>
+{{--     <script type="text/javascript" src="{{asset('js/map/np-3d2n-map.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/map/nl-hd-map.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/map/nl-2d1n-map.js')}}"></script>
-    <script type="text/javascript" src="{{asset('js/map/nl-3d2n-map.js')}}"></script>
-
+    <script type="text/javascript" src="{{asset('js/map/nl-3d2n-map.js')}}"></script>  --}}
     @if(Session::has('openModal'))
     <script type="text/javascript">
         $(function() {

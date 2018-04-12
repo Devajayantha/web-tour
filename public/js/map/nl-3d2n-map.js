@@ -1,7 +1,7 @@
 jQuery(function($) {
     // Asynchronously Load the map API 
     var script = document.createElement('script');
-    script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCK4p58C2JCyvZdHbY14R8yF7Rybpeu3UM&callback=initialize";
+    script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCK4p58C2JCyvZdHbY14R8yF7Rybpeu3UM&libraries=places&sensor=false";
     document.body.appendChild(script);
 });
 
@@ -18,13 +18,13 @@ function initialize() {
         
     // Multiple Markers
     var markers = [
+        ['Ceningan Snorkling, Nusa Ceningan', -8.6989283,115.4471067],
+        ['Secret Beach, Nusa Ceningan', -8.7079528,115.4399747],
         ['Mushroom Bay Beach, Nusa Lembongan', -8.6821941,115.4314241],
         ['Yellow Bridge, Nusa Lembongan', -8.6941269,115.4487418],
         ['Devil Tears, Nusa Lembongan', -8.690743,115.4271795],
         ['Bakau Forest Lembongan, Nusa Lembongan', -8.6671404,115.465806],
-        ['Blue Lagoon, Nusa Lembongan', -8.7076739,115.4364864],
-        ['Secret Beach, Nusa Ceningan', -8.7079528,115.4399747],
-        ['Ceningan Snorkling, Nusa Ceningan', -8.6989283,115.4471067]
+        ['Blue Lagoon, Nusa Lembongan', -8.7076739,115.4364864]
 
     ];
                         
