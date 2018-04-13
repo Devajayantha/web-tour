@@ -48,7 +48,7 @@
                             <span>Home</span>
                         </a>
                     </li> -->
-                    <li class="active">
+                    <li>
                         <a href="home">
                             <i class="material-icons">home</i>
                             <span>Home</span>
@@ -60,7 +60,7 @@
                             <span>Reminder</span>
                         </a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="rating">
                             <i class="material-icons">star</i>
                             <span>Rating</span>
@@ -86,85 +86,7 @@
 
     <section class="content">
         <div class="container-fluid">
-        <div style="font-size:30px;color:black">Daftar Pemesanan</div><br>
-        <table class="table table-bordered">
-            <thead class="thead-dark">
-                <tr>
-                <th scope="col">No</th>
-                <th scope="col">ID</th>
-                <th scope="col">Paket</th>
-                <th scope="col">Sub-Paket</th>
-                <th scope="col">Personil</th>
-                <th scope="col">Total</th>
-                <th scope="col">Action</th>
-                <th scope="col">Validasi</th>
-                <th scope="col">Modal</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                <th scope="row">1</th>
-                <td>123456</td>
-                <td>Combo</td>
-                <td>Combo 1</td>
-                <td>10</td>
-                <td>IDR xxxxx</td>
-                <td>
-                <a class="btn btn-primary" href="#" role="button">Respon</a>
-                    <!-- If blm bayar
-                    Btn respon
-                    Else if sudah bayar 
-                    Btn lunas
-                    Else 
-                    Btn batal -->
-                </td>
-                <td><a class="btn btn-info" href="#" role="button">Validation</a></td>
-                <td><a class="btn btn-light" href="#" role="button">Cek Payment</a></td>
-                </tr>
-            </tbody>
-            <tbody>
-                <tr>
-                <th scope="row">2</th>
-                <td>109347</td>
-                <td>Spesial</td>
-                <td>Spesial 2</td>
-                <td>23</td>
-                <td>IDR xxxxx</td>
-                <td>
-                <a class="btn btn-danger" href="#" role="button">Failed</a>
-                    <!-- If blm bayar
-                    Btn respon
-                    Else if sudah bayar 
-                    Btn lunas
-                    Else 
-                    Btn batal -->
-                </td>
-                <td><a class="btn btn-info" href="#" role="button">Validation</a></td>
-                <td><a class="btn btn-light" href="#" role="button">Cek Payment</a></td>
-                </tr>
-            </tbody>
-            <tbody>
-                <tr>
-                <th scope="row">3</th>
-                <td>293889</td>
-                <td>Eksklusive</td>
-                <td>Eksklusive 1</td>
-                <td>2</td>
-                <td>IDR xxxxx</td>
-                <td>
-                <a class="btn btn-success" href="#" role="button">Paid Off</a>
-                    <!-- If blm bayar
-                    Btn respon
-                    Else if sudah bayar 
-                    Btn lunas
-                    Else 
-                    Btn batal -->
-                </td>
-                <td><a class="btn btn-info" href="#" role="button">Validation</a></td>
-                <td><a class="btn btn-light" href="#" role="button">Cek Payment</a></td>
-                </tr>
-            </tbody>
-        </table>
+        <div style="font-size:30px;color:black">Rating</div><br>
         </div>
     </section>
 @endsection

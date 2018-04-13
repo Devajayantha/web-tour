@@ -49,9 +49,9 @@
                         </a>
                     </li>
                     <li>
-                        <a href="pemesanan">
-                            <i class="material-icons">attach_file</i>
-                            <span>Pemesanan</span>
+                        <a href="home">
+                            <i class="material-icons">home</i>
+                            <span>Home</span>
                         </a>
                     </li>
                     <li>
@@ -61,15 +61,9 @@
                         </a>
                     </li>
                     <li>
-                        <a href="promosi">
-                            <i class="material-icons">widgets</i>
-                            <span>Promosi</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="tour">
-                            <i class="material-icons">swap_calls</i>
-                            <span>Tour</span>
+                        <a href="rating">
+                            <i class="material-icons">star</i>
+                            <span>Rating</span>
                         </a>
                     </li>
                     <li  class="active">
