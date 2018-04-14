@@ -1,6 +1,6 @@
 @extends('layouts.app-admin')
 
-@section('broadcast.admin')
+@section('rating.admin')
 <div class="page-loader-wrapper">
         <div class="loader">
             <div class="preloader">
@@ -87,6 +87,21 @@
     <section class="content">
         <div class="container-fluid">
         <div style="font-size:30px;color:black">Rating</div><br>
+        <table class="table table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                <th scope="col">No</th>
+                <th scope="col">Email</th>
+                <th scope="col">Rating</th>
+                <th scope="col">Pesan</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                
+                </tr>
+            </tbody>
+        </table>
         </div>
     </section>
 @endsection

@@ -1,6 +1,6 @@
 @extends('layouts.app-admin')
 
-@section('broadcast.admin')
+@section('reminder.admin')
 <div class="page-loader-wrapper">
         <div class="loader">
             <div class="preloader">

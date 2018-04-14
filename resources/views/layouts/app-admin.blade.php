@@ -47,6 +47,12 @@
     <div>
         @yield('broadcast.admin')
     </div>
+    <div>
+        @yield('rating.admin')
+    </div>
+    <div>
+        @yield('reminder.admin')
+    </div>
 
 
     <script src="{{asset('js/app.js')}}"></script>
