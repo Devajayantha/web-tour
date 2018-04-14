@@ -42,12 +42,12 @@
             <div class="menu">
                 <ul class="list">
                     <li class="header">MAIN NAVIGATION</li>
-                    <!-- <li>
+                    <li>
                         <a href="dashboard">
                             <i class="material-icons">home</i>
                             <span>Home</span>
                         </a>
-                    </li> -->
+                    </li>
                     <li>
                         <a href="home">
                             <i class="material-icons">home</i>

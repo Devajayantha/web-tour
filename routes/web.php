@@ -36,11 +36,15 @@ Route::view('/nusa-lembongan/halfday', 'paket-lembongan.lembongan-hd')->name('le
 Route::view('/nusa-lembongan/2d1n', 'paket-lembongan.lembongan-2d1n')->name('lembongan-2d1n');
 Route::view('/nusa-lembongan/3d2n', 'paket-lembongan.lembongan-3d2n')->name('lembongan-3d2n');
 
+// route admin  dashboard
 Route::view('/admin/home', 'dashboard-admin.home-admin')->name('admin-home');
 Route::view('/admin/broadcast', 'dashboard-admin.broadcast-admin')->name('admin-broadcast');
 Route::view('/admin/reminder', 'dashboard-admin.reminder-admin')->name('admin-reminder');
 Route::view('/admin/rating', 'dashboard-admin.rating-admin')->name('admin-rating');
 
+
+// route user dashboard
+Route::view('/user/home', 'dashboard-user.home-user')->name('user-home');
 /*Route::get('/booking', function () {
     return view('bookingnow');
 })->middleware('auth');*/

@@ -158,17 +158,6 @@
       </div>
       <div class="modal-body">
         <div class="container-fluid">
-            <div class="card-container">
-                <div class="amount">
-                    <div class="amount-title pull-left">
-                        <span class="text-amount-title">Amount</span>
-                    </div>
-                    <div class="amount-content pull-right">
-                        <span class="text-amount-rp">Rp</span>
-                        <span class="text-amount-amount">400,000</span>
-                    </div>
-                </div>
-              </div>
               <div class="card-container">
                 <div class="card-title">Nomor Rekening</div>
                 <span class="text-no-rek">123456789</span>
