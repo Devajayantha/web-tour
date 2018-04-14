@@ -23,6 +23,12 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::view('/paket', 'paket')->name('paket-tour');
 Route::view('/contact', 'contact')->name('contact');
 Route::view('/gallery', 'gallery')->name('gallery');
+Route::get('nusapenida', function(){
+    return view('nusapenida');
+})->name('nusapenida');
+Route::get('nusalembongan', function(){
+    return view('nusalembongan');
+})->name('nusalembongan');
 Route::view('/nusa-penida', 'nusapenida')->name('nusapenida');
 Route::view('/nusa-lembongan', 'nusalembongan')->name('nusalembongan');
 

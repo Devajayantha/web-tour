@@ -46,7 +46,7 @@
                                     document.getElementById('logout-form').submit();">
                                      {{ __('Logout') }}
                                 </a>
-                                <a class="dropdown-item" href="{{ url('/user/home') }}">
+                                <a class="dropdown-item" href="{{ url('user/home') }}">
                                     Dashboard
                                 </a>
             
@@ -89,7 +89,7 @@
                     <div class="col-md-8 col-sm-12">
                         <div class="card card-booking ">
                             <div class="card-body">
-                                <form action="" class="form-cek ">
+                                <form method="post" id="myForm" onsubmit="return submitForm()"">
                                     <div class="row">
                                     <div class="input-group mb-3 col-md-4 col-sm-6">
                                         <div class="input-group-prepend">
@@ -97,7 +97,7 @@
                                                     <i class="fas fa-clipboard-check"></i>
                                             </label>
                                         </div>
-                                        <select class="custom-select" id="inputGroupSelect01">
+                                        <select class="custom-select" id="inputGroupSelect01" name="action">
                                             <option selected>Pilih Paket..</option>
                                             <option value="1">Nusa Penida</option>
                                             <option value="2">Nusa Lembongan</option>
@@ -117,7 +117,7 @@
                                         </select>
                                     </div>
                                     <div class="col-md-4 col-sm-4">
-                                        <button type="button" class="btn btn-info btn-block">Search</button>
+                                        <button type="submit" class="btn btn-info btn-block">Search</button>
                                     </div>
                                     </div>
                                 </form>
@@ -237,5 +237,6 @@
 
         <script src="{{asset('js/app.js')}}"></script>
         <script src="{{asset('js/main.js')}}"></script>
+        <script src="{{asset('js/search.js')}}"></script>
     </body>
 </html>
