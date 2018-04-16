@@ -26,7 +26,12 @@
                 <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><i class="fas fa-phone"></i></span>
                 </div>
-                <input type="text" name="telp" class="form-control" placeholder="Phone Number" aria-label="phone" aria-describedby="basic-addon1">
+                <input type="text" name="telp" class="form-control{{ $errors->has('telp') ? ' is-invalid' : '' }} " required autofocus" placeholder="Phone Number" aria-label="phone" aria-describedby="basic-addon1">
+                @if ($errors->has('telp'))
+                    <span class="invalid-feedback">
+                        <strong>{{ $errors->first('telp') }}</strong>
+                    </span>
+                @endif
             </div>
 
             <div class="input-group mb-3">
@@ -57,11 +62,16 @@
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="basic-addon1"><i class="far fa-calendar-alt"></i></span>
                 </div>
-                <input type="date" class="form-control" placeholder="Departure" aria-label="phone" aria-describedby="basic-addon1" name="departure">
+                <input type="date" class="form-control{{ $errors->has('telp') ? ' is-invalid' : '' }} " required autofocus" placeholder="Departure" aria-label="phone" aria-describedby="basic-addon1" name="departure">
+                @if ($errors->has('departure'))
+                    <span class="invalid-feedback">
+                        <strong>{{ $errors->first('departure') }}</strong>
+                    </span>
+                @endif
             </div>
 
 
-            <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            <button type="submit" class="btn btn-primary">
                 BOOKING NOW
             </button>  
         </form>
