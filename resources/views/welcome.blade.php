@@ -17,7 +17,7 @@
 
         <!-- Fonts -->
         {{--  <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">  --}}
-
+        <meta name="csrf-token" content="{{ csrf_token() }}">
     </head>
     <body>
         <nav class="navbar">
@@ -89,40 +89,73 @@
                     <div class="col-md-8 col-sm-12">
                         <div class="card card-booking ">
                             <div class="card-body">
-                                <form method="post" id="myForm" onsubmit="return submitForm()"">
+                                <script>
+                                    function submitForm() {
+                                        var selectedOption = $('#inputGroupSelect01').val();
+                                        var selectedOption2 = $('#inputGroupSelect02').val();
+                                        var url = "";
+                                        if (selectedOption == '1') {
+                                            url = "{{ route('nusapenida')}}";
+                                            if (selectedOption2 == '1'){
+                                                url = "{{ route('nusapenida-hd')}}";
+                                            }else if (selectedOption2 == '2'){
+                                                url = "{{ route('nusapenida-2d1n')}}";
+                                            }else{
+                                                url = "{{ route('nusapenida-3d2n')}}";
+                                            }
+                                        } else if (selectedOption == '2') {
+                                            url = "{{ route('nusalembongan')}}";
+                                            if (selectedOption2 == '1'){
+                                                url = "{{ route('lembongan-hd')}}";
+                                            }else if(selectedOption2 == '2'){
+                                                url = "{{ route('lembongan-2d1n')}}";
+                                            }else{
+                                                url = "{{ route('lembongan-3d2n')}}";
+                                            }
+                                        }else{
+                                            alert ("False");
+                                        }
+
+                                        //console.log(url);
+                                        $('form#myForm').attr('action', url);
+                                        return true;
+                                    }
+                                </script>
+                                <form method="get" id="myForm" onsubmit="return submitForm()">
+                                    {{ csrf_field() }}
                                     <div class="row">
-                                    <div class="input-group mb-3 col-md-4 col-sm-6">
-                                        <div class="input-group-prepend">
-                                            <label class="input-group-text" for="inputGroupSelect01">
+                                        <div class="input-group mb-3 col-md-4 col-sm-6">
+                                            <div class="input-group-prepend">
+                                                <label class="input-group-text" for="inputGroupSelect01">
                                                     <i class="fas fa-clipboard-check"></i>
-                                            </label>
+                                                </label>
+                                            </div>
+                                            <select class="custom-select" id="inputGroupSelect01" name="action">
+                                                <option selected>Pilih Paket..</option>
+                                                <option value="1">Nusa Penida</option>
+                                                <option value="2">Nusa Lembongan</option>
+                                            </select>
                                         </div>
-                                        <select class="custom-select" id="inputGroupSelect01" name="action">
-                                            <option selected>Pilih Paket..</option>
-                                            <option value="1">Nusa Penida</option>
-                                            <option value="2">Nusa Lembongan</option>
-                                        </select>
-                                    </div>
-                                    <div class="input-group mb-3 col-md-4 col-sm-6">
-                                        <div class="input-group-prepend">
-                                            <label class="input-group-text" for="inputGroupSelect01">
-                                                <i class="fas fa-list-ol"></i>
-                                            </label>
+                                        <div class="input-group mb-3 col-md-4 col-sm-6">
+                                            <div class="input-group-prepend">
+                                                <label class="input-group-text" for="inputGroupSelect01">
+                                                    <i class="fas fa-list-ol"></i>
+                                                </label>
+                                            </div>
+                                            <select class="custom-select" id="inputGroupSelect02" name="action">
+                                                <option selected>Pilih Tipe Paket ..</option>
+                                                <option value="1">half day</option>
+                                                <option value="2">2 day 1 dight</option>
+                                                <option value="3">3 day 2 night</option>
+                                            </select>
                                         </div>
-                                        <select class="custom-select" id="inputGroupSelect01">
-                                            <option selected>Pilih Tipe Paket ..</option>
-                                            <option value="1">half day</option>
-                                            <option value="2">2 day 1 dight</option>
-                                            <option value="3">3 day 2 night</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-4 col-sm-4">
-                                        <button type="submit" class="btn btn-info btn-block">Search</button>
-                                    </div>
+                                        <div class="col-md-4 col-sm-4">
+                                            <button type="submit" class="btn btn-info btn-block">Search</button>
+                                        </div>
                                     </div>
                                 </form>
                             </div>
-                        </div>
+                        </div>  
                     </div>    
                 <div class="col-md-2"></div>  
 

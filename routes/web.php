@@ -23,21 +23,45 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::view('/paket', 'paket')->name('paket-tour');
 Route::view('/contact', 'contact')->name('contact');
 Route::view('/gallery', 'gallery')->name('gallery');
+
+// for search get //////////////////////////////////////////////////////////////////////
 Route::get('nusapenida', function(){
     return view('nusapenida');
 })->name('nusapenida');
 Route::get('nusalembongan', function(){
     return view('nusalembongan');
 })->name('nusalembongan');
+Route::get('nusa-penida/halfday', function(){
+    return view('paket-penida.nusapenida-hd');
+})->name('nusapenida-hd');
+Route::get('nusa-penida/2d1n', function(){
+    return view('paket-penida.nusapenida-2d1n');
+})->name('nusapenida-2d1n');
+Route::get('nusa-penida/3d2n', function(){
+    return view('paket-penida.nusapenida-3d2n');
+})->name('nusapenida-3d2n');
+////////////////////////
+Route::get('nusa-lembongan/halfday', function(){
+    return view('paket-lembongan.lembongan-hd');
+})->name('lembongan-hd');
+Route::get('nusa-lembongan/2d1n', function(){
+    return view('paket-lembongan.lembongan-2d1n');
+})->name('lembongan-2d1n');
+Route::get('nusa-lembongan/3d2n', function(){
+    return view('paket-lembongan.lembongan-3d2n');
+})->name('lembongan-3d2n');
+/////////////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////////
 Route::view('/nusa-penida', 'nusapenida')->name('nusapenida');
 Route::view('/nusa-lembongan', 'nusalembongan')->name('nusalembongan');
 
-// sub paket nusa penida
+// sub paket nusa penida //////////////////////////////////////////////////////////
 Route::view('/nusa-penida/halfday', 'paket-penida.nusapenida-hd')->name('nusapenida-hd');
 Route::view('/nusa-penida/2d1n', 'paket-penida.nusapenida-2d1n')->name('nusapenida-2d1n');
 Route::view('/nusa-penida/3d2n', 'paket-penida.nusapenida-3d2n')->name('nusapenida-3d2n');
 
-// sub paket nusa lembongan
+// sub paket nusa lembongan /////////////////////////////////////////////////////////////
 Route::view('/nusa-lembongan/halfday', 'paket-lembongan.lembongan-hd')->name('lembongan-hd');
 Route::view('/nusa-lembongan/2d1n', 'paket-lembongan.lembongan-2d1n')->name('lembongan-2d1n');
 Route::view('/nusa-lembongan/3d2n', 'paket-lembongan.lembongan-3d2n')->name('lembongan-3d2n');

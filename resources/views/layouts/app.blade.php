@@ -32,14 +32,15 @@
        {{--  @if (Route::has('login'))    --}}
         <ul class="ul-navbar">
             @guest
+            <li><a href="{{ url('/') }}">Home</a></li>  
             <li><a href="{{ url('booking') }}">Booking Now</a></li>  
             <li><a href="{{ url('gallery') }}">Gallery</a></li>  
-
             <li><a href="{{ url('contact') }}">Contact</a></li>
             <li><a href="{{ url('paket') }}">Paket</a></li> 
             <li><a href="{{ route('login') }}">{{ __('Login') }}</a></li>
             <li><a href="{{ route('register') }}">{{ __('Register') }}</a></li>
             @else
+            <li><a href="{{ url('/') }}">Home</a></li>  
             <li><a href="{{ url('booking') }}">Booking Now</a></li>  
             <li><a href="#">Gallery</a></li>  
             <li><a href="{{ url('contact') }}">Contact</a></li>
