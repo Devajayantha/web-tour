@@ -35,9 +35,9 @@
                     <h5 class="card-title">Day</h5>
                     <p class="card-text">Half Day</p>
                     <h5 class="card-title">Person</h5>
-                    <p class="card-text">1</p>
+                    <p class="card-text">person</p>
                     <h5 class="card-title">Date</h5>
-                    <p class="card-text">11/04/2018</p>
+                    <p class="card-text">departure</p>
                   </div>
               </div>                
           </div>

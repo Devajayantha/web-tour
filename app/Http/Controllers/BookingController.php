@@ -43,7 +43,10 @@ class BookingController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'telp' => 'required',
+            'telp' => 'required|numeric',
+            'id_detpaket' => 'required',
+            'person' => 'required|integer',
+            'departure' => 'required'
         ]);
         
         $booking= new Booking();
