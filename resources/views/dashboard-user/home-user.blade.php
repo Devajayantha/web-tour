@@ -72,24 +72,25 @@
                         <tr>
                             <th scope="col">No</th>
                             <th scope="col">ID Booking</th>
-                            <th scope="col">Depature</th>
-                            <th scope="col">Return</th>
                             <th scope="col">Paket</th>
+                            <th scope="col">Subpaket</th>
                             <th scope="col">Person</th>
+                            <th scope="col">Depature</th>
                             <th scope="col">Amount</th>
                             <th scope="col">Status</th>
                             <th scope="col">Action</th>
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach($booking as $b)
                         <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
+                            <th scope="row">{{$loop->iteration}}</th>
+                            <td>{{$b->booking_no}}</td>
+                            <td>{{$b->detpaket->paket->name}}</td>
+                            <td>{{$b->detpaket->subpaket->name}}</td>
+                            <td>{{$b->person}}</td>
+                            <td>{{$b->departure}}</td>
+                            <td>{{$b->amount}}</td>                            
                             <td>
                                 <button type="button" class="btn btn-info">Respon</button>
                             </td>
@@ -97,21 +98,7 @@
                                 <button type="button" class="btn btn-outline-primary">Detail</button>
                             </td>
                         </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>
-                                <button type="button" class="btn btn-info">Respon</button>
-                            </td>
-                            <td>
-                                <button type="button" class="btn btn-outline-primary">Detail</button>
-                            </td>
-                        </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>

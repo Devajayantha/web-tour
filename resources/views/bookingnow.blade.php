@@ -71,7 +71,7 @@
             </div>
 
 
-            <button type="submit" class="btn btn-primary">
+            <button type="submit"  class="btn btn-primary">
                 BOOKING NOW
             </button>  
         </form>
@@ -81,5 +81,4 @@
 </div>
 @endsection
 
-@extends('layouts.modal')
 @extends('layouts.footer')

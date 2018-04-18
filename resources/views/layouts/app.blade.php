@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="{{asset('css/footer.css') }}">
     <link rel="stylesheet" href="{{asset('css/contact.css') }}">
     <link rel="stylesheet" href="{{asset('css/fontawesome-all.css')}}">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
+
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -55,7 +57,7 @@
                         document.getElementById('logout-form').submit();">
                          {{ __('Logout') }}
                     </a>
-                    <a class="dropdown-item" href="{{ url('user-home') }}">
+                    <a class="dropdown-item" href="{{ url('user/home') }}">
                         Dashboard
                     </a>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -109,12 +111,8 @@
     <script type="text/javascript" src="{{asset('js/map/nl-hd-map.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/map/nl-2d1n-map.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/map/nl-3d2n-map.js')}}"></script> --}}
-    @if(Session::has('openModal'))
-    <script type="text/javascript">
-        $(function() {
-            $('#exampleModal').modal('show');
-        });
-    </script>
-    @endif
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+    @include('sweet::alert')
 </body>
 </html>

@@ -6,8 +6,10 @@ use App\Booking;
 use App\Paket;
 use App\Subpaket;
 use App\detpakets;
+use Auth;
 use Session;
 use DB;
+use Alert;
 use Illuminate\Http\Request;
 
 class BookingController extends Controller
@@ -19,7 +21,9 @@ class BookingController extends Controller
      */
     public function index()
     {
-        //
+        $booking=Booking::where('id_user', Auth::user()->id)->get();
+        return view('dashboard-user.home-user', compact('booking'));
+
     }
 
     /**
@@ -45,7 +49,7 @@ class BookingController extends Controller
         $validatedData = $request->validate([
             'telp' => 'required|numeric',
             'id_detpaket' => 'required',
-            'person' => 'required|integer',
+            'person' => 'required',
             'departure' => 'required'
         ]);
         
@@ -58,9 +62,8 @@ class BookingController extends Controller
         $booking->departure = $request->departure;
         $booking->amount = $booking->detpaket->price*$booking->person;
         $booking->save();
-        return redirect()->back()->with('openModal', 'true');
-        
-
+        Alert::success('You have successfully booked your trip!','Success')->persistent("OK");
+        return redirect('/booking');
     }
 
     /**
@@ -71,7 +74,7 @@ class BookingController extends Controller
      */
     public function show(Booking $booking)
     {
-        
+        //
     }
 
     /**
