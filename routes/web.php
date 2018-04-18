@@ -40,7 +40,8 @@ Route::get('nusa-penida/2d1n', function(){
 Route::get('nusa-penida/3d2n', function(){
     return view('paket-penida.nusapenida-3d2n');
 })->name('nusapenida-3d2n');
-////////////////////////
+//////////////////////////////////////////////////////
+
 Route::get('nusa-lembongan/halfday', function(){
     return view('paket-lembongan.lembongan-hd');
 })->name('lembongan-hd');
@@ -75,6 +76,7 @@ Route::view('/admin/rating', 'dashboard-admin.rating-admin')->name('admin-rating
 
 // route user dashboard
 Route::view('/user/home', 'dashboard-user.home-user')->name('user-home');
+Route::view('/user/addrating', 'dashboard-user.home-user-rating')->name('user-addrating');
 /*Route::get('/booking', function () {
     return view('bookingnow');
 })->middleware('auth');*/

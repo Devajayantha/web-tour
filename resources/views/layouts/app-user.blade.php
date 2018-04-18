@@ -16,6 +16,7 @@
     <link rel="shortcut icon" href="{{asset('img/logo.png')}}">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/rating.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/fontawesome-all.css')}}">
     <link rel="stylesheet" href="{{asset('plugins/node-waves/waves.css')}}">
     <link rel="stylesheet" href="{{asset('plugins/animate-css/animate.css')}}">
@@ -44,6 +45,9 @@
     <div>
         @yield('home.user')
     </div>
+    <div>
+        @yield('rating.user')
+    </div>
 
 
     <script src="{{asset('js/app.js')}}"></script>
@@ -67,6 +71,7 @@
     <script src="{{asset('js/admin.js')}}"></script>
     <script src="{{asset('js/pages/index.js')}}"></script>
     <script src="{{asset('js/demo.js')}}"></script>
+    <script src="{{asset('js/rating.js')}}"></script>
 </body>
 
 </html>

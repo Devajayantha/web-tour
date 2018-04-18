@@ -41,13 +41,13 @@
                 <ul class="list">
                     <li class="header">MAIN NAVIGATION</li>
                     <li class="active">
-                        <a href="home">
+                        <a href="/user/home">
                             <i class="material-icons">card_travel</i>
                             <span>Pemesanan</span>
                         </a>
                     </li>
                     <li>
-                        <a href="rating">
+                        <a href="/user/addrating">
                             <i class="material-icons">star</i>
                             <span>Rating</span>
                         </a>
