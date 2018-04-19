@@ -78,7 +78,7 @@
                             <th scope="col">Depature</th>
                             <th scope="col">Amount</th>
                             <th scope="col">Status</th>
-                            <th scope="col">Action</th>
+                            <th scope="col">Payment</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -92,7 +92,11 @@
                             <td>{{$b->departure}}</td>
                             <td>{{$b->amount}}</td>                            
                             <td>
-                                <button type="button" class="btn btn-info">Respon</button>
+                                @if($b->confirmation == 0)
+                                    {{'Belum Bayar'}}
+                                @else
+                                    {{'Sudah Bayar'}}
+                                @endif
                             </td>
                             <td>
                                 <button type="button" class="btn btn-outline-primary">Detail</button>

@@ -21,8 +21,7 @@ class BookingController extends Controller
      */
     public function index()
     {
-        $booking=Booking::where('id_user', Auth::user()->id)->get();
-        return view('dashboard-user.home-user', compact('booking'));
+        //
 
     }
 
