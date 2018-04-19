@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="{{asset('plugins/animate-css/animate.css')}}">
     <link rel="stylesheet" href="{{asset('plugins/morrisjs/morris.css')}}">
     <link rel="stylesheet" href="{{asset('css/themes/all-themes.css')}}">
+
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Bootstrap Core Css -->
     {{-- <link href="plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
 

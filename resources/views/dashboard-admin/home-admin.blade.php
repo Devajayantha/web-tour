@@ -87,79 +87,100 @@
     <section class="content">
         <div class="container-fluid">
         <div style="font-size:30px;color:black">Daftar Pemesanan</div><br>
-        <table class="table table-bordered">
-            <thead class="thead-dark">
+        <table class="table table-striped">
+            <thead>
                 <tr>
                 <th scope="col">No</th>
                 <th scope="col">ID</th>
                 <th scope="col">Paket</th>
                 <th scope="col">Sub-Paket</th>
-                <th scope="col">Personil</th>
+                <th scope="col">Person</th>
+                <th scope="col">Depature</th>
                 <th scope="col">Total</th>
-                <th scope="col">Action</th>
+                <th scope="col">Status</th>
+                <th scope="col">Payment</th>
                 <th scope="col">Validasi</th>
-                <th scope="col">Modal</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                <th scope="row">1</th>
-                <td>123456</td>
-                <td>Combo</td>
-                <td>Combo 1</td>
-                <td>10</td>
-                <td>IDR xxxxx</td>
-                <td>
-                <a class="btn btn-primary" href="#" role="button">Respon</a>
-                    <!-- If blm bayar
-                    Btn respon
-                    Else if sudah bayar 
-                    Btn lunas
-                    Else 
-                    Btn batal -->
-                </td>
-                <td><a class="btn btn-info" href="#" role="button">Validation</a></td>
-                <td><a class="btn btn-light" href="#" role="button">Cek Payment</a></td>
-                </tr>
-            </tbody>
-        </table>
-        </div>
-        <div class="container-fluid">
-        <div style="font-size:30px;color:black">Daftar Boking</div><br>
-        <table class="table table-bordered">
-            <thead class="thead-dark">
-                <tr>
-                <th scope="col">No</th>
-                <th scope="col">ID</th>
-                <th scope="col">Paket</th>
-                <th scope="col">Sub-Paket</th>
-                <th scope="col">Personil</th>
-                <th scope="col">Total</th>
-                <th scope="col">Action</th>
-                <th scope="col">Validasi</th>
-                <th scope="col">Modal</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                <th scope="row">1</th>
-                <td>123456</td>
-                <td>Combo</td>
-                <td>Combo 1</td>
-                <td>10</td>
-                <td>IDR xxxxx</td>
-                <td>
-                <a class="btn btn-primary" href="#" role="button">Respon</a>
-                    <!-- If blm bayar
-                    Btn respon
-                    Else if sudah bayar 
-                    Btn lunas
-                    Else 
-                    Btn batal -->
-                </td>
-                <td><a class="btn btn-info" href="#" role="button">Validation</a></td>
-                <td><a class="btn btn-light" href="#" role="button">Cek Payment</a></td>
-                </tr>
+            @if(count($booking))
+                @foreach($booking as $b)
+                    <tr>
+                        <td>{{$loop->iteration}}</td>
+                        <td>{{$b->booking_no}}</td>
+                        <td>{{$b->paket}}</td>
+                        <td>{{$b->subpaket}}</td>
+                        <td>{{$b->person}}</td>
+                        <td>{{$b->departure}}</td>
+                        <td>{{$b->amount}}</td>
+                        <td>
+                        @if($b->confirmation == 0)
+                            {{'Belum Bayar'}}
+                        @else
+                            {{'Sudah Bayar'}}
+                        @endif
+                        </td>
+                        <td>
+                            {{--  <!-- Button trigger modal -->  --}}
+                            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#paymentModal">
+                                check
+                            </button>
+                            
+                            {{--  <!-- Modal pembayaran -->  --}}
+                            <div class="modal fade" id="paymentModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    </div>
+                                    <div class="modal-body">
+                                    ...
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal{{$b->id}}">
+                            Val
+                        </button>
+                        {{--  <!-- Modal verifikasi -->  --}}
+                        <div class="modal fade" id="exampleModal{{$b->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Verifikasi Pembayaran</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              
+                            <form action="/admin/updatepayment/{{$b->id}}" method="POST">
+                            @csrf
+                            {{method_field('put')}}
+                            <div class="modal-body">
+                                Apakah anda yakin untuk melakukan verifikasi ?
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                <button type="submit" class="btn btn-primary">Verifikasi</button>
+                            </div>
+                            </form>
+                            </div>
+                          </div>
+                        </div>
+                        </td>
+                    </tr>
+
+                @endforeach
+            @endif
             </tbody>
         </table>
         </div>

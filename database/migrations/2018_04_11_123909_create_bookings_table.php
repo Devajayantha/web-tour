@@ -24,6 +24,8 @@ class CreateBookingsTable extends Migration
             $table->integer('person');
             $table->date('departure');
             $table->integer('amount')->nullable();
+            $table->boolean('confirmation')->default(0);
+            $table->string('payment')->nullable();
             $table->timestamps();
         });
     }

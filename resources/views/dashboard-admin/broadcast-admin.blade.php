@@ -43,13 +43,7 @@
                 <ul class="list">
                     <li class="header">MAIN NAVIGATION</li>
                     <li>
-                        <a href="dashboard">
-                            <i class="material-icons">home</i>
-                            <span>Home</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="home">
+                        <a href="/admin">
                             <i class="material-icons">home</i>
                             <span>Home</span>
                         </a>

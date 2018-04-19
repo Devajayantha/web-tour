@@ -46,7 +46,7 @@
                                     document.getElementById('logout-form').submit();">
                                      {{ __('Logout') }}
                                 </a>
-                                <a class="dropdown-item" href="{{ url('user/home') }}">
+                                <a class="dropdown-item" href="/user/home">
                                     Dashboard
                                 </a>
             
