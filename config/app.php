@@ -160,6 +160,9 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        //Sweetalert
+        UxWeb\SweetAlert\SweetAlertServiceProvider::class,
+
     ],
 
     /*
@@ -175,6 +178,7 @@ return [
 
     'aliases' => [
 
+        'Alert' => UxWeb\SweetAlert\SweetAlert::class,
         'App' => Illuminate\Support\Facades\App::class,
         'Artisan' => Illuminate\Support\Facades\Artisan::class,
         'Auth' => Illuminate\Support\Facades\Auth::class,

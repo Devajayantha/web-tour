@@ -1,4 +1,6 @@
 @extends('layouts.app')
+
+
 @section('bookingnow')
 <div class="image-contact">
     <img src="{{asset('img/booking-now.jpg')}}" alt="image-contact" class="sampul">
@@ -56,6 +58,9 @@
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
                 </select>
             </div>
             <div class="input-group mb-3">
@@ -71,7 +76,7 @@
             </div>
 
 
-            <button type="submit" class="btn btn-primary">
+            <button type="submit"  class="btn btn-primary">
                 BOOKING NOW
             </button>  
         </form>
@@ -81,5 +86,4 @@
 </div>
 @endsection
 
-@extends('layouts.modal')
 @extends('layouts.footer')

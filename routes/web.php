@@ -77,12 +77,11 @@ Route::resource('/admin','PesanadminController');
 Route::put('/admin/updatepayment/{admin}','PesanadminController@confirmationPayment');
 
 // route user dashboard
-Route::view('/user/home', 'dashboard-user.home-user')->name('user-home');
+Route::get('/user/home','BookingController@index')->middleware('auth')->name('user-home');;
+//Route::view('/user/home', 'dashboard-user.home-user')->name('user-home');
 Route::view('/user/addrating', 'dashboard-user.home-user-rating')->name('user-addrating');
-/*Route::get('/booking', function () {
-    return view('bookingnow');
-})->middleware('auth');*/
 
-//Route::get('/booking','BookingController@index')->middleware('auth');
+
 Route::get('/booking','BookingController@create')->middleware('auth');
 Route::post('/booking','BookingController@store')->middleware('auth');
+

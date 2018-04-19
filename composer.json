@@ -9,7 +9,11 @@
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.6.*",
         "laravel/tinker": "^1.0",
+<<<<<<< HEAD
         "uxweb/sweet-alert": "~1.4"
+=======
+        "uxweb/sweet-alert": "^1.4"
+>>>>>>> b361a59627ef381806cf1bbb17f5137c1e231536
     },
     "require-dev": {
         "filp/whoops": "^2.0",

@@ -18,6 +18,7 @@ class PesanadminController extends Controller
         ->join('pakets', 'pakets.id', '=', 'detpakets.id_paket')
         ->join('subpakets', 'subpakets.id', '=', 'detpakets.id_subpaket' )
         ->select('bookings.*', 'subpakets.name as subpaket', 'pakets.name as paket')
+        ->orderBy('id', 'DESC')
         ->get();
 
 
