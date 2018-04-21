@@ -73,7 +73,7 @@ Route::view('/admin/reminder', 'dashboard-admin.reminder-admin')->name('admin-re
 Route::view('/admin/rating', 'dashboard-admin.rating-admin')->name('admin-rating');
 
 Route::resource('/admin','PesanadminController');
-
+Route::resource('/user/addrating','InputRatingController');
 Route::put('/admin/updatepayment/{admin}','PesanadminController@confirmationPayment');
 
 // route user dashboard

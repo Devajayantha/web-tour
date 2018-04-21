@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\InputRating;
+use Auth;
 use Illuminate\Http\Request;
-use App\Subsribe;
-use Alert;
 
-class SubscribeController extends Controller
+class InputRatingController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,8 @@ class SubscribeController extends Controller
      */
     public function index()
     {
-        //
+        $rating=InputRating::where('id_user', Auth::user()->id)->get();
+        return view('dashboard-user.home-user-rating', compact('rating'));
     }
 
     /**
@@ -25,8 +26,9 @@ class SubscribeController extends Controller
      */
     public function create()
     {
-        $subsribe = Subsribe::all();
-        return view('/', compact('subsribe'));
+    
+        $rating=InputRating::all();
+        return view('dashboard-user.home-user-rating',compact('rating'));
     }
 
     /**
@@ -37,20 +39,21 @@ class SubscribeController extends Controller
      */
     public function store(Request $request)
     {
-        $subsribe = new Subsribe();
-        $subsribe->email = $request->email;
-        $subsribe->save();
-        // Alert::success('You have successfully subsribe your trip!','Success')->persistent("OK");
-        return redirect ('/');
+        $rating = new InputRating();
+        $rating->id_user = $request->id_user;
+        $rating->stars = $request->stars;
+        $rating->message = $request->message;
+        $rating->save();
+        return redirect('/user/addrating');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\InputRating  $inputRating
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(InputRating $inputRating)
     {
         //
     }
@@ -58,10 +61,10 @@ class SubscribeController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\InputRating  $inputRating
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(InputRating $inputRating)
     {
         //
     }
@@ -70,10 +73,10 @@ class SubscribeController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\InputRating  $inputRating
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, InputRating $inputRating)
     {
         //
     }
@@ -81,10 +84,10 @@ class SubscribeController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\InputRating  $inputRating
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(InputRating $inputRating)
     {
         //
     }

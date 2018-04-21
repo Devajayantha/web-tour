@@ -25,13 +25,16 @@ $(document).ready(function(){
     $('#stars li').on('click', function(){
       var onStar = parseInt($(this).data('value'), 10); // The star currently selected
       var stars = $(this).parent().children('li.star');
+      var rating = $(this).data('star');
       
       for (i = 0; i < stars.length; i++) {
         $(stars[i]).removeClass('selected');
+        $('#stars2').val(rating);
       }
       
       for (i = 0; i < onStar; i++) {
         $(stars[i]).addClass('selected');
+        $('#stars2').val(i+1);
       }
       
       // JUST RESPONSE (Not needed)
