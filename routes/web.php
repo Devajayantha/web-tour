@@ -60,10 +60,10 @@ Route::view('/nusa-lembongan', 'nusalembongan')->name('nusalembongan');
 // sub paket nusa penida //////////////////////////////////////////////////////////
 Route::view('/nusa-penida/halfday', 'paket-penida.nusapenida-hd')->name('nusapenida-hd');
 Route::post('/nusa-penida/halfday','BookingController@store')->name('nusapenida-hd')->middleware('auth');
-Route::post('/nusa-penida/2d1n','BookingController@store')->name('nusapenida-hd')->middleware('auth');
 Route::view('/nusa-penida/2d1n', 'paket-penida.nusapenida-2d1n')->name('nusapenida-2d1n');
+Route::post('/nusa-penida/2d1n','BookingController@store')->name('nusapenida-2d1n')->middleware('auth');
 Route::view('/nusa-penida/3d2n', 'paket-penida.nusapenida-3d2n')->name('nusapenida-3d2n');
-
+Route::post('/nusa-penida/3d2n','BookingController@store')->name('nusapenida-3d2n')->middleware('auth');
 // sub paket nusa lembongan /////////////////////////////////////////////////////////////
 Route::view('/nusa-lembongan/halfday', 'paket-lembongan.lembongan-hd')->name('lembongan-hd');
 Route::view('/nusa-lembongan/2d1n', 'paket-lembongan.lembongan-2d1n')->name('lembongan-2d1n');

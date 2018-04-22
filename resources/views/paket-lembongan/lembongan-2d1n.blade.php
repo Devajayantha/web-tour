@@ -9,11 +9,19 @@
 			</div>
 			<div class="col-md-4"></div>
 			<div class="col-md-2">
-				<div class="btn-group btn-book">
-					<a href="\booking" class="btn btn-info">
-						<i class="fas fa-shopping-cart" aria-hidden="true"></i> BOOKING NOW 
-					</a>
-				</div>				
+				@auth
+					<div class="btn-group btn-book">
+						<a  data-toggle="modal" data-target="#formModal" class="btn btn-info">
+							<i class="fas fa-shopping-cart" aria-hidden="true"></i> BOOKING NOW 
+						</a>						
+					</div>
+					@else
+					<div class="btn-group btn-book">
+						<a  href="{{ route('login') }}" class="btn btn-info">
+							<i class="fas fa-shopping-cart" aria-hidden="true"></i> BOOKING NOW 
+						</a>
+					</div>			
+				@endauth				
 			</div>
 		</div>
   	</div>
@@ -251,5 +259,5 @@
 	}
 </script>
 @endsection
-
+@extends('layouts.modal-lembongan-2d1n')
 @extends('layouts.footer')
