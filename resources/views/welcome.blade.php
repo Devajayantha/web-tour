@@ -267,7 +267,7 @@
                 <p class="footer-company-name">&copy; 2018 Penida Trip Tour & Travel</p>
             </footer>
 
-
+        
         <script src="{{asset('js/app.js')}}"></script>
         <script src="{{asset('js/main.js')}}"></script>
     </body>

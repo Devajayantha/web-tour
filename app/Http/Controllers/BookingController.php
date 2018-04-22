@@ -37,6 +37,7 @@ class BookingController extends Controller
         return view('bookingnow', compact('booking', 'detpaket'));
     }
 
+
     /**
      * Store a newly created resource in storage.
      *
@@ -62,7 +63,7 @@ class BookingController extends Controller
         $booking->amount = $booking->detpaket->price*$booking->person;
         $booking->save();
         Alert::success('You have successfully booked your trip!','Success')->persistent("OK");
-        return redirect('/booking');
+        return redirect()->back();
     }
 
     /**

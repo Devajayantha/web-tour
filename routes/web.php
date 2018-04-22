@@ -59,6 +59,8 @@ Route::view('/nusa-lembongan', 'nusalembongan')->name('nusalembongan');
 
 // sub paket nusa penida //////////////////////////////////////////////////////////
 Route::view('/nusa-penida/halfday', 'paket-penida.nusapenida-hd')->name('nusapenida-hd');
+Route::post('/nusa-penida/halfday','BookingController@store')->name('nusapenida-hd')->middleware('auth');
+Route::post('/nusa-penida/2d1n','BookingController@store')->name('nusapenida-hd')->middleware('auth');
 Route::view('/nusa-penida/2d1n', 'paket-penida.nusapenida-2d1n')->name('nusapenida-2d1n');
 Route::view('/nusa-penida/3d2n', 'paket-penida.nusapenida-3d2n')->name('nusapenida-3d2n');
 
@@ -73,7 +75,7 @@ Route::view('/admin/reminder', 'dashboard-admin.reminder-admin')->name('admin-re
 Route::view('/admin/rating', 'dashboard-admin.rating-admin')->name('admin-rating');
 
 Route::resource('/admin','PesanadminController');
-
+Route::resource('/user/addrating','InputRatingController');
 Route::put('/admin/updatepayment/{admin}','PesanadminController@confirmationPayment');
 
 // route user dashboard
@@ -84,4 +86,6 @@ Route::view('/user/addrating', 'dashboard-user.home-user-rating')->name('user-ad
 
 Route::get('/booking','BookingController@create')->middleware('auth');
 Route::post('/booking','BookingController@store')->middleware('auth');
+
+
 

@@ -99,7 +99,36 @@
                                 @endif
                             </td>
                             <td>
-                                <button type="button" class="btn btn-outline-primary">Detail</button>
+                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#uploadModal">Upload file</button>
+
+                                <!-- Modal -->
+                                <div id="uploadModal" class="modal fade" role="dialog">
+                                  <div class="modal-dialog">
+                                
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                            </button>
+                                          </div>
+                                      <div class="modal-body">
+                                        {{--  Form upload pembyaran  --}}
+                                        <form method='post' action='' enctype="multipart/form-data">
+                                            {{csrf_field() }}
+                                          Select file : <input type='file' name='file' id='file' class='form-control' ><br>
+                                          <input type='button' class='btn btn-info' value='Upload' id='upload'>
+                                        </form>
+                                
+                                        <!-- Preview-->
+                                        <div id='preview'></div>
+                                      </div>
+                                 
+                                    </div>
+                                
+                                  </div>
+                                </div>
                             </td>
                         </tr>
                         @endforeach

@@ -200,6 +200,7 @@ body{
 }
 .btn-book{
 	margin-top: 20px;
+	color: #fff;
 }
 /*carousel card*/
 @media (min-width: 768px) {
@@ -224,7 +225,7 @@ body{
 	background-color: #fff;
 	margin: 5px;
 	width: calc(100% - 16px);
-	border-bottom: 1px solid #ccc;
+	/*border-bottom: 1px solid #ccc;*/
 }
 .amount-title{
 	padding : 14px 16px;

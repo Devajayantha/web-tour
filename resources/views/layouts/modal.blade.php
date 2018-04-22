@@ -1,180 +1,71 @@
 @section('modal')
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+@auth
+<div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="formModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Details</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Book Now</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
         <div class="container-fluid">
-            <div class="card-container">
-                <div class="amount">
-                    <div class="amount-title pull-left">
-                        <span class="text-amount-title">Amount</span>
+            <div class="card-container">           
+                  <form method="post" action="/nusa-penida/halfday">
+                    {{csrf_field()}}
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1"><i class="fas fa-envelope"></i></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1" value="{{ Auth::user()->email }}">
+                        <input type="hidden" name="id_user" value="{{ Auth::user()->id}}">
+                        <input type="hidden" name="booking_no" value="{{ rand() }}">
                     </div>
-                    <div class="amount-content pull-right">
-                        <span class="text-amount-rp">Rp</span>
-                        <span class="text-amount-amount">400,000</span>
-                    </div>
-                </div>
-              </div>
-              <div class="card-container">
-                <div class="row">
-                  <div class="col-sm-6">
-                    <h5 class="card-title">Name</h5>
-                    <p class="card-text">{{ Auth::user()->name }}</p>
-                    <h5 class="card-title">Email</h5>
-                    <p class="card-text">{{ Auth::user()->email }}</p>
-                    <h5 class="card-title">Package</h5>
-                    <p class="card-text">Nusa Penida</p>
-                  </div>
-                  <div class="col-sm-6">
-                    <h5 class="card-title">Day</h5>
-                    <p class="card-text">Half Day</p>
-                    <h5 class="card-title">Person</h5>
-                    <p class="card-text">person</p>
-                    <h5 class="card-title">Date</h5>
-                    <p class="card-text">departure</p>
-                  </div>
-              </div>                
-          </div>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalPayment" data-dismiss="modal">Next</button>
-      </div>
-    </div>
-  </div>
-</div>
 
-<div class="modal fade" id="modalPayment" tabindex="-1" role="dialog" aria-labelledby="modalPaymentLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="modalPaymentLabel">Payment</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="container-fluid">
-            <div class="card-container">
-              <div class="content-list" id="payment-list">
-                <div>
-                  <a class="list" href="#modalBank" data-toggle="modal" data-target="#modalBank" data-dismiss="modal">
-                    <div class="list-payment-logo">
-                      <i class="fas fa-credit-card"></i> 
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1"><i class="fas fa-phone"></i></span>
+                        </div>
+                        <input type="text" name="telp" class="form-control{{ $errors->has('telp') ? ' is-invalid' : '' }} " required autofocus" placeholder="Phone Number" aria-label="phone" aria-describedby="basic-addon1">
                     </div>
-                    <div class="list-content">
-                      <div class="list-title text-actionable-bold">ATM</div>
-                      <div class="list-caption text-actionable-caption">Bayar dari ATM Bank</div>
+
+                     <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="inputGroupSelect01">Paket</label>
+                        </div>
+                        <select class="custom-select" id="inputGroupSelect01" name="id_detpaket">
+                            <option selected value="1">Nusa Penida/Half Day</option>
+                        </select>
                     </div>
-                    <div class="list-next">
-                      <i class="fas fa-chevron-right"></i>
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="inputGroupSelect01">Person</label>
+                        </div>
+                        <select class="custom-select" id="inputGroupSelect01" name="person">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>
                     </div>
-                  </a>
-                </div>
-              </div>
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1"><i class="far fa-calendar-alt"></i></span>
+                        </div>
+                        <input type="date" class="form-control{{ $errors->has('telp') ? ' is-invalid' : '' }} " required autofocus" placeholder="Departure" aria-label="departure" aria-describedby="basic-addon1" name="departure">
+                    </div>
+                    <button type="submit"   class="btn btn-primary">BOOKING NOW</button>
+                  </form>              
             </div>
-            
         </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary mr-auto" data-toggle="modal" data-target="#exampleModal" data-dismiss="modal">Previous</button>
       </div>
     </div>
   </div>
 </div>
-
-<div class="modal fade" id="modalBank" tabindex="-1" role="dialog" aria-labelledby="modalBankLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="modalBankLabel">Bank</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="container-fluid">
-            <div class="card-container">
-              <div class="content-list" id="payment-list">
-                <div>
-                  <a class="list" href="#BCAModal" data-toggle="modal" data-target="#BCAModal" data-dismiss="modal">
-                    <div class="list-payment-logo">
-                      <i class="fas fa-credit-card"></i>
-                    </div>
-                    <div class="list-content">
-                      <div class="list-title text-actionable-bold">BCA</div>
-                      <div class="list-caption text-actionable-caption">Bayar dengan Kartu BCA</div>
-                    </div>
-                    <div class="list-next">
-                      <i class="fas fa-chevron-right"></i>
-                    </div>
-                  </a>
-                </div>
-                
-                <div>
-                  <a class="list" href="#/bank-transfer">
-                    <div class="list-payment-logo">
-                        <i class="fas fa-credit-card"></i>                      
-                    </div>
-                    <div class="list-content">
-                      <div class="list-title text-actionable-bold">Bank Lainnya</div>
-                      <div class="list-caption text-actionable-caption">Bayar dari ATM Bersama</div>
-                    </div>
-                    <div class="list-next">
-                      <i class="fas fa-chevron-right"></i>
-                    </div>
-                  </a>
-                </div>
-                
-              </div>
-            </div>
-            
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary mr-auto" data-toggle="modal" data-target="#modalPayment" data-dismiss="modal">Previous</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<div class="modal fade" id="BCAModal" tabindex="-1" role="dialog" aria-labelledby="BCAModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="BCAModalLabel">BCA</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="container-fluid">
-              <div class="card-container">
-                <div class="card-title">Nomor Rekening</div>
-                <span class="text-no-rek">123456789</span>
-              </div>
-              <div class="card-container">
-                <div class="card-title">Cara Pembayaran</div>
-                <p class="card-text">....</p>
-              </div>                
-          </div>
-        </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary mr-auto" data-toggle="modal" data-target="#modalBank" data-dismiss="modal">Previous</button>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#" data-dismiss="modal">Next</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
+@endauth
 @endsection

@@ -3,10 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Subsribe;
-use Alert;
-
-class SubscribeController extends Controller
+use DB;
+use App\Booking;
+class UploadbayarController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +14,15 @@ class SubscribeController extends Controller
      */
     public function index()
     {
-        //
+        $booking = DB::table('bookings')->join('detpakets', 'detpakets.id' , '=', 'bookings.id_detpaket' )
+        ->join('pakets', 'pakets.id', '=', 'detpakets.id_paket')
+        ->join('subpakets', 'subpakets.id', '=', 'detpakets.id_subpaket' )
+        ->select('bookings.*', 'subpakets.name as subpaket', 'pakets.name as paket')
+        ->orderBy('id', 'DESC')
+        ->get();
+
+
+        return view ('dashboard-admin.home-admin', compact('booking'));
     }
 
     /**
@@ -25,8 +32,7 @@ class SubscribeController extends Controller
      */
     public function create()
     {
-        $subsribe = Subsribe::all();
-        return view('/', compact('subsribe'));
+        //
     }
 
     /**
@@ -37,11 +43,11 @@ class SubscribeController extends Controller
      */
     public function store(Request $request)
     {
-        $subsribe = new Subsribe();
-        $subsribe->email = $request->email;
-        $subsribe->save();
-        // Alert::success('You have successfully subsribe your trip!','Success')->persistent("OK");
-        return redirect ('/');
+        $input = $request->all();
+        //upload foto
+        if ($request->hasFile('payment')) {
+          $input['payment'] = $this->uploadFoto($request);
+        }
     }
 
     /**
@@ -88,4 +94,26 @@ class SubscribeController extends Controller
     {
         //
     }
+
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function aploadfoto(Request $request)
+    {
+        $foto = $request->file('payment');
+        $ext = $foto->getClientOriginalExtension();
+ 
+        if($request->file('payment')->isValid()){
+            $namaFoto = date('YmdHis').".".$ext;
+            $upload_path = 'fotoUpload';
+            $request->file('payment')->move($upload_path,$namaFoto);
+            return $namaFoto;
+        }
+        return false;
+    }    
+    
 }
