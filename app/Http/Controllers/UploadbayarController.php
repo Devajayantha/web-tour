@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use DB;
 use App\Booking;
+use Storage;
+use Auth;
 class UploadbayarController extends Controller
 {
     /**
@@ -21,7 +23,7 @@ class UploadbayarController extends Controller
         ->orderBy('id', 'DESC')
         ->get();
 
-
+        // $post = Booking::all();
         return view ('dashboard-admin.home-admin', compact('booking'));
     }
 
@@ -43,11 +45,34 @@ class UploadbayarController extends Controller
      */
     public function store(Request $request)
     {
-        $input = $request->all();
-        //upload foto
-        if ($request->hasFile('payment')) {
-          $input['payment'] = $this->uploadFoto($request);
+        $post=Booking::where('id_user', Auth::user()->id)->get();
+        // $post= restore();
+        $post -> booking_no = $request->booking_no;
+
+
+        $image = $request->file('payment');
+        if($image){
+            $filename =$post->booking_no . "_" . date('m-d-Y', time()) . '.' . $image->getClientOriginalExtension();
+            $post->payment = $filename;
+            $image->move(public_path('asset/images'),$filename);
         }
+
+        $post->save();
+        return redirect('/user/home');
+        // $filename = null;
+        // if ($request->hasfile('payment')){
+        //     $path = $request->file('payment')->store('public/profileaAdmin');
+        //     $filename = basename($path);
+        // }
+
+        // $post = new Booking;
+        // $post->payment = $filename;
+        // $post->save();
+        // $input = $request->all();
+        // //upload foto
+        // if ($request->hasFile('payment')) {
+        //   $input['payment'] = $this->uploadFoto($request);
+        // }
     }
 
     /**
@@ -69,7 +94,9 @@ class UploadbayarController extends Controller
      */
     public function edit($id)
     {
-        //
+        // $post = Booking::find($id);
+
+        // return view();
     }
 
     /**
@@ -81,7 +108,28 @@ class UploadbayarController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $post = Booking::find($id);
+            
+        // $post -> booking_no = $request->
+
+        $image = $request->file('payment');
+        if ($image) {
+            $filename = $post->booking_no . "_" . date('m-d-Y', time()) . '.' . $image->getClientOriginalExtension();
+            $oldFilename = $post->payment;
+            Storage::delete($oldFilename);
+            $post->payment = $filename;
+            $image->move(public_path('assets/images'), $filename);
+        }
+        $post->save();
+        return redirect('/user/home');
+
+        // $post->$request->all();
+        // if($request->hasFile('payment')){
+        //     $file = $request->('payment');
+        //     $path = $request->photo->path()
+        // $request->payment->
+        // }
+
     }
 
     /**
@@ -104,16 +152,16 @@ class UploadbayarController extends Controller
      */
     public function aploadfoto(Request $request)
     {
-        $foto = $request->file('payment');
-        $ext = $foto->getClientOriginalExtension();
+        // $foto = $request->file('payment');
+        // $ext = $foto->getClientOriginalExtension();
  
-        if($request->file('payment')->isValid()){
-            $namaFoto = date('YmdHis').".".$ext;
-            $upload_path = 'fotoUpload';
-            $request->file('payment')->move($upload_path,$namaFoto);
-            return $namaFoto;
-        }
-        return false;
+        // if($request->file('payment')->isValid()){
+        //     $namaFoto = date('YmdHis').".".$ext;
+        //     $upload_path = 'fotoUpload';
+        //     $request->file('payment')->move($upload_path,$namaFoto);
+        //     return $namaFoto;
+        // }
+        // return false;
     }    
     
 }

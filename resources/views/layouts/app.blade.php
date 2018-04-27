@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="{{asset('css/main.css') }}">
     <link rel="shortcut icon" href="{{asset('img/logo.png')}}">
     <link rel="stylesheet" href="{{asset('css/footer.css') }}">
+    
     <link rel="stylesheet" href="{{asset('css/contact.css') }}">
     <link rel="stylesheet" href="{{asset('css/fontawesome-all.css')}}">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
-
+    <link rel="stylesheet" href="{{asset('css/newfooter.css') }}">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -77,6 +78,9 @@
     <div>
         @yield('contact')
     </div>
+    {{--  <div>
+        @yield('newfooter')
+    </div>  --}}
     <div>
         @yield('cekboking')
     </div>

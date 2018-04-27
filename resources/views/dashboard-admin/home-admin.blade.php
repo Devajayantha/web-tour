@@ -114,20 +114,27 @@
                         <td>{{$b->departure}}</td>
                         <td>{{$b->amount}}</td>
                         <td>
-                        @if($b->confirmation == 0)
+                        {{--  @if($b->confirmation == 0)
                             {{'Belum Bayar'}}
                         @else
                             {{'Sudah Bayar'}}
+                        @endif  --}}
+                        @if($b->confirmation == 0 && is_null($b->payment))
+                        {{'Belum Bayar'}}
+                        @elseif ($b->confirmation == 0 && $b->payment !== '')
+                            {{'Menunggu'}}
+                        @else
+                            {{'Berhasil'}}
                         @endif
                         </td>
                         <td>
                             {{--  <!-- Button trigger modal -->  --}}
-                            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#paymentModal">
+                            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#paymentModal{{$b->id}}">
                                 check
                             </button>
                             
                             {{--  <!-- Modal pembayaran -->  --}}
-                            <div class="modal fade" id="paymentModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal fade" id="paymentModal{{$b->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -137,7 +144,7 @@
                                     </button>
                                     </div>
                                     <div class="modal-body">
-                                    ...
+                                    <img src="/assets/images/{{$b->payment}}" height="200px" width="200px">
                                     </div>
                                     <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

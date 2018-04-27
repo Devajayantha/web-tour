@@ -92,17 +92,19 @@
                             <td>{{$b->departure}}</td>
                             <td>{{$b->amount}}</td>                            
                             <td>
-                                @if($b->confirmation == 0)
+                                @if($b->confirmation == 0 && is_null($b->payment))
                                     {{'Belum Bayar'}}
+                                @elseif ($b->confirmation == 0 && $b->payment !== '')
+                                    {{'Menunggu'}}
                                 @else
-                                    {{'Sudah Bayar'}}
+                                    {{'Berhasil'}}
                                 @endif
                             </td>
                             <td>
-                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#uploadModal">Upload file</button>
+                                <button type="button" class="btn btn-info" value="{{$loop->iteration}}" data-toggle="modal" data-target="#uploadModal{{$b->id}}">Upload file</button>
 
                                 <!-- Modal -->
-                                <div id="uploadModal" class="modal fade" role="dialog">
+                                <div id="uploadModal{{$b->id}}" class="modal fade" role="dialog">
                                   <div class="modal-dialog">
                                 
                                     <!-- Modal content-->
@@ -115,10 +117,11 @@
                                           </div>
                                       <div class="modal-body">
                                         {{--  Form upload pembyaran  --}}
-                                        <form method='post' action='' enctype="multipart/form-data">
+                                        <form method='post' action='{{route("uploadbayar.update", ['uploadbayar'=>$b->id])}}' enctype="multipart/form-data">
+                                            @method('patch')
                                             {{csrf_field() }}
-                                          Select file : <input type='file' name='file' id='file' class='form-control' ><br>
-                                          <input type='button' class='btn btn-info' value='Upload' id='upload'>
+                                          Select file : <input type='file' name='payment' id='file' class='form-control' ><br>
+                                          <input type='submit' class='btn btn-info' value='Upload' id='upload'>
                                         </form>
                                 
                                         <!-- Preview-->

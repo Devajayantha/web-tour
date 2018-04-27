@@ -9,6 +9,7 @@
         <link rel="shortcut icon" href="{{asset('img/logo.png')}}">
         <link rel="stylesheet" href="{{asset('css/fontawesome-all.css')}}">
         <link rel="stylesheet" href="{{asset('css/footer.css')}}">
+        <link rel="stylesheet" href="{{asset('css/newfooter.css') }}">
 
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -249,25 +250,50 @@
         </div>
     </div>  
 </div>
-
-        <footer class="footer-basic-centered">
-                <p class="footer-company-motto">Penida Hill Trip & Tour</p>
-
-                <p class="footer-links">
-                    <a href="#">Home</a>
-                    ·
-                    <a href="#">Paket</a>
-                    ·
-                    <a href="#">Booking</a>
-                    ·
-                    <a href="#">Contact</a>
-                    ·
-                    <a href="#">Gallery</a>
-                </p>
-                <p class="footer-company-name">&copy; 2018 Penida Trip Tour & Travel</p>
-            </footer>
-
-        
+<footer id="myFooter">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <h2 class="logo"><a href="#"> LOGO </a></h2>
+            </div>
+            <div class="col-sm-2">
+                <h5>Get started</h5>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Sign up</a></li>
+                    <li><a href="#">Downloads</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-2">
+                <h5>About us</h5>
+                <ul>
+                    <li><a href="#">Company Information</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Reviews</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-2">
+                <h5>Support</h5>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Help desk</a></li>
+                    <li><a href="#">Forums</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-3">
+                <div class="social-networks">
+                    <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                    <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                    <a href="#" class="google"><i class="fa fa-google-plus"></i></a>
+                </div>
+                <button type="button" class="btn btn-default">Contact us</button>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <p>© 2016 Copyright Text </p>
+    </div>
+</footer>
         <script src="{{asset('js/app.js')}}"></script>
         <script src="{{asset('js/main.js')}}"></script>
     </body>
