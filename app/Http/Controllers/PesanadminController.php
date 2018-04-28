@@ -104,6 +104,6 @@ class PesanadminController extends Controller
         $payment = Booking::find($id);
         $payment->confirmation=1;
         $payment->save();
-        return redirect('/admin');
+        return redirect('/admin/dashboard');
     }
 }

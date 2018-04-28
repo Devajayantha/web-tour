@@ -1,5 +1,7 @@
 @extends('layouts.app')
 @section ('content')
+
+<!--/.Slides-->
 <div class="jumbotron">
   <div class="container">
 		<div class="row">
@@ -105,6 +107,7 @@
 		    </tr>
 		  </tbody>
 		</table>
+		@include('layouts.slide')
 		<h2><center>The Tourist Attraction</center></h2>
 		<div id="map_wrapper">
 			<div id="nusapenida-hd" class="mapping"></div>
@@ -182,6 +185,6 @@
 			
 	}
 </script>
+{{-- @include('layouts.newfooter') --}}
 @endsection
 @extends('layouts.modal')
-@extends('layouts.footer')

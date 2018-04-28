@@ -186,7 +186,6 @@
 			
 	}
 </script>
-
+{{-- @include('layouts.newfooter') --}}
 @endsection
 @extends('layouts.modal-lembongan-hd')
-@extends('layouts.footer')

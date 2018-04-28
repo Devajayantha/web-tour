@@ -258,6 +258,6 @@
 			
 	}
 </script>
+{{-- @include('layouts.newfooter') --}}
 @endsection
 @extends('layouts.modal-lembongan-2d1n')
-@extends('layouts.footer')

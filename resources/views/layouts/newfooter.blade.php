@@ -1,7 +1,4 @@
-@extends('layouts.newfooter')
-
-
-@section('newfooter')
+{{-- <link rel="stylesheet" href="{{asset('css/newfooter.css') }}"> --}}
 <div class="content">
 </div>
 <footer id="myFooter">
@@ -48,4 +45,3 @@
         <p>© 2016 Copyright Text </p>
     </div>
 </footer>
-@endsection

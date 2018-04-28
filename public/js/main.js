@@ -7,4 +7,13 @@ $(document).ready(function(){
 	$('.carouselExampleSlidesOnly').carousel({
 	  interval: 1000
 	})
+	// newFunction();
 })
+
+
+
+function newFunction() {
+	$('.carousel-inner').carousel({
+		interval: 1000
+	});
+}

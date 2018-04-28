@@ -4,14 +4,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/main.css') }}">
+    <link rel="stylesheet" href="{{asset('css/contact.css') }}">  
     <link rel="shortcut icon" href="{{asset('img/logo.png')}}">
-    <link rel="stylesheet" href="{{asset('css/footer.css') }}">
-    
-    <link rel="stylesheet" href="{{asset('css/contact.css') }}">
     <link rel="stylesheet" href="{{asset('css/fontawesome-all.css')}}">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
-    <link rel="stylesheet" href="{{asset('css/newfooter.css') }}">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -22,7 +20,8 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    
+    <link rel="stylesheet" href="{{asset('css/newfooter.css') }}"> 
 </head>
 <body>
     <nav class="navbar">
@@ -53,14 +52,15 @@
                     {{ Auth::user()->name }} <span class="caret"></span>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{{ url('/user/dashboard') }}">
+                        Dashboard
+                    </a>                    
                     <a class="dropdown-item" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();">
                          {{ __('Logout') }}
                     </a>
-                    <a class="dropdown-item" href="{{ url('user/home') }}">
-                        Dashboard
-                    </a>
+
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                     @csrf
                 </form>
@@ -77,15 +77,11 @@
     </main>
     <div>
         @yield('contact')
-    </div>
-    {{--  <div>
-        @yield('newfooter')
-    </div>  --}}
-    <div>
-        @yield('cekboking')
+        {{-- @include('layouts.newfooter') --}}
     </div>
     <div>
         @yield('bookingnow')
+        @include('layouts.newfooter')
     </div>
     <div>
         @yield('modal')
@@ -93,9 +89,6 @@
     <div>
         @yield('modal-bank')
     </div>
-    <footer>
-        @yield('footer')
-    </footer>
         {{--  <script src="{{ asset('js/app.js') }}" defer></script>    --}}
     <script src="{{asset('js/app.js')}}"></script>
     <script src="{{asset('js/main.js')}}"></script>

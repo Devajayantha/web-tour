@@ -208,6 +208,7 @@
 			</table>
 		  </div>
 		</div>
+		@include('layouts.slide')
 		<h2><center>The Tourist Attraction</center></h2>
 		<div id="map_wrapper">
 			<div id="nusapenida-3d2n" class="mapping"></div>
@@ -311,7 +312,6 @@
 			
 	}
 </script>
-
+{{-- @include('layouts.newfooter') --}}
 @endsection
 @extends('layouts.modal-penida-3d2n')
-@extends('layouts.footer')

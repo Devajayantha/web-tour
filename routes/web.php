@@ -69,22 +69,30 @@ Route::view('/nusa-lembongan/halfday', 'paket-lembongan.lembongan-hd')->name('le
 Route::view('/nusa-lembongan/2d1n', 'paket-lembongan.lembongan-2d1n')->name('lembongan-2d1n');
 Route::view('/nusa-lembongan/3d2n', 'paket-lembongan.lembongan-3d2n')->name('lembongan-3d2n');
 
-// Route::view('/admin/home', 'dashboard-admin.home-admin')->name('admin-home');
+// adminnn //////////////////////////////////////////////////////////
 Route::view('/admin/broadcast', 'dashboard-admin.broadcast-admin')->name('admin-broadcast');
 Route::view('/admin/reminder', 'dashboard-admin.reminder-admin')->name('admin-reminder');
 Route::view('/admin/rating', 'dashboard-admin.rating-admin')->name('admin-rating');
-
-Route::resource('/admin','PesanadminController');
+//////////////////////////////////////////////////////////////////////
+Route::resource('/admin/dashboard','PesanadminController');
 Route::resource('/user/addrating','InputRatingController');
 Route::put('/admin/updatepayment/{admin}','PesanadminController@confirmationPayment');
 
-// route user dashboard
+// route user dashboard /////////////////////////////////////////////////////////
 Route::get('/user/home','UserDashboardController@index')->middleware('auth')->name('user-home');
 Route::view('/user/addrating', 'dashboard-user.home-user-rating')->name('user-addrating');
 Route::resource('uploadbayar','UploadbayarController');
 
+
+// bookingg
 Route::get('/booking','BookingController@create')->middleware('auth');
 Route::post('/booking','BookingController@store')->middleware('auth');
 
 
+Route::get('user/dashboard', function(){
+    return view('dashboard-user.home-user-main');
+})->name('user/dashboard');
+Route::get('admin', function(){
+    return view('dashboard-admin.main-admin');
+})->name('admin');
 
