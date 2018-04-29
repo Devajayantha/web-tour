@@ -40,7 +40,7 @@ class SubscribeController extends Controller
         $subsribe = new Subsribe();
         $subsribe->email = $request->email;
         $subsribe->save();
-        // Alert::success('You have successfully subsribe your trip!','Success')->persistent("OK");
+        Alert::success('You have successfully subscribed your trip!','Success')->persistent("OK");
         return redirect ('/');
     }
 

@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="{{asset('css/fontawesome-all.css')}}">
         <link rel="stylesheet" href="{{asset('css/footer.css')}}">
         <link rel="stylesheet" href="{{asset('css/newfooter.css') }}">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
 
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -257,8 +258,8 @@
             <div class="row">
                 <div class="col-md-7 col-sm-12">
                     <div class="text-subsribe">
-                        <h2>Subsribe to Our newsletter</h2>
-                        <p>Sign up here to get the lastest news,updates and spesial promo in Penida Trip delivered directly to your inbox</p>
+                        <h2>Subscribe to Our newsletter</h2>
+                        <p>Sign up here to get the latest news,updates and special promo in Penida Trip delivered directly to your inbox</p>
                         <form action="/" method="post">
                             {{csrf_field()}}
                         <div class="input-group mb-3">
@@ -282,5 +283,7 @@
 @include('layouts.newfooter')
         <script src="{{asset('js/app.js')}}"></script>
         <script src="{{asset('js/main.js')}}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+        @include('sweet::alert')
     </body>
 </html>
