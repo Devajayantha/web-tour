@@ -72,12 +72,14 @@
                             <span>Broadcast</span>
                         </a>
                     </li>
+                    @if (auth()->guard('admin')->check())
                     <li>
-                        <a href="login">
+                        <a href="{{route('logout')}}">
                             <i class="material-icons">person</i>
                             <span>Log Out</span>
                         </a>
                     </li>
+                    @endif
             </div>
             <!-- #Menu -->
         </aside>

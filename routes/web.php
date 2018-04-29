@@ -24,6 +24,29 @@ Route::view('/paket', 'paket')->name('paket-tour');
 Route::view('/contact', 'contact')->name('contact');
 Route::view('/gallery', 'gallery')->name('gallery');
 
+//login silahkan ketik /admin/login dan register ketik /admin/register
+Route::group(['prefix' => 'admin'], function() {
+
+// Login Routes...
+    Route::get('login', ['as' => 'admin.login', 'uses' => 'AdminAuth\LoginController@showLoginForm']);
+    Route::post('login', ['as' => 'admin.login.post', 'uses' => 'AdminAuth\LoginController@login']);
+    Route::post('logout', ['as' => 'admin.logout', 'uses' => 'AdminAuth\LoginController@logout']);
+
+// Registration Routes...
+    Route::get('register', ['as' => 'admin.register', 'uses' => 'AdminAuth\RegisterController@showRegistrationForm']);
+    Route::post('register', ['as' => 'admin.register.post', 'uses' => 'AdminAuth\RegisterController@register']);
+
+// Password Reset Routes...
+    Route::get('password/reset', ['as' => 'admin.password.reset', 'uses' => 'AdminAuth\ForgotPasswordController@showLinkRequestForm']);
+    Route::post('password/email', ['as' => 'admin.password.email', 'uses' => 'AdminAuth\ForgotPasswordController@sendResetLinkEmail']);
+    Route::get('password/reset/{token}', ['as' => 'admin.password.reset.token', 'uses' => 'AdminAuth\ResetPasswordController@showResetForm']);
+    Route::post('password/reset', ['as' => 'admin.password.reset.post', 'uses' => 'AdminAuth\ResetPasswordController@reset']);
+
+// Route::view('/admin/home', 'dashboard-admin.home-admin')->name('admin-home');
+
+});
+//////
+
 // for search get //////////////////////////////////////////////////////////////////////
 Route::get('nusapenida', function(){
     return view('nusapenida');
@@ -74,7 +97,7 @@ Route::view('/admin/broadcast', 'dashboard-admin.broadcast-admin')->name('admin-
 Route::view('/admin/reminder', 'dashboard-admin.reminder-admin')->name('admin-reminder');
 Route::view('/admin/rating', 'dashboard-admin.rating-admin')->name('admin-rating');
 
-Route::resource('/admin','PesanadminController');
+Route::resource('/admin','PesanadminController')->middleware('admin');
 Route::resource('/user/addrating','InputRatingController');
 Route::put('/admin/updatepayment/{admin}','PesanadminController@confirmationPayment');
 
