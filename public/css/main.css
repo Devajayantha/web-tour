@@ -20,9 +20,9 @@ body{
 	margin-left: 500px;
 	padding: 0;
 }
-/*.ul-navbar{
+/* .ul-navbar{
     padding-left: 420px;
-}*/
+} */
 .ul-navbar > li {
 	list-style: none;
 	display: inline-block;
@@ -377,7 +377,7 @@ body{
 		margin: auto;
 	}
 	ul li{
-		/* display: block; */
+		display: block;
 		text-align: center;
 	}
     .active{

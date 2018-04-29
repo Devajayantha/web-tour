@@ -1,5 +1,4 @@
-@include('layouts.app-admin-new')
-
+@include('layouts.app-user-new')
 <div class="content-wrapper">
     <div class="container-fluid">
       <!-- Breadcrumbs-->
@@ -59,22 +58,6 @@
             </a>
           </div>
         </div>
-        <div class="col-xl-3 col-sm-6 mb-3">
-                <div class="card text-white bg-success o-hidden h-100">
-                  <div class="card-body">
-                    <div class="card-body-icon">
-                      <i class="fa fa-fw fa-shopping-cart"></i>
-                    </div>
-                    <div class="mr-5">History Book!</div>
-                  </div>
-                  <a class="card-footer text-white clearfix small z-1" href="#">
-                    <span class="float-left">View Details</span>
-                    <span class="float-right">
-                      <i class="fa fa-angle-right"></i>
-                    </span>
-                  </a>
-                </div>
-              </div>
       </div>
       {{--  ///////////////////////////////////////////////////  --}}
       <!-- Example DataTables Card-->
@@ -83,23 +66,37 @@
           <i class="fa fa-table"></i> Data Table Example</div>
         <div class="card-body">
           <div class="table-responsive">
-            <table class="table table-striped table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
               <thead>
                 <tr>
-                <th scope="col">No</th>
-                <th scope="col">Email</th>
-                <th scope="col">Rating</th>
-                <th scope="col">Pesan</th>
+                  <th>Name</th>
+                  <th>Position</th>
+                  <th>Office</th>
+                  <th>Age</th>
+                  <th>Start date</th>
+                  <th>Salary</th>
                 </tr>
-            </thead>
-            <tbody>
+              </thead>
+              <tfoot>
                 <tr>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
+                  <th>Name</th>
+                  <th>Position</th>
+                  <th>Office</th>
+                  <th>Age</th>
+                  <th>Start date</th>
+                  <th>Salary</th>
                 </tr>
-            </tbody>
+              </tfoot>
+              <tbody>
+                <tr>
+                  <td>Tiger Nixon</td>
+                  <td>System Architect</td>
+                  <td>Edinburgh</td>
+                  <td>61</td>
+                  <td>2011/04/25</td>
+                  <td>$320,800</td>
+                </tr>
+              </tbody>
             </table>
           </div>
         </div>

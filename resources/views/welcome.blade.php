@@ -47,7 +47,7 @@
                                     document.getElementById('logout-form').submit();">
                                      {{ __('Logout') }}
                                 </a>
-                                <a class="dropdown-item" href="/user/home">
+                                <a class="dropdown-item" href="/user/dashboard">
                                     Dashboard
                                 </a>
             
@@ -55,7 +55,33 @@
                                 @csrf
                             </form>
                             </div>
-                        </li> 
+                        </li>
+                    @elseif(Auth::guard('admin')->check()) 
+                    <li><a href="{{ url('booking') }}">Booking Now</a></li>  
+                    <li><a href="{{ url('gallery') }}">Gallery</a></li>  
+
+                    <li><a href="{{ url('contact') }}">Contact</a></li>
+                    <li><a href="{{ url('paket') }}">Paket</a></li>
+
+                    <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{ Auth::guard('admin')->user()->name }} <span class="caret"></span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('admin.logout') }}"
+                                    onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
+                                     {{ __('Logout') }}
+                                </a>
+                                <a class="dropdown-item" href="/admin/dashboard">
+                                    Dashboard
+                                </a>
+            
+                            <form id="logout-form" action="{{ route('admin.logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+                            </div>
+                        </li>
                     @else
                     <li><a href="{{ url('booking') }}">Booking Now</a></li>  
                     <li><a href="{{ url('gallery') }}">Gallery</a></li>  
@@ -96,22 +122,25 @@
                                         var selectedOption2 = $('#inputGroupSelect02').val();
                                         var url = "";
                                         if (selectedOption == '1') {
-                                            url = "{{ route('nusapenida')}}";
                                             if (selectedOption2 == '1'){
                                                 url = "{{ route('nusapenida-hd')}}";
                                             }else if (selectedOption2 == '2'){
                                                 url = "{{ route('nusapenida-2d1n')}}";
-                                            }else{
+                                            }else if (selectedOption2 == '3'){
                                                 url = "{{ route('nusapenida-3d2n')}}";
+                                            }else{
+                                                url = "{{ route('nusapenida')}}";
                                             }
                                         } else if (selectedOption == '2') {
-                                            url = "{{ route('nusalembongan')}}";
+                                            
                                             if (selectedOption2 == '1'){
                                                 url = "{{ route('lembongan-hd')}}";
                                             }else if(selectedOption2 == '2'){
                                                 url = "{{ route('lembongan-2d1n')}}";
-                                            }else{
+                                            }else if(selectedOption2 == '3'){
                                                 url = "{{ route('lembongan-3d2n')}}";
+                                            }else{
+                                                url = "{{ route('nusalembongan')}}";
                                             }
                                         }else{
                                             alert ("False");
@@ -250,50 +279,7 @@
         </div>
     </div>  
 </div>
-<footer id="myFooter">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-3">
-                <h2 class="logo"><a href="#"> LOGO </a></h2>
-            </div>
-            <div class="col-sm-2">
-                <h5>Get started</h5>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Sign up</a></li>
-                    <li><a href="#">Downloads</a></li>
-                </ul>
-            </div>
-            <div class="col-sm-2">
-                <h5>About us</h5>
-                <ul>
-                    <li><a href="#">Company Information</a></li>
-                    <li><a href="#">Contact us</a></li>
-                    <li><a href="#">Reviews</a></li>
-                </ul>
-            </div>
-            <div class="col-sm-2">
-                <h5>Support</h5>
-                <ul>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Help desk</a></li>
-                    <li><a href="#">Forums</a></li>
-                </ul>
-            </div>
-            <div class="col-sm-3">
-                <div class="social-networks">
-                    <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                    <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                    <a href="#" class="google"><i class="fa fa-google-plus"></i></a>
-                </div>
-                <button type="button" class="btn btn-default">Contact us</button>
-            </div>
-        </div>
-    </div>
-    <div class="footer-copyright">
-        <p>© 2016 Copyright Text </p>
-    </div>
-</footer>
+@include('layouts.newfooter')
         <script src="{{asset('js/app.js')}}"></script>
         <script src="{{asset('js/main.js')}}"></script>
     </body>

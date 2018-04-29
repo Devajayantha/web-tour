@@ -4,14 +4,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/main.css') }}">
+    <link rel="stylesheet" href="{{asset('css/contact.css') }}">  
     <link rel="shortcut icon" href="{{asset('img/logo.png')}}">
-    <link rel="stylesheet" href="{{asset('css/footer.css') }}">
-    
-    <link rel="stylesheet" href="{{asset('css/contact.css') }}">
     <link rel="stylesheet" href="{{asset('css/fontawesome-all.css')}}">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
-    <link rel="stylesheet" href="{{asset('css/newfooter.css') }}">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -22,7 +20,8 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    
+    <link rel="stylesheet" href="{{asset('css/newfooter.css') }}"> 
 </head>
 <body>
     <nav class="navbar">
@@ -33,62 +32,72 @@
             <img class="logo-brand" src="{{ asset('img/penida-hill.png') }}">
         </a>
        {{--  @if (Route::has('login'))    --}}
-        <ul class="ul-navbar">
-            @guest
-            <li><a href="{{ url('/') }}">Home</a></li>  
-            <li><a href="{{ url('booking') }}">Booking Now</a></li>  
-            <li><a href="{{ url('gallery') }}">Gallery</a></li>  
-            <li><a href="{{ url('contact') }}">Contact</a></li>
-            <li><a href="{{ url('paket') }}">Paket</a></li> 
-            <li><a href="{{ route('login') }}">{{ __('Login') }}</a></li>
-            <li><a href="{{ route('register') }}">{{ __('Register') }}</a></li>
-            @else
-            <li><a href="{{ url('/') }}">Home</a></li>  
-            <li><a href="{{ url('booking') }}">Booking Now</a></li>  
-            <li><a href="#">Gallery</a></li>  
-            <li><a href="{{ url('contact') }}">Contact</a></li>
-            <li><a href="{{ url('paket') }}">Paket</a></li> 
-                @if (auth()->guard('admin')->check())
-                <li class="nav-item dropdown">
-                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                        {{ Auth::user()->name }} <span class="caret"></span>
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{ route('logout') }}"
-                            onclick="event.preventDefault();
-                            document.getElementById('logout-form').submit();">
-                             {{ __('Logout') }}
-                        </a>
-                        <a class="dropdown-item" href="{{ url('user/home') }}">
-                            Dashboard
-                        </a>
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                        @csrf
-                    </form>
-                    </div>
-                </li>
-                @else
-                <li class="nav-item dropdown">
-                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                        {{ Auth::guard('admin')->user()->name }} <span class="caret"></span>
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{ route('admin.logout') }}"
-                            onclick="event.preventDefault();
-                            document.getElementById('logout-form').submit();">
-                             {{ __('Logout') }}
-                        </a>
-                        <a class="dropdown-item" href="{{ url('/admin') }}">
-                            Dashboard
-                        </a>
-                    <form id="logout-form" action="{{ route('admin.logout') }}" method="POST" style="display: none;">
-                        @csrf
-                    </form>
-                    </div>
-                </li>
+       @if (Route::has('login'))
+            <ul class="ul-navbar">
+                @auth
+                    <li><a href="{{ url('/') }}">Home</a></li> 
+                    <li><a href="{{ url('booking') }}">Booking Now</a></li>  
+                    <li><a href="{{ url('gallery') }}">Gallery</a></li>  
+                    <li><a href="{{ url('contact') }}">Contact</a></li>
+                    <li><a href="{{ url('paket') }}">Paket</a></li>
+
+                    <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{ Auth::user()->name }} <span class="caret"></span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                    onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
+                                     {{ __('Logout') }}
+                                </a>
+                                <a class="dropdown-item" href="/user/dashboard">
+                                    Dashboard
+                                </a>
+            
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+                            </div>
+                        </li>
+                    @elseif(Auth::guard('admin')->check()) 
+                    <li><a href="{{ url('/') }}">Home</a></li> 
+                    <li><a href="{{ url('booking') }}">Booking Now</a></li>  
+                    <li><a href="{{ url('gallery') }}">Gallery</a></li>  
+                    <li><a href="{{ url('contact') }}">Contact</a></li>
+                    <li><a href="{{ url('paket') }}">Paket</a></li>
+
+                    <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{ Auth::guard('admin')->user()->name }} <span class="caret"></span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('admin.logout') }}"
+                                    onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
+                                     {{ __('Logout') }}
+                                </a>
+                                <a class="dropdown-item" href="/admin/dashboard">
+                                    Dashboard
+                                </a>
+            
+                            <form id="logout-form" action="{{ route('admin.logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+                            </div>
+                        </li>
+                    @else
+                    <li><a href="{{ url('/') }}">Home</a></li> 
+                    <li><a href="{{ url('booking') }}">Booking Now</a></li>  
+                    <li><a href="{{ url('gallery') }}">Gallery</a></li>  
+                    <li><a href="{{ url('contact') }}">Contact</a></li>
+                    <li><a href="{{ url('paket') }}">Paket</a></li> 
+                    <li><a href="{{ route('login') }}">Login</a></li>
+                    <li><a href="{{ route('register') }}">Register</a></li>
                 @endif
-            @endguest           
-        </ul>
+                </ul>
+           @endif  
+        
     </nav>
     <div>
         @yield('welcome')    
@@ -98,15 +107,11 @@
     </main>
     <div>
         @yield('contact')
-    </div>
-    {{--  <div>
-        @yield('newfooter')
-    </div>  --}}
-    <div>
-        @yield('cekboking')
+        {{-- @include('layouts.newfooter') --}}
     </div>
     <div>
         @yield('bookingnow')
+        @include('layouts.newfooter')
     </div>
     <div>
         @yield('modal')
@@ -114,9 +119,6 @@
     <div>
         @yield('modal-bank')
     </div>
-    <footer>
-        @yield('footer')
-    </footer>
         {{--  <script src="{{ asset('js/app.js') }}" defer></script>    --}}
     <script src="{{asset('js/app.js')}}"></script>
     <script src="{{asset('js/main.js')}}"></script>
