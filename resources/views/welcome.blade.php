@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="{{asset('css/fontawesome-all.css')}}">
         <link rel="stylesheet" href="{{asset('css/footer.css')}}">
         <link rel="stylesheet" href="{{asset('css/newfooter.css') }}">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
 
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -55,7 +56,33 @@
                                 @csrf
                             </form>
                             </div>
-                        </li> 
+                        </li>
+                    @elseif(Auth::guard('admin')->check()) 
+                    <li><a href="{{ url('booking') }}">Booking Now</a></li>  
+                    <li><a href="{{ url('gallery') }}">Gallery</a></li>  
+
+                    <li><a href="{{ url('contact') }}">Contact</a></li>
+                    <li><a href="{{ url('paket') }}">Paket</a></li>
+
+                    <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{ Auth::guard('admin')->user()->name }} <span class="caret"></span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('admin.logout') }}"
+                                    onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
+                                     {{ __('Logout') }}
+                                </a>
+                                <a class="dropdown-item" href="/admin/dashboard">
+                                    Dashboard
+                                </a>
+            
+                            <form id="logout-form" action="{{ route('admin.logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+                            </div>
+                        </li>
                     @else
                     <li><a href="{{ url('booking') }}">Booking Now</a></li>  
                     <li><a href="{{ url('gallery') }}">Gallery</a></li>  
@@ -231,8 +258,8 @@
             <div class="row">
                 <div class="col-md-7 col-sm-12">
                     <div class="text-subsribe">
-                        <h2>Subsribe to Our newsletter</h2>
-                        <p>Sign up here to get the lastest news,updates and spesial promo in Penida Trip delivered directly to your inbox</p>
+                        <h2>Subscribe to Our newsletter</h2>
+                        <p>Sign up here to get the latest news,updates and special promo in Penida Trip delivered directly to your inbox</p>
                         <form action="/" method="post">
                             {{csrf_field()}}
                         <div class="input-group mb-3">
@@ -256,5 +283,7 @@
 @include('layouts.newfooter')
         <script src="{{asset('js/app.js')}}"></script>
         <script src="{{asset('js/main.js')}}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+        @include('sweet::alert')
     </body>
 </html>

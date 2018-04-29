@@ -69,7 +69,7 @@
       <ul  class="navbar-nav ml-auto">
         <li class="nav-item">
           <a class="nav-link">
-            Hello, Buddy<span class="caret"></span>
+            Hello, {{ Auth::guard('admin')->user()->name }}<span class="caret"></span>
           </a>
         </li>
         <li class="nav-item">

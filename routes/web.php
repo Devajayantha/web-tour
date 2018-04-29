@@ -24,6 +24,26 @@ Route::view('/paket', 'paket')->name('paket-tour');
 Route::view('/contact', 'contact')->name('contact');
 Route::view('/gallery', 'gallery')->name('gallery');
 
+//login silahkan ketik /admin/login dan register ketik /admin/register
+Route::group(['prefix' => 'admin'], function() {
+
+// Login Routes...
+    Route::get('login', ['as' => 'admin.login', 'uses' => 'AdminAuth\LoginController@showLoginForm']);
+    Route::post('login', ['as' => 'admin.login.post', 'uses' => 'AdminAuth\LoginController@login']);
+    Route::post('logout', ['as' => 'admin.logout', 'uses' => 'AdminAuth\LoginController@logout']);
+
+// Registration Routes...
+    Route::get('register', ['as' => 'admin.register', 'uses' => 'AdminAuth\RegisterController@showRegistrationForm']);
+    Route::post('register', ['as' => 'admin.register.post', 'uses' => 'AdminAuth\RegisterController@register']);
+
+// Password Reset Routes...
+    Route::get('password/reset', ['as' => 'admin.password.reset', 'uses' => 'AdminAuth\ForgotPasswordController@showLinkRequestForm']);
+    Route::post('password/email', ['as' => 'admin.password.email', 'uses' => 'AdminAuth\ForgotPasswordController@sendResetLinkEmail']);
+    Route::get('password/reset/{token}', ['as' => 'admin.password.reset.token', 'uses' => 'AdminAuth\ResetPasswordController@showResetForm']);
+    Route::post('password/reset', ['as' => 'admin.password.reset.post', 'uses' => 'AdminAuth\ResetPasswordController@reset']);
+});
+//////
+
 // for search get //////////////////////////////////////////////////////////////////////
 Route::get('nusapenida', function(){
     return view('nusapenida');
@@ -73,9 +93,9 @@ Route::view('/nusa-lembongan/3d2n', 'paket-lembongan.lembongan-3d2n')->name('lem
 Route::view('/admin/broadcast', 'dashboard-admin.broadcast-admin')->name('admin-broadcast');
 Route::view('/admin/reminder', 'dashboard-admin.reminder-admin')->name('admin-reminder');
 Route::get('/admin/rating', 'ShowratingController@index');
-//////////////////////////////////////////////////////////////////////
-Route::resource('/admin/dashboard','PesanadminController');
+Route::resource('/admin/dashboard','PesanadminController')->middleware('admin');
 Route::resource('/user/addrating','InputRatingController');
+///////////////////
 Route::put('/admin/updatepayment/{admin}','PesanadminController@confirmationPayment');
 
 // route user dashboard /////////////////////////////////////////////////////////
@@ -91,8 +111,8 @@ Route::post('/booking','BookingController@store')->middleware('auth');
 
 Route::get('user/dashboard', function(){
     return view('dashboard-user.home-user-main');
-})->name('user/dashboard');
+})->name('user/dashboard')->middleware('auth');
 Route::get('admin', function(){
     return view('dashboard-admin.main-admin');
-})->name('admin');
+})->name('admin')->middleware('admin');
 
