@@ -7,80 +7,13 @@
         <li class="breadcrumb-item">
           <a href="#">Dashboard</a>
         </li>
-        <li class="breadcrumb-item active">My Dashboard</li>
+        <li class="breadcrumb-item active">Booking List</li>
       </ol>
-      <!-- Icon Cards-->
-      <div class="row">
-        <div class="col-xl-3 col-sm-6 mb-3">
-          <div class="card text-white bg-primary o-hidden h-100">
-            <div class="card-body">
-              <div class="card-body-icon">
-                <i class="fa fa-fw fa-comments"></i>
-              </div>
-              <div class="mr-5">Dashboard</div>
-            </div>
-            <a class="card-footer text-white clearfix small z-1" href="#">
-              <span class="float-left">View Details</span>
-              <span class="float-right">
-                <i class="fa fa-angle-right"></i>
-              </span>
-            </a>
-          </div>
-        </div>
-        <div class="col-xl-3 col-sm-6 mb-3">
-          <div class="card text-white bg-warning o-hidden h-100">
-            <div class="card-body">
-              <div class="card-body-icon">
-                <i class="fa fa-fw fa-list"></i>
-              </div>
-              <div class="mr-5">Add Ratings</div>
-            </div>
-            <a class="card-footer text-white clearfix small z-1" href="#">
-              <span class="float-left">View Details</span>
-              <span class="float-right">
-                <i class="fa fa-angle-right"></i>
-              </span>
-            </a>
-          </div>
-        </div>
-        <div class="col-xl-3 col-sm-6 mb-3">
-          <div class="card text-white bg-success o-hidden h-100">
-            <div class="card-body">
-              <div class="card-body-icon">
-                <i class="fa fa-fw fa-shopping-cart"></i>
-              </div>
-              <div class="mr-5">History Book!</div>
-            </div>
-            <a class="card-footer text-white clearfix small z-1" href="#">
-              <span class="float-left">View Details</span>
-              <span class="float-right">
-                <i class="fa fa-angle-right"></i>
-              </span>
-            </a>
-          </div>
-        </div>
-        <div class="col-xl-3 col-sm-6 mb-3">
-                <div class="card text-white bg-success o-hidden h-100">
-                  <div class="card-body">
-                    <div class="card-body-icon">
-                      <i class="fa fa-fw fa-shopping-cart"></i>
-                    </div>
-                    <div class="mr-5">History Book!</div>
-                  </div>
-                  <a class="card-footer text-white clearfix small z-1" href="#">
-                    <span class="float-left">View Details</span>
-                    <span class="float-right">
-                      <i class="fa fa-angle-right"></i>
-                    </span>
-                  </a>
-                </div>
-              </div>
-      </div>
       {{--  ///////////////////////////////////////////////////  --}}
       <!-- Example DataTables Card-->
       <div class="card mb-3">
         <div class="card-header">
-          <i class="fa fa-table"></i> Data Table Example</div>
+          <i class="fa fa-table"></i> Table Booking</div>
         <div class="card-body">
           <div class="table-responsive">
             <table class="table table-striped table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -116,7 +49,7 @@
                                 {{'Sudah Bayar'}}
                             @endif  --}}
                             @if($b->confirmation == 0 && is_null($b->payment))
-                            {{'Belum Bayar'}}
+                                {{'Belum Bayar'}}
                             @elseif ($b->confirmation == 0 && $b->payment !== '')
                                 {{'Menunggu'}}
                             @else
@@ -124,39 +57,48 @@
                             @endif
                             </td>
                             <td>
+                                <a href="#" class="btn btn-success btn-lg" data-toggle="modal" data-target="#paymentModal{{$b->id}}">
+                                    <span class="fas fa-cloud-upload-alt"></span>
+                                </a>
                                 {{--  <!-- Button trigger modal -->  --}}
-                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#paymentModal{{$b->id}}">
-                                    check
-                                </button>
+                                {{--  <button type="button" class="btn btn-info fas fa-cloud-upload-alt" data-toggle="modal" data-target="#paymentModal{{$b->id}}">
+                                   
+                                </button>  --}}
                                 
                                 {{--  <!-- Modal pembayaran -->  --}}
                                 <div class="modal fade" id="paymentModal{{$b->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                        <h5 class="modal-title" id="exampleModalLabel">Check Detail Payment</h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                         </div>
-                                        <div class="modal-body">
-                                        <div>
-                                            {{$b->id}}
-                                        </div>
-                                        <img src="/assets/images/{{$b->payment}}" height="200px" width="200px">
+                                        <div class="modal-body mx-3">
+                                        <div class="form-group form-inline">
+                                            <label for="text">Nama : &nbsp; </label>
+                                            <input type="text" class="form-control" id="name" value="{{$b->name}}" disabled>
+                                        </div>      
+                                        @if (is_null($b->payment)) 
+                                            {{'User Belum Melakukan Upload Bukti Bayar'}}
+                                        @else                         
+                                            <img src="/assets/images/{{$b->payment}}" width="85%;" class="fotobayar">
+                                        @endif
                                         </div>
                                         <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                        <button type="button" class="btn btn-primary">Ok</button>
                                         </div>
                                     </div>
                                     </div>
                                 </div>
                             </td>
                             <td>
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal{{$b->id}}">
-                                Val
-                            </button>
+                                <a href="#" class="btn btn-info btn-lg" data-toggle="modal" data-target="#exampleModal{{$b->id}}">
+                                    <span class="far fa-calendar-check"></span>
+                                </a>
+
                             {{--  <!-- Modal verifikasi -->  --}}
                             <div class="modal fade" id="exampleModal{{$b->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -167,7 +109,6 @@
                                     <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
-                                
                                 <form action="/admin/updatepayment/{{$b->id}}" method="POST">
                                 @csrf
                                 {{method_field('put')}}

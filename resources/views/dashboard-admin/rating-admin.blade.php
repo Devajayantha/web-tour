@@ -7,75 +7,8 @@
         <li class="breadcrumb-item">
           <a href="#">Dashboard</a>
         </li>
-        <li class="breadcrumb-item active">My Dashboard</li>
+        <li class="breadcrumb-item active">Ratings Message</li>
       </ol>
-      <!-- Icon Cards-->
-      <div class="row">
-        <div class="col-xl-3 col-sm-6 mb-3">
-          <div class="card text-white bg-primary o-hidden h-100">
-            <div class="card-body">
-              <div class="card-body-icon">
-                <i class="fa fa-fw fa-comments"></i>
-              </div>
-              <div class="mr-5">Dashboard</div>
-            </div>
-            <a class="card-footer text-white clearfix small z-1" href="#">
-              <span class="float-left">View Details</span>
-              <span class="float-right">
-                <i class="fa fa-angle-right"></i>
-              </span>
-            </a>
-          </div>
-        </div>
-        <div class="col-xl-3 col-sm-6 mb-3">
-          <div class="card text-white bg-warning o-hidden h-100">
-            <div class="card-body">
-              <div class="card-body-icon">
-                <i class="fa fa-fw fa-list"></i>
-              </div>
-              <div class="mr-5">Add Ratings</div>
-            </div>
-            <a class="card-footer text-white clearfix small z-1" href="#">
-              <span class="float-left">View Details</span>
-              <span class="float-right">
-                <i class="fa fa-angle-right"></i>
-              </span>
-            </a>
-          </div>
-        </div>
-        <div class="col-xl-3 col-sm-6 mb-3">
-          <div class="card text-white bg-success o-hidden h-100">
-            <div class="card-body">
-              <div class="card-body-icon">
-                <i class="fa fa-fw fa-shopping-cart"></i>
-              </div>
-              <div class="mr-5">History Book!</div>
-            </div>
-            <a class="card-footer text-white clearfix small z-1" href="#">
-              <span class="float-left">View Details</span>
-              <span class="float-right">
-                <i class="fa fa-angle-right"></i>
-              </span>
-            </a>
-          </div>
-        </div>
-        <div class="col-xl-3 col-sm-6 mb-3">
-                <div class="card text-white bg-success o-hidden h-100">
-                  <div class="card-body">
-                    <div class="card-body-icon">
-                      <i class="fa fa-fw fa-shopping-cart"></i>
-                    </div>
-                    <div class="mr-5">History Book!</div>
-                  </div>
-                  <a class="card-footer text-white clearfix small z-1" href="#">
-                    <span class="float-left">View Details</span>
-                    <span class="float-right">
-                      <i class="fa fa-angle-right"></i>
-                    </span>
-                  </a>
-                </div>
-              </div>
-      </div>
       {{--  ///////////////////////////////////////////////////  --}}
       <!-- Example DataTables Card-->
       <div class="card mb-3">
@@ -83,25 +16,60 @@
           <i class="fa fa-table"></i> Data Table Example</div>
         <div class="card-body">
           <div class="table-responsive">
+            @if(!empty($ratings))
             <table class="table table-striped table-bordered" id="dataTable" width="100%" cellspacing="0">
               <thead>
                 <tr>
                 <th scope="col">No</th>
-                <th scope="col">Email</th>
-                <th scope="col">Rating</th>
+                <th scope="col">Nama</th>
+                <th scope="col">Rating Stars</th>
                 <th scope="col">Pesan</th>
+                <th scope="col">Action</th>
                 </tr>
             </thead>
             <tbody>
+              @foreach($ratings as $r)
                 <tr>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
+                  <td>{{$loop->iteration}}</td>
+                  <td>{{$r->name}}</td>
+                  <td>
+                    @if($r->stars == 5)
+                      <span class="fas fa-star checked"></span>
+                      <span class="fas fa-star checked"></span>
+                      <span class="fas fa-star checked"></span>
+                      <span class="fas fa-star checked"></span>
+                      <span class="fas fa-star checked"></span>
+                    @elseif($r->stars == 4)
+                      <span class="fas fa-star checked"></span>
+                      <span class="fas fa-star checked"></span>
+                      <span class="fas fa-star checked"></span>
+                      <span class="fas fa-star checked"></span>
+                    @elseif($r->stars == 3)
+                      <span class="fas fa-star checked"></span>
+                      <span class="fas fa-star checked"></span>
+                      <span class="fas fa-star checked"></span>
+                    @elseif($r->stars == 2)
+                      <span class="fas fa-star checked"></span>
+                      <span class="fas fa-star checked"></span>
+                    @else
+                      <span class="fas fa-star checked"></span>
+                    @endif
+                  </td>
+                  <td>{{$r->message}}</td>
+                  <td>
+                    <a href="#" class="btn btn-danger btn-lg">
+                      <span class="fas fa-trash"></span>
+                    </a>                    
+                  </td>
                 </tr>
+                @endforeach
             </tbody>
+            @else
+              <p>Tidak ada Ada</p>
+            @endif
             </table>
           </div>
+          <button type="submit" class="btn btn-info"> Submit</button>
         </div>
         <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
       </div>

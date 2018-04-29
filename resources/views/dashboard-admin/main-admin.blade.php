@@ -15,9 +15,9 @@
           <div class="card text-white bg-primary o-hidden h-100">
             <div class="card-body">
               <div class="card-body-icon">
-                <i class="fa fa-fw fa-comments"></i>
+                <i class="fab fa-snapchat"></i>
               </div>
-              <div class="mr-5">Dashboard</div>
+              <div class="mr-5">Message</div>
             </div>
             <a class="card-footer text-white clearfix small z-1" href="#">
               <span class="float-left">View Details</span>
@@ -31,9 +31,9 @@
           <div class="card text-white bg-warning o-hidden h-100">
             <div class="card-body">
               <div class="card-body-icon">
-                <i class="fa fa-fw fa-list"></i>
+                <i class="far fa-calendar-alt"></i>
               </div>
-              <div class="mr-5">Add Ratings</div>
+              <div class="mr-5">Reminder</div>
             </div>
             <a class="card-footer text-white clearfix small z-1" href="#">
               <span class="float-left">View Details</span>
@@ -44,12 +44,12 @@
           </div>
         </div>
         <div class="col-xl-3 col-sm-6 mb-3">
-          <div class="card text-white bg-success o-hidden h-100">
+          <div class="card text-white bg-info o-hidden h-100">
             <div class="card-body">
               <div class="card-body-icon">
                 <i class="fa fa-fw fa-shopping-cart"></i>
               </div>
-              <div class="mr-5">History Book!</div>
+              <div class="mr-5">Booking</div>
             </div>
             <a class="card-footer text-white clearfix small z-1" href="#">
               <span class="float-left">View Details</span>
@@ -63,9 +63,9 @@
                 <div class="card text-white bg-success o-hidden h-100">
                   <div class="card-body">
                     <div class="card-body-icon">
-                      <i class="fa fa-fw fa-shopping-cart"></i>
+                      <i class="fas fa-bullhorn"></i>
                     </div>
-                    <div class="mr-5">History Book!</div>
+                    <div class="mr-5">Broadcast!</div>
                   </div>
                   <a class="card-footer text-white clearfix small z-1" href="#">
                     <span class="float-left">View Details</span>

@@ -16,8 +16,10 @@
     <div class="container">
     <form method="post" action="/user/addrating">
         {{csrf_field()}}
-        <div class="input-group mb-3">
-            <input type="text" name="id_user" value="{{ Auth::user()->id}}">
+        <div class="input-group mb-3 form-group">
+            <label  for="comment" >Your Account * &ensp;</label>
+            <input type="text" name="name" value="{{ Auth::user()->name}}" disabled>
+            <input type="hidden" name="id_user" value="{{ Auth::user()->id}}" >
         </div>
         
         <div class="form-group">
@@ -80,7 +82,7 @@
               <span aria-hidden="true">×</span>
             </button>
           </div>
-          <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+          <div class="modal-body">Select "Back" below if you are ready to end your current session.</div>
           <div class="modal-footer">
             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
             <a class="btn btn-primary" href="/">Back</a>

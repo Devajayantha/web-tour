@@ -72,7 +72,7 @@ Route::view('/nusa-lembongan/3d2n', 'paket-lembongan.lembongan-3d2n')->name('lem
 // adminnn //////////////////////////////////////////////////////////
 Route::view('/admin/broadcast', 'dashboard-admin.broadcast-admin')->name('admin-broadcast');
 Route::view('/admin/reminder', 'dashboard-admin.reminder-admin')->name('admin-reminder');
-Route::view('/admin/rating', 'dashboard-admin.rating-admin')->name('admin-rating');
+Route::get('/admin/rating', 'ShowratingController@index');
 //////////////////////////////////////////////////////////////////////
 Route::resource('/admin/dashboard','PesanadminController');
 Route::resource('/user/addrating','InputRatingController');

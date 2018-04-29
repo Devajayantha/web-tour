@@ -42,19 +42,19 @@
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
           <a class="nav-link" href="{{ route('admin-reminder')}}">
-            <i class="far fa-comments"></i>
+            <i class="far fa-calendar-alt"></i>
             <span class="nav-link-text">Reminder</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
-            <a class="nav-link" href="{{route('admin-rating')}}">
-              <i class="fas fa-cogs "></i>
+            <a class="nav-link" href="{{url('admin/rating')}}">
+              <i class="fab fa-snapchat"></i>
               <span class="nav-link-text">Request Message</span>
             </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
             <a class="nav-link" href="{{route('admin-broadcast')}}">
-                <i class="fas fa-cogs "></i>
+                <i class="fas fa-bullhorn"></i>
                 <span class="nav-link-text">Broadcast</span>
             </a>
         </li>
@@ -74,7 +74,7 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
-            <i class="fas fa-sign-out-alt"></i> Back to Home</a>
+            <i class="fas fa-sign-out-alt"></i>Logout</a>
         </li>
       </ul>
     </div>
@@ -83,9 +83,9 @@
     <script src="{{asset('js/app.js')}}"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- Core plugin JavaScript-->
-    <script src="{{asset('vendor/jquery-easing/jquery.easing.min.js') }}"></script>
+    //<script src="{{asset('vendor/jquery-easing/jquery.easing.min.js') }}"></script>
     <!-- Page level plugin JavaScript-->
-    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script src="{{asset('vendor/chart.js/Chart.min.js') }}"></script>
     <script src="{{asset('vendor/datatables/jquery.dataTables.js') }}"></script>
     <script src="{{asset('vendor/datatables/dataTables.bootstrap4.js') }}"></script>
     <!-- Custom scripts for all pages-->

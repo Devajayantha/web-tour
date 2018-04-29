@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\InputRating;
 use DB;
-use App\Booking;
-class PesanadminController extends Controller
+
+class ShowratingController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,16 +15,12 @@ class PesanadminController extends Controller
      */
     public function index()
     {
-        $booking = DB::table('bookings')->join('detpakets', 'detpakets.id' , '=', 'bookings.id_detpaket' )
-        ->join('pakets', 'pakets.id', '=', 'detpakets.id_paket')
-        ->join('subpakets', 'subpakets.id', '=', 'detpakets.id_subpaket' )
-        ->join('users','users.id', '=', 'bookings.id_user' )
-        ->select('bookings.*', 'subpakets.name as subpaket', 'pakets.name as paket', 'users.name as name', 'users.email as email')
-        ->orderBy('id', 'DESC')
+        $ratings = DB::table('ratings')->join('users','users.id', '=', 'ratings.id_user' )
+        ->select('ratings.*','users.name as name')
+        ->orderBy('id','DESC')
         ->get();
 
-
-        return view ('dashboard-admin.home-admin', compact('booking'));
+        return view('dashboard-admin.rating-admin', compact('ratings'));
     }
 
     /**
@@ -90,21 +87,5 @@ class PesanadminController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function confirmationPayment(Request $request, $id)
-    {
-        $payment = Booking::find($id);
-        $payment->confirmation=1;
-        $payment->save();
-        return redirect('/admin/dashboard');
     }
 }
