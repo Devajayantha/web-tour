@@ -108,6 +108,7 @@
 		    </tr>
 		  </tbody>
 		</table>
+		@include('layouts.slide-lembongan')
 		<h2><center>The Tourist Attraction</center></h2>
 		<div id="map_wrapper">
 			<div id="lembongan-hd" class="mapping"></div>
@@ -149,7 +150,7 @@
 					'</div>'],
 					['<div class="info_content">' +
 					'<h3>Bakau Forest Lembongan </h3>' +
-					'<p>Position Near Atuh Beach Located in Pejukutan Village.</p>' +
+					'<p>Position Near Atuh Beach Loc	ated in Pejukutan Village.</p>' +
 					'</div>']
 			];
 					

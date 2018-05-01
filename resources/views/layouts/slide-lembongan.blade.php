@@ -5,12 +5,12 @@
     <div class="carousel-item active">
             <div class="col-md-4 mb-3">
                     <div class="card">
-                            <img class="img-fluid" src="{{asset('img/gallery/foto17.jpg')}}" alt="Card image cap">
+                            <img class="img-fluid" src="{{asset('img/gallery/foto12.jpg')}}" alt="Card image cap">
                     </div>
             </div>
             <div class="col-md-4 mb-3">
                     <div class="card">
-                            <img class="img-fluid" src="{{asset('img/gallery/foto9.jpg')}}" alt="Card image cap">
+                            <img class="img-fluid" src="{{asset('img/gallery/foto8.jpg')}}" alt="Card image cap">
                     </div>
             </div>
             <div class="col-md-4 mb-3">
@@ -24,17 +24,17 @@
     <div class="carousel-item">
             <div class="col-md-4 mb-3">
                     <div class="card">
-                            <img class="img-fluid" src="{{asset('img/gallery/foto20.jpg')}}" alt="Card image cap">
+                            <img class="img-fluid" src="{{asset('img/gallery/foto2.jpg')}}" alt="Card image cap">
                     </div>
             </div>
             <div class="col-md-4 mb-3">
                     <div class="card">
-                            <img class="img-fluid" src="{{asset('img/gallery/foto11.jpg')}}" alt="Card image cap">
+                            <img class="img-fluid" src="{{asset('img/gallery/foto14.jpg')}}" alt="Card image cap">
                     </div>
             </div>
             <div class="col-md-4 mb-3">
                     <div class="card">
-                            <img class="img-fluid" src="{{asset('img/gallery/foto7.jpg')}}" alt="Card image cap">
+                            <img class="img-fluid" src="{{asset('img/gallery/foto3.jpg')}}" alt="Card image cap">
                     </div>
             </div>
     </div>

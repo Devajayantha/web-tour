@@ -164,6 +164,7 @@
 			</table>
 		  </div>
 		</div>
+		@include('layouts.slide-lembongan')
 		<h2><center>The Tourist Attraction</center></h2>
 		<div id="map_wrapper">
 			<div id="lembongan-2d1n" class="mapping"></div>

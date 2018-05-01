@@ -45,13 +45,13 @@
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
           <a class="nav-link" href="{{ url('admin/reminder')}}">
             <i class="far fa-calendar-alt"></i>
-            <span class="nav-link-text">Reminder</span>
+            <span class="nav-link-text">Schedule</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
             <a class="nav-link" href="{{url('admin/rating')}}">
               <i class="fab fa-snapchat"></i>
-              <span class="nav-link-text">Request Message</span>
+              <span class="nav-link-text">Rating Message</span>
             </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
