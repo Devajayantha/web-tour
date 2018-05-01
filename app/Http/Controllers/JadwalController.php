@@ -18,6 +18,7 @@ class JadwalController extends Controller
         ->join('subpakets', 'subpakets.id', '=', 'detpakets.id_subpaket' )
         ->join('users','users.id', '=', 'bookings.id_user' )
         ->select('bookings.*', 'subpakets.name as subpaket', 'pakets.name as paket', 'users.name as name')
+        ->where('confirmation','=','1')
         ->orderBy('departure', 'ASC')
         ->get();
 

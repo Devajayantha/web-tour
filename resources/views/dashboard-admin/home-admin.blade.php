@@ -9,6 +9,18 @@
         </li>
         <li class="breadcrumb-item active">Booking List</li>
       </ol>
+      @if (isset($warning))
+      <div class="alert alert-warning alert-block">
+      <button type="button" class="close" data-dismiss="alert">×</button> 
+        <strong>{{ $warning }}</strong>
+      </div>
+      @endif
+       @if ($message = Session::get('success'))
+      <div class="alert alert-success alert-block">
+      <button type="button" class="close" data-dismiss="alert">×</button> 
+        <strong>{{ $message }}</strong>
+      </div>
+      @endif
       {{--  ///////////////////////////////////////////////////  --}}
       <!-- Example DataTables Card-->
       <div class="card mb-3">
@@ -160,7 +172,11 @@
           <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
           <div class="modal-footer">
             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-            <a class="btn btn-primary" href="/">Back</a>
+            <a class="btn btn-primary" href="{{route('admin.logout')}}" onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">Logout</a>
+            <form id="logout-form" action="{{ route('admin.logout') }}" method="POST" style="display: none;">
+                @csrf
+            </form>
           </div>
         </div>
       </div>
