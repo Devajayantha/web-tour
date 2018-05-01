@@ -7,42 +7,68 @@
         <li class="breadcrumb-item">
           <a href="#">Dashboard</a>
         </li>
-        <li class="breadcrumb-item active">Callender Event</li>
+        <li class="breadcrumb-item active">Ratings Message</li>
       </ol>
-
       {{--  ///////////////////////////////////////////////////  --}}
       <!-- Example DataTables Card-->
       <div class="card mb-3">
         <div class="card-header">
           <i class="fa fa-table"></i> Data Table Example</div>
         <div class="card-body">
-            @section('style')
-            <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.css"/>
-            @endsection
-            
-            @section('content')
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">Full Calendar Example</div>
-            
-                            <div class="panel-body">
-                                Callender()
+          <div class="agenda">
+          <div class="table-responsive">
+            <table class="table table-striped table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Event</th>
+                        <th>Person</th>
+                        <th>User</th>
+                        <th>Booking</th>
+                    </tr>
+                </thead>
+                <tbody>
+                @if(count($jadwal))
+                  @foreach($jadwal as $j)
+                    <!-- Single event in a single day -->
+                    @if( $j->confirmation == 1 )
+                    <tr>
+                        <td>{{$loop->iteration}}</td>
+                        <td class="agenda-date" class="active" rowspan="1">
+                            <div class="dayofmonth">{{date('j',strtotime($j->departure))}}</div>
+                            <div class="dayofweek">{{date('l',strtotime($j->departure))}}</div>
+                            <div class="shortdate text-muted">{{date('F \, Y',strtotime($j->departure))}}</div>
+                        </td>
+                        <td class="agenda-time">
+                            7 : 00 PM
+                        </td>
+                        <td class="agenda-events">
+                            <div class="agenda-event">
+                                {{$j->subpaket}}
+                                {{$j->paket}}
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            @endsection
-            
-            @section('script')
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.js"></script>
-            {{--  {!! $calendar->script() !!}  --}}
-            @endsection
+                        </td>
+                        <td class="agenda-events">
+                            {{$j->person}}
+                        </td>
+                        <td class="agenda-events">
+                            {{$j->name}}
+                        </td>
+                        <td class="agenda-events">
+                            {{date('j F Y',strtotime($j->created_at))}}
+                        </td>
+                    </tr>
+                    @endif
+                    @endforeach
+                  @endif
+                </tbody>            
+            </table>
+          </div>
         </div>
+        </div>
+        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
       </div>
     </div>
     <!-- /.container-fluid-->

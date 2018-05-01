@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <title>My Account </title>
+  <title>Welcome To | Penida Admin Dashboard</title>
   <!-- Bootstrap core CSS-->
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
   <!-- Custom fonts for this template-->
@@ -17,6 +17,8 @@
   <!-- Custom styles for this template-->
   <link href="{{asset('css/sb-admin.css') }}" rel="stylesheet">
   <link href="{{ asset('css/rating.css') }}" rel="stylesheet">
+  {{--  <link href="{{ asset('css/one-page-wonder.css') }}" rel="stylesheet">  --}}
+  <link href="{{ asset('css/agenda.css') }}" rel="stylesheet">
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
@@ -41,7 +43,7 @@
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
-          <a class="nav-link" href="{{ route('admin-reminder')}}">
+          <a class="nav-link" href="{{ url('admin/reminder')}}">
             <i class="far fa-calendar-alt"></i>
             <span class="nav-link-text">Reminder</span>
           </a>
