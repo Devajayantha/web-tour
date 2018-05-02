@@ -14,26 +14,33 @@
         <div class="card-header">
           <i class="fa fa-table"></i> Data Table Example</div>
         <div class="card-body">
-        <form>
-            <div class="form-group">
+        <form action="{{ route('sendmail') }}" method="POST">
+            {{ csrf_field() }}  
+          {{--  <div class="form-group">
                 <label for="exampleFormControlInput1">Recipients</label>
                 <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="email@example.com">
+            </div>  --}}
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Subject</label>
+                <input type="email" name="mail" class="form-control" id="exampleFormControlInput1" rows="3" placeholder="Subject">
             </div>
             <div class="form-group">
                 <label for="exampleFormControlInput1">Subject</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" rows="3" placeholder="Subject">
+                <input type="text" name="message" class="form-control" id="exampleFormControlInput1" rows="3" placeholder="Subject">
             </div>
-            <div class="form-group">
+            {{--  <div class="form-group">
                 <label for="exampleFormControlTextarea1">Message</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
-            </div>
-            <form>
+                <textarea name="message" class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+            </div>  --}}
+            {{--  <form>
                 <div class="form-group">
                     <label for="exampleFormControlFile1">Input Picture</label>
-                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                    <input type="file"  class="form-control-file" id="exampleFormControlFile1">
                 </div>
-                </form>
-            <button type="submit" class="btn btn-primary mb-2">Broadcast</button>
+                </form>  --}}
+
+                <button type="submit" class="btn btn-primary mb-2">Broadcast</button>
+                
         </form>
         </div>
         <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>

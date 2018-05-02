@@ -116,3 +116,11 @@ Route::get('admin', function(){
     return view('dashboard-admin.main-admin');
 })->name('admin')->middleware('admin');
 
+
+Route::post('sendmail', function (\Illuminate\Http\Request $request,
+\Illuminate\Mail\Mailer $mailer){
+    $mailer
+        ->to($request->input('mail'))
+        ->send(new \App\Mail\MyMail($request->input('message')));
+    return redirect()->back();
+})->name('sendmail');
