@@ -23,7 +23,6 @@ class UploadbayarController extends Controller
         ->orderBy('id', 'DESC')
         ->get();
 
-        // $post = Booking::all();
         return view ('dashboard-admin.home-admin', compact('booking'));
     }
 
@@ -58,7 +57,7 @@ class UploadbayarController extends Controller
         }
 
         $post->save();
-        return redirect('/user/home');
+        return redirect('/user/home')->with('success','Item created successfully!');
         // $filename = null;
         // if ($request->hasfile('payment')){
         //     $path = $request->file('payment')->store('public/profileaAdmin');
@@ -121,7 +120,7 @@ class UploadbayarController extends Controller
             $image->move(public_path('assets/images'), $filename);
         }
         $post->save();
-        return redirect('/user/home');
+        return redirect('/user/home')->with('success','Berhasil membayar, silahkan tunggu konfirmasi');
 
         // $post->$request->all();
         // if($request->hasFile('payment')){

@@ -33,7 +33,7 @@
                 @if(count($jadwal))
                   @foreach($jadwal as $j)
                     <!-- Single event in a single day -->
-                    @if( $j->confirmation == 1 )
+                  
                     <tr>
                         <td>{{$loop->iteration}}</td>
                         <td class="agenda-date" class="active" rowspan="1">
@@ -60,7 +60,7 @@
                             {{date('j F Y',strtotime($j->created_at))}}
                         </td>
                     </tr>
-                    @endif
+                   
                     @endforeach
                   @endif
                 </tbody>            
@@ -97,7 +97,11 @@
           <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
           <div class="modal-footer">
             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-            <a class="btn btn-primary" href="/">Back</a>
+            <a class="btn btn-primary" href="{{route('admin.logout')}}" onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">Logout</a>
+            <form id="logout-form" action="{{ route('admin.logout') }}" method="POST" style="display: none;">
+                @csrf
+            </form>
           </div>
         </div>
       </div>
