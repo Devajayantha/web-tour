@@ -57,7 +57,7 @@ class UploadbayarController extends Controller
         }
 
         $post->save();
-        return redirect('/user/home')->with('success','Item created successfully!');
+        return redirect('/user/home')->with('success','Bukti pembayaran berhasil diupload!');
         // $filename = null;
         // if ($request->hasfile('payment')){
         //     $path = $request->file('payment')->store('public/profileaAdmin');

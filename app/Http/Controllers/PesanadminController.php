@@ -23,7 +23,6 @@ class PesanadminController extends Controller
         ->get();
 
         $confirm=DB::table('bookings')->select('*')->where('confirmation','=','0')->whereNotNull('payment')->count();
-        
         //select('*')->where('confirmation','=','0')->count();
         if ($confirm>0){
             return view ('dashboard-admin.home-admin', compact('booking'), [
