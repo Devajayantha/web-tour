@@ -8,7 +8,13 @@
 </head>
 <body>
     <h1>You Got It</h1>
-    <p>{{ $message }}</p>
+    <h6>{{ $email_content }}</h6>
+    <p>{{ $text_area }}</p>
+    <img src=" $request->embed($pathToFile) " alt="" style="max-width: 80%;padding-top: 20px;">
+    {{-- <div>
+    <img src="{{ $message->embed($image_content) }}">
+     
+    </div>  --}}
     
 </body>
 </html>

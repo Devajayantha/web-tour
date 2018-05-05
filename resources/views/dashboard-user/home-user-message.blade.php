@@ -1,4 +1,4 @@
-@include('layouts.app-admin-new')
+@include('layouts.app-user-new')
 
 <div class="content-wrapper">
     <div class="container-fluid">
@@ -14,29 +14,19 @@
         <div class="card-header">
           <i class="fa fa-table"></i> Data Table Example</div>
         <div class="card-body">
-        <form action="{{ route('sendmail') }}" method="POST">
+        <form action="/user/message" method="POST">
             {{ csrf_field() }}  
-          {{--  <div class="form-group">
-                <label for="exampleFormControlInput1">Recipients</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="email@example.com">
-            </div>  --}}
             <div class="form-group">
-                <label for="exampleFormControlInput1">Email</label>
-                <input type="email" name="mail" class="form-control" id="exampleFormControlInput1" rows="3" placeholder="email@example.com">
-            </div>
-            <div class="form-group">
-                <label for="exampleFormControlInput1">Subject</label>
-                <input type="text" name="subject" class="form-control" id="exampleFormControlInput1" rows="3" placeholder="Subject">
+                <label for="exampleFormControlInput1">Name</label>
+                <input type="text" name="name" class="form-control" id="exampleFormControlInput1" rows="3" value="{{ Auth::user()->name }}">
+                <input type="hidden" name="id_user" value="{{ Auth::user()->id}}" 
             </div>
             <div class="form-group">
                 <label for="exampleFormControlTextarea1">Message</label>
-                <textarea name="message_email" class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="message"></textarea>
+                <textarea name="message" class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Create your message"></textarea>
             </div>
-            <div class="form-group">
-                <label for="exampleFormControlFile1">Input Picture</label>
-                <input type="file" name="picture" class="form-control-file" id="exampleFormControlFile1">
-            </div>
-            <button type="submit" class="btn btn-primary mb-2">Broadcast</button>
+
+            <button type="submit" class="btn btn-primary mb-2">Submit</button>
                 
         </form>
         </div>
