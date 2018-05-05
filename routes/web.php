@@ -37,7 +37,7 @@ Route::group(['prefix' => 'admin'], function() {
     Route::post('register', ['as' => 'admin.register.post', 'uses' => 'AdminAuth\RegisterController@register']);
 
 // Password Reset Routes...
-    Route::get('password/reset', ['as' => 'admin.password.reset', 'uses' => 'AdminAuth\ForgotPasswordController@showLinkRequestForm']);
+    Route::get('password/reset', ['as' => 'admin.password.request', 'uses' => 'AdminAuth\ForgotPasswordController@showLinkRequestForm']);
     Route::post('password/email', ['as' => 'admin.password.email', 'uses' => 'AdminAuth\ForgotPasswordController@sendResetLinkEmail']);
     Route::get('password/reset/{token}', ['as' => 'admin.password.reset.token', 'uses' => 'AdminAuth\ResetPasswordController@showResetForm']);
     Route::post('password/reset', ['as' => 'admin.password.reset.post', 'uses' => 'AdminAuth\ResetPasswordController@reset']);
@@ -93,7 +93,7 @@ Route::view('/nusa-lembongan/3d2n', 'paket-lembongan.lembongan-3d2n')->name('lem
 Route::view('/admin/broadcast', 'dashboard-admin.broadcast-admin')->name('admin-broadcast');
 Route::get('/admin/reminder', 'JadwalController@index');
 Route::get('/admin/rating', 'ShowratingController@index');
-Route::resource('/admin/dashboard','PesanadminController')->middleware('admin');
+Route::resource('/admin/dashboard','PesanadminController');//->middleware('admin');
 Route::resource('/user/addrating','InputRatingController');
 ///////////////////
 Route::put('/admin/updatepayment/{admin}','PesanadminController@confirmationPayment');
@@ -114,7 +114,7 @@ Route::get('user/dashboard', function(){
 })->name('user/dashboard')->middleware('auth');
 Route::get('admin', function(){
     return view('dashboard-admin.main-admin');
-})->name('admin')->middleware('admin');
+})->name('admin')->middleware('auth:admin');//->middleware('admin');
 
 
 Route::post('sendmail', function (\Illuminate\Http\Request $request,
