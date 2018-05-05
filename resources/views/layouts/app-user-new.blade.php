@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <title>My Account </title>
+  <title>Dashboard | My Account</title>
   <!-- Bootstrap core CSS-->
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
   <!-- Custom fonts for this template-->
@@ -34,7 +34,7 @@
             <span class="nav-link-text">Dashboard</span>
           </a>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title=""Booking>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Booking">
           <a class="nav-link" href="{{ route('user-home')}}">
             <i class="fas fa-suitcase"></i>
             <span class="nav-link-text">Booking History</span>
@@ -46,12 +46,18 @@
             <span class="nav-link-text">Add Ratings</span>
           </a>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
-            <a class="nav-link" href="#">
-              <i class="fas fa-cogs "></i>
-              <span class="nav-link-text">Profile</span>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Create Message">
+            <a class="nav-link" href="{{ url('user/message')}}">
+              <i class="far fa-envelope-open "></i>
+              <span class="nav-link-text">Create Message</span>
             </a>
         </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Inbox">
+          <a class="nav-link" href="#">
+            <i class="fas fa-inbox "></i>
+            <span class="nav-link-text">Inbox</span>
+          </a>
+      </li>
       </ul>
       <ul class="navbar-nav sidenav-toggler">
         <li class="nav-item">

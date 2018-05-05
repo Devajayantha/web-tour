@@ -19,7 +19,7 @@ Route::post('/','SubscribeController@store');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
+Route::view('/test','test')->name('test');
 Route::view('/paket', 'paket')->name('paket-tour');
 Route::view('/contact', 'contact')->name('contact');
 Route::view('/gallery', 'gallery')->name('gallery');
@@ -102,7 +102,7 @@ Route::put('/admin/updatepayment/{admin}','PesanadminController@confirmationPaym
 Route::get('/user/home','UserDashboardController@index')->middleware('auth')->name('user-home');
 Route::view('/user/addrating', 'dashboard-user.home-user-rating')->name('user-addrating');
 Route::resource('uploadbayar','UploadbayarController');
-
+Route::resource('/user/message','MessageuserController');
 
 // bookingg
 Route::get('/booking','BookingController@create')->middleware('auth');
@@ -115,12 +115,12 @@ Route::get('user/dashboard', function(){
 Route::get('admin', function(){
     return view('dashboard-admin.main-admin');
 })->name('admin')->middleware('admin');
+Route::post('sendmail','SendemailController@send')->name('sendmail');
 
-
-Route::post('sendmail', function (\Illuminate\Http\Request $request,
-\Illuminate\Mail\Mailer $mailer){
-    $mailer
-        ->to($request->input('mail'))
-        ->send(new \App\Mail\MyMail($request->input('message')));
-    return redirect()->back();
-})->name('sendmail');
+// Route::post('sendmail', function (\Illuminate\Http\Request $request,
+// \Illuminate\Mail\Mailer $mailer){
+//     $mailer
+//         ->to($request->input('mail'))
+//         ->send(new \App\Mail\MyMail($request->input('subject'),$request->input('message_email'),$request->input('picture')));
+//     return redirect()->back();
+// })->name('sendmail');

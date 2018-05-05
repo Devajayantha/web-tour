@@ -11,15 +11,20 @@ class Mymail extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $message;
+    public $email_content;
+    public $text_area;
+    public $image_content;
+
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($message)
+    public function __construct($email,$message)
     {
-        $this->message = $message;
+        $this->email_content = $email;
+        $this->text_area = $message;
+        // $this->image_content = $image;
     }
 
     /**

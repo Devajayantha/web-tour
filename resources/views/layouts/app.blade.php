@@ -110,8 +110,10 @@
         {{-- @include('layouts.newfooter') --}}
     </div>
     <div>
+        @yield('test');
         @yield('bookingnow')
         @include('layouts.newfooter')
+        
     </div>
     <div>
         @yield('modal')
