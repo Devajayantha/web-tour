@@ -2,47 +2,83 @@
 
 
 @section('test')
-<link rel="stylesheet" href="{{asset('css/auth.css') }}">
-<div class="lowin">
-    <div class="lowin-brand">
-        <img src="kodinger.jpg" alt="logo">
-    </div>
-    <div class="lowin-wrapper">
-        <div class="lowin-box lowin-login">
-            <div class="lowin-box-inner">
-                <form action="">
-                    <p>Sign in to continue</p>
-                    <div class="lowin-group">
-                        <label>Email <a href="#" class="login-back-link">Sign in?</a></label>
-                        <input type="email" autocomplete="email" name="email" class="lowin-input">
+<div class="container">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="box-form">
+                <div class="form-signin">
+                    <div>
+                        <img  class="form-logo" src="{{asset('img/penida-hill.png')}}" alt="">
                     </div>
-                    <div class="lowin-group password-group">
-                        <label>Password <a href="#" class="forgot-link">Forgot Password?</a></label>
-                        <input type="password" name="password" autocomplete="current-password" class="lowin-input">
-                    </div>
-                    <button class="lowin-btn login-btn">
-                        Sign In
-                    </button>
-
-                    <div class="text-foot">
-                        Don't have an account? <a href="" class="register-link">Register</a>
-                    </div>
-                </form>
+                    <span class="judul modal-header">
+                        Hello World
+                    </span>
+                    <p id="textspan">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industrys standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and scrambled it to make a type 
+                        specimen book. It has survived not only five centuries, but also the leap into 
+                        electronic typesetting, remaining essentially unchanged. It was popularised in 
+                        the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+                        and more recently with desktop publishing software like Aldus PageMaker including 
+                        versions of Lorem Ipsum.
+                    </p>
+                </div>
             </div>
         </div>
+        <div class="col-md-2"></div>
 
     </div>
-
-    <footer class="lowin-footer">
-        Design By <a href="http://fb.me/itskodinger">@itskodinger</a>
-    </footer>
 </div>
+<style>
 
-<script src="{{asset('js/auth.js') }}"></script>
-<script>
-    Auth.init({
-        login_url: '#login',
-        forgot_url: '#forgot'
-    });
-</script>
+    @font-face {
+        font-family: "Quantify";
+        src: url('Quantify Bold v2.6.ttf');
+    }
+     
+     *{
+         padding: 0;
+     }
+
+     body{
+         background-color: #e0e0e0;
+         margin:0;
+     }
+    .form-logo{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 40%;
+        padding-bottom: 20px;
+    }
+     .judul{
+        font-family: "Quantify";
+        font-size: 35px;
+        color :#757575;
+        text-align: center;
+        padding-top: 5px;         
+     }
+
+    .form-signin{
+        box-shadow: 0 4px 8px 0 #0064b7;
+        max-width: 380px;
+        padding: 15px 35px 15px;
+        margin: 0 auto;
+        background-color: rgba(255,255,255,0.6);
+        border: 1px solid rgba(0,0,0,0.1);
+    }
+    
+    .box-form{
+        padding-top: 15%;
+    }
+    #textspan{
+        padding-top: 20px;
+        font-family: "arial";
+        text-align: justify;
+        text-justify: inter-word;
+    }
+     
+</style>
 @endsection

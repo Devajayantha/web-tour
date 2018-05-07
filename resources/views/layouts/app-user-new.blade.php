@@ -46,7 +46,7 @@
             <span class="nav-link-text">Add Ratings</span>
           </a>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Create Message">
+        {{-- <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Create Message">
             <a class="nav-link" href="{{ url('user/message')}}">
               <i class="far fa-envelope-open "></i>
               <span class="nav-link-text">Create Message</span>
@@ -57,7 +57,7 @@
             <i class="fas fa-inbox "></i>
             <span class="nav-link-text">Inbox</span>
           </a>
-      </li>
+        </li> --}}
       </ul>
       <ul class="navbar-nav sidenav-toggler">
         <li class="nav-item">

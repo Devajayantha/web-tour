@@ -61,7 +61,7 @@
       </div>
       {{--  ///////////////////////////////////////////////////  --}}
       <!-- Example DataTables Card-->
-      <div class="card mb-3">
+      {{-- <div class="card mb-3">
         <div class="card-header">
           <i class="fa fa-table"></i> Data Table Example</div>
         <div class="card-body">
@@ -101,14 +101,14 @@
           </div>
         </div>
         <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
-      </div>
+      </div> --}}
     </div>
     <!-- /.container-fluid-->
     <!-- /.content-wrapper-->
     <footer class="sticky-footer">
       <div class="container">
         <div class="text-center">
-          <small>Copyright © Your Website 2018</small>
+          <small>Copyright © Penida Hill 2018</small>
         </div>
       </div>
     </footer>
