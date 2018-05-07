@@ -2,78 +2,111 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
-
-                <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
-                        @csrf
-
-                        <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
-
-                            <div class="col-md-6">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="box-form">
+                    <div class="form-signin">
+                        <h2 class="title" >Registrasi </h2><br>
+                        <form method="POST" action="{{ route('register') }}">
+                             @csrf
+                            <div class="form-group">          
+                                <label for="name">{{ __('Name') }}</label>
                                 <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
-
+    
                                 @if ($errors->has('name'))
                                     <span class="invalid-feedback">
                                         <strong>{{ $errors->first('name') }}</strong>
                                     </span>
                                 @endif
                             </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                            <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="email">{{ __('E-Mail Address') }}</label>
                                 <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
-
+    
                                 @if ($errors->has('email'))
                                     <span class="invalid-feedback">
                                         <strong>{{ $errors->first('email') }}</strong>
                                     </span>
                                 @endif
                             </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
-
-                                @if ($errors->has('password'))
-                                    <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
+                            <div class="form-group">
+                                <div class="form-row">
+                                    <div class="col-md-6">
+                                    <label for="password">{{ __('Password') }}</label>
+                                    <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+    
+                                    @if ($errors->has('password'))
+                                        <span class="invalid-feedback">
+                                            <strong>{{ $errors->first('password') }}</strong>
+                                        </span>
+                                    @endif
+                                    </div>
+                                    <div class="col-md-6">
+                                    <label for="password-confirm">{{ __('Confirm Password') }}</label>
+                                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                            <button type="submit" class="btn btn-primary col-md-12">
+                                    Register
+                            </button>
+                        </form>
+                            <div class="text-center">
+                                <a class="d-block small mt-3" href="{{ route('login')}}">Login Page</a>
+                                <a class="d-block small" href="{{ route('password.request') }}">Forgot Password?</a>
                             </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
-                                </button>
-                            </div>
-                        </div>
-                    </form>
+                    </div>
                 </div>
+    
+            </div>
+            <div class="col-md-4">
+                <div>
+                    <img class="login-image" src="{{asset('img/tourlogin.jpg')}}" alt="">
+                </div>
+            </div>
+            <div class="col-md-4">
+    
             </div>
         </div>
     </div>
-</div>
+    <style>
+        @font-face {
+            font-family: "Quantify";
+            src: url('Quantify Bold v2.6.ttf');
+         }
+         
+         *{
+             padding: 0;
+         }
+         .login-image{
+             width: 700px;
+             margin-top:100px;
+         }
+         body{
+             margin:0;
+         }
+         .form-signin{
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+           max-width: 380px;
+           padding: 15px 35px 15px;
+           margin: 0 auto;
+           background-color: rgba(255,255,255,0.6);
+           border: 1px solid rgba(0,0,0,0.1);
+         }
+         
+         .box-form{
+             padding-top: 25%;
+         }
+         /* title h2 */
+         .title{
+             font-family: "Quantify";
+             font-size: 35px;
+             color :#757575;
+             text-align: center;
+             padding-top: 5px;
+         }
+         
+    </style>
 @endsection
 
 {{--      --}}

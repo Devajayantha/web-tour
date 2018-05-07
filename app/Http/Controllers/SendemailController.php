@@ -121,8 +121,7 @@ class SendemailController extends Controller
 
 
         Mail::to($request->input('mail'))->send(new \App\Mail\MyMail($request->input('subject'),
-                $request->input('message_email'),
-                $request->attach('image')->getRealPath()
+                $request->input('message_email')
         ));
         return redirect()->back();
     }
