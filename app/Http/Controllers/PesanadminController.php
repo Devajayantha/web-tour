@@ -114,6 +114,6 @@ class PesanadminController extends Controller
         $payment = Booking::find($id);
         $payment->confirmation=1;
         $payment->save();
-        return redirect('/admin/dashboard')->with('success','Berhasil melakukan verifikasi');
+        return redirect('/admin/dashboard')->with('success',sprintf('Berhasil melakukan verifikasi #%s',$payment->booking_no ));
     }
 }

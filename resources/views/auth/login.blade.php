@@ -13,7 +13,7 @@
             <div class="col-md-4">
                 <div class="box-form">
                     <div class="form-signin">
-                        <h2 class="title" >Login</h2><br>
+                        <h2 class="title">Login</h2><br>
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
                             <div class="form-group">

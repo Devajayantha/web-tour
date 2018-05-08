@@ -47,7 +47,9 @@ class UploadbayarController extends Controller
         $post=Booking::where('id_user', Auth::user()->id)->get();
         // $post= restore();
         $post -> booking_no = $request->booking_no;
-
+        $this->validate($request, [
+            'payment' => 'image|max:1024',
+        ]);
 
         $image = $request->file('payment');
         if($image){
@@ -55,9 +57,9 @@ class UploadbayarController extends Controller
             $post->payment = $filename;
             $image->move(public_path('asset/images'),$filename);
         }
-
         $post->save();
-        return redirect('/user/home')->with('success','Bukti pembayaran berhasil diupload!');
+        return redirect()->back()->with('success','Bukti pembayaran berhasil diupload!');
+
         // $filename = null;
         // if ($request->hasfile('payment')){
         //     $path = $request->file('payment')->store('public/profileaAdmin');
@@ -110,6 +112,9 @@ class UploadbayarController extends Controller
         $post = Booking::find($id);
             
         // $post -> booking_no = $request->
+        $this->validate($request, [
+            'payment' => 'image|max:1024',
+        ]);
 
         $image = $request->file('payment');
         if ($image) {
@@ -120,7 +125,7 @@ class UploadbayarController extends Controller
             $image->move(public_path('assets/images'), $filename);
         }
         $post->save();
-        return redirect('/user/home')->with('success','Berhasil membayar, silahkan tunggu konfirmasi');
+        return redirect()->back()->with('success',sprintf('Bukti pembayaran #%s berhasil diupload', $post->booking_no));
 
         // $post->$request->all();
         // if($request->hasFile('payment')){

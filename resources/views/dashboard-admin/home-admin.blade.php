@@ -70,7 +70,7 @@
                             </td>
                             <td>
                                 <a href="#" class="btn btn-success btn-lg" data-toggle="modal" data-target="#paymentModal{{$b->id}}">
-                                    <span class="fas fa-cloud-upload-alt"></span>
+                                    <span class="fas fa-eye"></span>
                                 </a>
                                 {{--  <!-- Button trigger modal -->  --}}
                                 {{--  <button type="button" class="btn btn-info fas fa-cloud-upload-alt" data-toggle="modal" data-target="#paymentModal{{$b->id}}">
