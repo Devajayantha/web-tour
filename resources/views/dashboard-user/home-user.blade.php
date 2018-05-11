@@ -21,7 +21,7 @@
       </div>
       @endif
       @if ($message = Session::get('error'))
-      <div class="alert alert-success alert-block">
+      <div class="alert alert-danger alert-block">
       <button type="button" class="close" data-dismiss="alert">×</button> 
         <strong>{{ $message }}</strong>
       </div>
@@ -66,10 +66,14 @@
                                 @endif
                             </td>
                             <td>
+                                @if ($b->confirmation == 0)
                                 {{--  <span>
                                     <i class="fas fa-cloud-upload-alt"></i>
                                 </span>  --}}
                                 <button type="button" class="btn btn-info fas fa-cloud-upload-alt" value="{{$loop->iteration}}" data-toggle="modal" data-target="#uploadModal{{$b->id}}"></button>
+                                @else
+                                <i class="fas fa-check-circle text-success"></i>
+                                @endif
 
                                 <!-- Modal -->
                                 <div id="uploadModal{{$b->id}}" class="modal fade" role="dialog">
@@ -85,13 +89,21 @@
                                           </div>
                                       <div class="modal-body">
                                         <div class="alert alert-info" role="alert">
-                                          File Upload Maximum 5 mb
+                                          File Upload Maximum 1 mb
                                         </div>
+                                        @if ($errors->has('payment'))
+                                          <div class="alert alert-danger" role="alert">
+                                               {{ $errors->first('payment') }}
+                                          </div>
+                                        @endif
+      
                                         {{--  Form upload pembyaran  --}}
                                         <form method='post' action='{{route("uploadbayar.update", ['uploadbayar'=>$b->id])}}' enctype="multipart/form-data">
                                             @method('patch')
                                             {{csrf_field() }}
+                                            
                                           Select file : <input type='file' name='payment' id='file' class='form-control' ><br>
+                                          
                                           <input type='submit' class='btn btn-info' value='Upload' id='upload'>
                                         </form>
                                 

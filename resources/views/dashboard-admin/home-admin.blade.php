@@ -70,7 +70,7 @@
                             </td>
                             <td>
                                 <a href="#" class="btn btn-success btn-lg" data-toggle="modal" data-target="#paymentModal{{$b->id}}">
-                                    <span class="fas fa-cloud-upload-alt"></span>
+                                    <span class="fas fa-eye"></span>
                                 </a>
                                 {{--  <!-- Button trigger modal -->  --}}
                                 {{--  <button type="button" class="btn btn-info fas fa-cloud-upload-alt" data-toggle="modal" data-target="#paymentModal{{$b->id}}">
@@ -107,9 +107,15 @@
                                 </div>
                             </td>
                             <td>
+                                @if ($b->confirmation == 0)                                
                                 <a href="#" class="btn btn-info btn-lg" data-toggle="modal" data-target="#exampleModal{{$b->id}}">
                                     <span class="far fa-calendar-check"></span>
                                 </a>
+                                @else
+                                 <a href="#" class="btn btn-info btn-lg disabled" data-toggle="modal" data-target="#exampleModal{{$b->id}}">
+                                    <span class="far fa-calendar-check"></span>
+                                </a>
+                                @endif
 
                             {{--  <!-- Modal verifikasi -->  --}}
                             <div class="modal fade" id="exampleModal{{$b->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

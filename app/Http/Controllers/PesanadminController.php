@@ -22,11 +22,10 @@ class PesanadminController extends Controller
         ->orderBy('id', 'DESC')
         ->get();
 
-        $confirm=DB::table('bookings')->select('*')->where('confirmation','=','0')->whereNotNull('payment')->count();
+        $confirm=DB::table('bookings')->where('confirmation','=','0')->whereNotNull('payment')->first();
         //select('*')->where('confirmation','=','0')->count();
-        if ($confirm>0){
-            return view ('dashboard-admin.home-admin', compact('booking'), [
-      'warning' => 'Mohon verifikasi booking yang baru dibayar' ]);
+        if ($confirm!=NULL){
+            return view ('dashboard-admin.home-admin', compact('booking'), ['warning' => sprintf('Mohon verifikasi booking #%s yang baru dibayar', $confirm->booking_no) ]);
         }
         else{
             return view ('dashboard-admin.home-admin', compact('booking'));
@@ -114,6 +113,6 @@ class PesanadminController extends Controller
         $payment = Booking::find($id);
         $payment->confirmation=1;
         $payment->save();
-        return redirect('/admin/dashboard')->with('success','Berhasil melakukan verifikasi');
+        return redirect('/admin/dashboard')->with('success',sprintf('Berhasil melakukan verifikasi #%s',$payment->booking_no ));
     }
 }
