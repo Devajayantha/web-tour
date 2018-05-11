@@ -1,5 +1,43 @@
 $(document).ready(function(){
   
+  $('#ModalEdit').on('show.bs.modal',function(event){
+    console.log('Modal Opened');
+    var button = $(event.relatedTarget)
+    var id = button.data('fid')
+    var stars = button.data('fstars')
+    var name = button.data('fname')
+    var message = button.data('fmessage')
+    var confirm = button.data('fconfirm')
+
+    var modal = $(this)
+    modal.find('.modal-body #id').val(id)
+    modal.find('.modal-body #stars2').val(stars)
+    modal.find('.modal-body #message').val(message)
+    modal.find('.modal-body #name').val(name)
+    modal.find('.modal-body #confirm_rating').val(confirm)
+  })
+
+  $('#validasiConfirm').on('show.bs.modal',function(event){
+    console.log('Modal Opened');
+    var button = $(event.relatedTarget)
+    var id = button.data('fid')
+    var confirm = button.data('fconfirm')
+
+    var modal = $(this)
+    modal.find('.modal-body #id').val(id)
+    modal.find('.modal-body #confirm_rating').val(confirm)
+  })
+
+  $('#cancelConfirm').on('show.bs.modal',function(event){
+    console.log('Modal Opened');
+    var button = $(event.relatedTarget)
+    var id = button.data('fid')
+    var confirm = button.data('fconfirm')
+
+    var modal = $(this)
+    modal.find('.modal-body #id').val(id)
+    modal.find('.modal-body #confirm_rating').val(confirm)
+  })
     /* 1. Visualizing things on Hover - See next part for action on click */
     $('#stars li').on('mouseover', function(){
       var onStar = parseInt($(this).data('value'), 10); // The star currently mouse on

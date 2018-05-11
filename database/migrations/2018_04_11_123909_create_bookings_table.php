@@ -26,6 +26,9 @@ class CreateBookingsTable extends Migration
             $table->integer('amount')->nullable();
             $table->boolean('confirmation')->default(0);
             $table->string('payment')->nullable();
+            $table->integer('stars')->nullable();
+            $table->text('message')->nullable();
+            $table->boolean('confirm_rating')->default(0);
             $table->timestamps();
         });
     }

@@ -1,16 +1,14 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Http\requests;
+
 use Illuminate\Http\Request;
-use App\Post;
-// use Illuminate\Mail\Mailer;
-use App\Mail\Mymail;
-use Mail;
-use Image;
-use Storage;
-use Session;
-class SendemailController extends Controller
+use App\RatingUser;
+use App\Booking;
+use DB;
+use Auth;
+use App\Http\Requests;
+class RatingUserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,7 +17,17 @@ class SendemailController extends Controller
      */
     public function index()
     {
-        //
+        $rating=Booking::where('id_user', Auth::user()->id)
+        ->where('confirmation','1')->get(); 
+        // $rating = DB::table('bookings')->join('detpakets', 'detpakets.id' , '=', 'bookings.id_detpaket' )
+        // ->join('pakets', 'pakets.id', '=', 'detpakets.id_paket')
+        // ->join('subpakets', 'subpakets.id', '=', 'detpakets.id_subpaket' )
+        // ->join('users','users.id', '=', 'bookings.id_user' )
+        // ->select('bookings.*', 'subpakets.name as subpaket', 'pakets.name as paket', 'users.name as name', 'users.email as email')
+        // ->orderBy('id', 'DESC')
+        // ->get();
+        return view ('dashboard-user.home-user-add-rating', compact('rating'));
+
     }
 
     /**
@@ -72,9 +80,15 @@ class SendemailController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        // dd($request->all());
+        $rating = Booking::findOrFail($request->id);
+        $rating->stars = $request->get('stars');
+        $rating->message = $request->get('message');
+        $rating->save();
+        // return back();
+        return redirect ('/user/rating');
     }
 
     /**
@@ -87,40 +101,5 @@ class SendemailController extends Controller
     {
         //
     }
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function send(Request $request)
-    {
-        // $mail = $request->input('mail')
 
-        
-        // Mail::send('new \App\Mail\MyMail', $data, function ($message) {
-        //     $message->from('john@johndoe.com', 'John Doe');
-        //     $message->sender('john@johndoe.com', 'John Doe');
-        
-        //     $message->to('john@johndoe.com', 'John Doe');
-        
-        //     $message->cc('john@johndoe.com', 'John Doe');
-        //     $message->bcc('john@johndoe.com', 'John Doe');
-        
-        //     $message->replyTo('john@johndoe.com', 'John Doe');
-        
-        //     $message->subject('Subject');
-        
-        //     $message->priority(3);
-        
-        //     $message->attach('pathToFile');
-        // });
-        
-            
-
-        Mail::to($request->input('mail'))->send(new \App\Mail\MyMail($request->input('subject'),
-                $request->input('message_email')
-        ));
-        return redirect()->back();
-    }
 }

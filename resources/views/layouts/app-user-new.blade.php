@@ -41,23 +41,11 @@
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
-          <a class="nav-link" href="{{ route('user-addrating')}}">
+          <a class="nav-link" href="{{ route('user-rating')}}">
             <i class="far fa-comments"></i>
             <span class="nav-link-text">Add Ratings</span>
           </a>
         </li>
-        {{-- <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Create Message">
-            <a class="nav-link" href="{{ url('user/message')}}">
-              <i class="far fa-envelope-open "></i>
-              <span class="nav-link-text">Create Message</span>
-            </a>
-        </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Inbox">
-          <a class="nav-link" href="#">
-            <i class="fas fa-inbox "></i>
-            <span class="nav-link-text">Inbox</span>
-          </a>
-        </li> --}}
       </ul>
       <ul class="navbar-nav sidenav-toggler">
         <li class="nav-item">

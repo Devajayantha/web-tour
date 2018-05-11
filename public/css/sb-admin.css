@@ -2,6 +2,18 @@ html {
   position: relative;
   min-height: 100%;
 }
+.white-star{
+  color: white;
+}
+.status_rating{
+  color: green;
+}
+.waitting{
+  color:blue;
+}
+.eyes{
+  color:purple;
+}
 .fotobayar{
   display: block;
   margin-left: auto;

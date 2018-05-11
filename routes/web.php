@@ -93,17 +93,21 @@ Route::view('/nusa-lembongan/3d2n', 'paket-lembongan.lembongan-3d2n')->name('lem
 Route::view('/admin/broadcast', 'dashboard-admin.broadcast-admin')->name('admin-broadcast');
 Route::get('/admin/reminder', 'JadwalController@index');
 Route::get('/admin/rating', 'ShowratingController@index');
+Route::post('sendmail','SendemailController@send')->name('sendmail');
 Route::resource('/admin/dashboard','PesanadminController');//->middleware('admin');
-Route::resource('/user/addrating','InputRatingController');
-///////////////////
+
+// Route::resource('/user/addrating','InputRatingController');
 Route::put('/admin/updatepayment/{admin}','PesanadminController@confirmationPayment');
+Route::put('/admin/update/valid','ShowratingController@updateValid');
+Route::put('/admin/update/cancel','ShowratingController@updateCancel');     
 
 // route user dashboard /////////////////////////////////////////////////////////
 Route::get('/user/home','UserDashboardController@index')->middleware('auth')->name('user-home');
-Route::view('/user/addrating', 'dashboard-user.home-user-rating')->name('user-addrating');
+// Route::view('/user/addrating', 'dashboard-user.home-user-rating')->name('user-addrating');
 Route::resource('uploadbayar','UploadbayarController');
-Route::resource('/user/message','MessageuserController');
-
+//////////////////////////////////////// progress
+Route::get('/user/rating','RatingUserController@index')->middleware('auth')->name('user-rating');
+Route::put('/user/input/rating/','RatingUserController@update')->name('user-input-rating');
 // bookingg
 Route::get('/booking','BookingController@create')->middleware('auth');
 Route::post('/booking','BookingController@store')->middleware('auth');
@@ -114,9 +118,9 @@ Route::get('user/dashboard', function(){
 })->name('user/dashboard')->middleware('auth');
 Route::get('admin', function(){
     return view('dashboard-admin.main-admin');
-
 })->name('admin')->middleware('auth:admin');
-Route::post('sendmail','SendemailController@send')->name('sendmail');
+
+
 
 // Route::post('sendmail', function (\Illuminate\Http\Request $request,
 // \Illuminate\Mail\Mailer $mailer){

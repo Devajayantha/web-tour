@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\InputRating;
+use App\Booking;
 use DB;
 
 class ShowratingController extends Controller
@@ -15,9 +15,13 @@ class ShowratingController extends Controller
      */
     public function index()
     {
-        $ratings = DB::table('ratings')->join('users','users.id', '=', 'ratings.id_user' )
-        ->select('ratings.*','users.name as name')
+        $ratings = DB::table('bookings')->join('users','users.id', '=', 'bookings.id_user' )
+        ->join('detpakets', 'detpakets.id' , '=', 'bookings.id_detpaket' )
+        ->join('pakets', 'pakets.id', '=', 'detpakets.id_paket')
+        ->join('subpakets', 'subpakets.id', '=', 'detpakets.id_subpaket' )
+        ->select('bookings.*','users.name as name', 'subpakets.name as subpaket', 'pakets.name as paket')
         ->orderBy('id','DESC')
+        ->where('confirmation','1')
         ->get();
 
         return view('dashboard-admin.rating-admin', compact('ratings'));
@@ -87,5 +91,37 @@ class ShowratingController extends Controller
     public function destroy($id)
     {
         //
+    }
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function updateValid(Request $request)
+    {
+        $ratings = Booking::findOrFail($request->id);
+        $ratings->confirm_rating=1;
+        $ratings->save();
+
+        return redirect ('/admin/rating');
+
+
+    }
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function updateCancel(Request $request)
+    {
+        $ratings = Booking::findOrFail($request->id);
+        $ratings->confirm_rating=0;
+        $ratings->save();
+
+        return redirect ('/admin/rating');
     }
 }
