@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Booking;
 use Auth;
 use DB;
+use App\User;
 
 class UserDashboardController extends Controller
 {
@@ -21,5 +22,20 @@ class UserDashboardController extends Controller
         }
         //return view('dashboard-user.home-user', compact('booking'));
 
+    }
+
+
+    public function edit(User $user)
+    {
+        return view('dashboard-user.edit-user', compact('user'));
+    }
+
+
+    public function update(Request $request, User $user)
+    {
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->save();
+        return redirect ('/user/dashboard'); 
     }
 }

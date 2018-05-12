@@ -11,22 +11,6 @@
       <!-- Icon Cards-->
       <div class="row">
         <div class="col-xl-3 col-sm-6 mb-3">
-          <div class="card text-white bg-primary o-hidden h-100">
-            <div class="card-body">
-              <div class="card-body-icon">
-                <i class="fa fa-fw fa-comments"></i>
-              </div>
-              <div class="mr-5">Dashboard</div>
-            </div>
-            <a class="card-footer text-white clearfix small z-1" href="#">
-              <span class="float-left">View Details</span>
-              <span class="float-right">
-                <i class="fa fa-angle-right"></i>
-              </span>
-            </a>
-          </div>
-        </div>
-        <div class="col-xl-3 col-sm-6 mb-3">
           <div class="card text-white bg-warning o-hidden h-100">
             <div class="card-body">
               <div class="card-body-icon">
@@ -57,6 +41,31 @@
               </span>
             </a>
           </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          Profile
+        </div>
+        <div class="card-body">
+          <h5 class="card-title"></h5>
+          <div class="row">
+            <div class="col-sm-4 text-center">
+              <div class="profile-userpic">
+                <img src="http://poolwallet.com/assets/img/default.jpg" class="img-responsive" alt="">
+              </div>
+              
+            </div>
+            <div class="col-sm-4">
+              <h3 class="card-text">Nama</h3>
+              <p class="card-text">{{ Auth::user()->name }}</p>
+              <h3 class="card-text">E-mail</h3>
+              <p class="card-text">{{ Auth::user()->email }}</p>
+            </div>
+            <div class="col-sm-4">
+              <a href="/user/{{Auth::user()->id}}/edit" class="button btn btn-primary">Edit Profile</a>
+            </div>
+          </div>        
         </div>
       </div>
     </div>

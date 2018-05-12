@@ -116,6 +116,10 @@ Route::post('/booking','BookingController@store')->middleware('auth');
 Route::get('user/dashboard', function(){
     return view('dashboard-user.home-user-main');
 })->name('user/dashboard')->middleware('auth');
+Route::get('user/{user}/edit',  ['as' => 'user.edit', 'uses' => 'UserDashboardController@edit']);
+Route::put('user/{user}',  ['as' => 'user.update', 'uses' => 'UserDashboardController@update']);
+
+
 Route::get('admin', function(){
     return view('dashboard-admin.main-admin');
 })->name('admin')->middleware('auth:admin');

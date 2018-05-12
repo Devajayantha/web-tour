@@ -65,7 +65,7 @@
                                     {{'Berhasil'}}
                                 @endif
                             </td>
-                            <td>
+                            <td style="text-align: center;">
                                 @if ($b->confirmation == 0)
                                 {{--  <span>
                                     <i class="fas fa-cloud-upload-alt"></i>
