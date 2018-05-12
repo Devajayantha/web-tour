@@ -58,19 +58,23 @@
                             <td>{{$b->amount}}</td>                            
                             <td>
                                 @if($b->confirmation == 0 && is_null($b->payment))
-                                    {{'Belum Bayar'}}
-                                @elseif ($b->confirmation == 0 && $b->payment !== '')
-                                    {{'Menunggu'}}
-                                @else
+                                    {{'Belum Bayar'}}                               
+                                @elseif ($b->confirmation == 0 && $b->payment=='gagal')
+                                    {{'Gagal'}}
+                                @elseif ($b->confirmation == 1)
                                     {{'Berhasil'}}
+                                @else
+                                    {{'Menunggu'}}
                                 @endif
                             </td>
                             <td style="text-align: center;">
-                                @if ($b->confirmation == 0)
+                                @if ($b->confirmation == 0  && is_null($b->payment))
                                 {{--  <span>
                                     <i class="fas fa-cloud-upload-alt"></i>
                                 </span>  --}}
                                 <button type="button" class="btn btn-info fas fa-cloud-upload-alt" value="{{$loop->iteration}}" data-toggle="modal" data-target="#uploadModal{{$b->id}}"></button>
+                                @elseif ($b->confirmation == 0 && $b->payment=='gagal')
+                                <i class="fas fa-times-circle text-danger"></i>
                                 @else
                                 <i class="fas fa-check-circle text-success"></i>
                                 @endif
