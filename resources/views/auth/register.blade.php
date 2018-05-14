@@ -30,6 +30,26 @@
                                 @endif
                             </div>
                             <div class="form-group">
+                                <label for="birth">{{ __('Birth Date') }}</label>
+                                <input id="birth" type="date" class="form-control{{ $errors->has('birth') ? ' is-invalid' : '' }}" name="birth" value="{{ old('birth') }}" required>
+    
+                                @if ($errors->has('birth'))
+                                    <span class="invalid-feedback">
+                                        <strong>{{ $errors->first('birth') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                            <div class="form-group">
+                                <label for="address">{{ __('Address') }}</label>
+                                <input id="address" type="text" class="form-control{{ $errors->has('address') ? ' is-invalid' : '' }}" name="address" value="{{ old('address') }}" required>
+    
+                                @if ($errors->has('address'))
+                                    <span class="invalid-feedback">
+                                        <strong>{{ $errors->first('address') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                            <div class="form-group">
                                 <div class="form-row">
                                     <div class="col-md-6">
                                     <label for="password">{{ __('Password') }}</label>

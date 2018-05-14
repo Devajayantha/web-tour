@@ -17,14 +17,47 @@
          
             <div class="card-body">
             	<div class="form-group">
-				    <label for="exampleInputName1">Name</label>
-				    <input type="text" class="form-control" id="exampleInputName1" name="name" value="{{$user->name}}">
-				</div>
+				        <label for="exampleInputName1">Name</label>
+				        <input type="text" class="form-control" id="exampleInputName1" name="name" value="{{$user->name}}">
+                @if ($errors->has('name'))
+                    <span class="invalid-feedback">
+                        <strong>{{ $errors->first('name') }}</strong>
+                    </span>
+                @endif
+				      </div>
 	            <div class="form-group">
-				    <label for="exampleInputEmail1">Email address</label>
-				    <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" value="{{$user->email}}">
-				    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-				  </div>
+				        <label for="exampleInputEmail1">Email address</label>
+				        <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" value="{{$user->email}}">
+                @if ($errors->has('email'))
+                    <span class="invalid-feedback">
+                        <strong>{{ $errors->first('email') }}</strong>
+                    </span>
+                @endif
+				        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+				      </div>
+              <div class="form-group">
+                <label for="exampleInputBirth1">Birth Date</label>
+                <input type="date" class="form-control" id="exampleInputBirth1" name="birth" value="{{$user->birth}}">
+                @if ($errors->has('birth'))
+                    <span class="invalid-feedback">
+                        <strong>{{ $errors->first('birth') }}</strong>
+                    </span>
+                @endif
+              </div>
+              <div class="form-group">
+                <label for="exampleInputAddress1">Address</label>
+                <input type="text" class="form-control" id="exampleInputAddress1" name="address" value="{{$user->address}}">
+                @if ($errors->has('address'))
+                    <span class="invalid-feedback">
+                        <strong>{{ $errors->first('address') }}</strong>
+                    </span>
+                @endif
+              </div>
+
+              <div class="form-group">
+                <label for="exampleProfpic1">Profile Picture</label>
+                <input type='file' name='profilepic' id='file' class='form-control' >
+              </div>
 
 	            <button type="submit"  class="btn btn-primary">
 	                Submit

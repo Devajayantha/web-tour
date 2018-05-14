@@ -27,6 +27,6 @@ class EventBatal extends Migration
      */
     public function down()
     {
-        DB::unprepared('DROP TRIGGER `event_batal`');
+        DB::unprepared('DROP EVENT `event_batal`');
     }
 }
