@@ -127,13 +127,6 @@ class UploadbayarController extends Controller
         $post->save();
         return redirect()->back()->with('success',sprintf('Bukti pembayaran #%s berhasil diupload', $post->booking_no));
 
-        // $post->$request->all();
-        // if($request->hasFile('payment')){
-        //     $file = $request->('payment');
-        //     $path = $request->photo->path()
-        // $request->payment->
-        // }
-
     }
 
     /**

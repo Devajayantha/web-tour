@@ -21,7 +21,7 @@ class ShowratingController extends Controller
         ->join('subpakets', 'subpakets.id', '=', 'detpakets.id_subpaket' )
         ->select('bookings.*','users.name as name', 'subpakets.name as subpaket', 'pakets.name as paket')
         ->orderBy('id','DESC')
-        ->where('confirmation','1')
+        ->where('stars', '<>', '', 'and')
         ->get();
 
         return view('dashboard-admin.rating-admin', compact('ratings'));

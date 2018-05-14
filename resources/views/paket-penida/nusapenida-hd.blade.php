@@ -112,6 +112,7 @@
 		<div id="map_wrapper">
 			<div id="nusapenida-hd" class="mapping"></div>
 		</div>
+		@include('layouts.rating-viewers')
 	</div>
 </div>
 <script>

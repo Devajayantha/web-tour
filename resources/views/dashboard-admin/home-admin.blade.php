@@ -69,15 +69,10 @@
                             @endif
                             </td>
                             <td>
+                                {{--  <i class="far fa-eye" data-toggle="modal" data-target="#paymentModal{{$b->id}}"></i>  --}}
                                 <a href="#" class="btn btn-success btn-lg" data-toggle="modal" data-target="#paymentModal{{$b->id}}">
                                     <span class="fas fa-eye"></span>
                                 </a>
-                                {{--  <!-- Button trigger modal -->  --}}
-                                {{--  <button type="button" class="btn btn-info fas fa-cloud-upload-alt" data-toggle="modal" data-target="#paymentModal{{$b->id}}">
-                                   
-                                </button>  --}}
-                                
-                                {{--  <!-- Modal pembayaran -->  --}}
                                 <div class="modal fade" id="paymentModal{{$b->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
                                     <div class="modal-content">

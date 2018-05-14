@@ -18,6 +18,10 @@ Route::post('/','SubscribeController@store');
 
 Auth::routes();
 
+// Route::get('/gallery','MainController@gallery');
+// Route::get('/paket','MainController@paket');
+
+
 Route::get('/home', 'HomeController@index')->name('home');
 Route::view('/test','test')->name('test');
 Route::view('/paket', 'paket')->name('paket-tour');

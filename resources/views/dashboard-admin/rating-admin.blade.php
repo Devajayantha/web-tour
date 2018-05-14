@@ -55,8 +55,10 @@
                     @elseif($r->stars == 2)
                       <span class="fas fa-star checked"></span>
                       <span class="fas fa-star checked"></span>
-                    @else
+                    @elseif($r->stars == 1)
                       <span class="fas fa-star checked"></span>
+                    @else
+                     <span>Please review our paket</span>
                     @endif
                   </td>
                   <td>{{$r->message}}</td>
