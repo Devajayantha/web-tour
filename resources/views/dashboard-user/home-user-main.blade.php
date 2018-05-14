@@ -8,55 +8,22 @@
         </li>
         <li class="breadcrumb-item active">My Dashboard</li>
       </ol>
-      <!-- Icon Cards-->
-      <div class="row">
-        <div class="col-xl-3 col-sm-6 mb-3">
-          <div class="card text-white bg-warning o-hidden h-100">
-            <div class="card-body">
-              <div class="card-body-icon">
-                <i class="fa fa-fw fa-list"></i>
-              </div>
-              <div class="mr-5">Add Ratings</div>
-            </div>
-            <a class="card-footer text-white clearfix small z-1" href="#">
-              <span class="float-left">View Details</span>
-              <span class="float-right">
-                <i class="fa fa-angle-right"></i>
-              </span>
-            </a>
-          </div>
-        </div>
-        <div class="col-xl-3 col-sm-6 mb-3">
-          <div class="card text-white bg-success o-hidden h-100">
-            <div class="card-body">
-              <div class="card-body-icon">
-                <i class="fa fa-fw fa-shopping-cart"></i>
-              </div>
-              <div class="mr-5">History Book!</div>
-            </div>
-            <a class="card-footer text-white clearfix small z-1" href="#">
-              <span class="float-left">View Details</span>
-              <span class="float-right">
-                <i class="fa fa-angle-right"></i>
-              </span>
-            </a>
-          </div>
-        </div>
-      </div>
+
       <div class="card">
         <div class="card-header">
-          Profile
+          <a href="/user/{{Auth::user()->id}}/edit" class="button btn btn-primary">
+            <i class="fab fa-telegram-plane"></i> Edit Profile
+          </a>
         </div>
         <div class="card-body">
           <h5 class="card-title"></h5>
           <div class="row">
-            <div class="col-sm-4 text-center">
+            <div class="col-sm-7 text-center">
               <div class="profile-userpic">
-                @if (Auth::user()->profilepic == NULL)
-                <img src="http://poolwallet.com/assets/img/default.jpg" class="img-responsive" alt="">
-                else
-                <img src="/upload/profile/{{ Auth::user()->profilepic }}" width="85%;" class="fotobayar">
-                
+                @if (isset(Auth::user()->profilepic ))
+                  <img src="/upload/profile/{{ Auth::user()->profilepic }}"  class="foto-profile">
+                @else
+                  <img src="http://poolwallet.com/assets/img/default.jpg" class="img-responsive" alt="">  
                 @endif
               </div>
               
@@ -70,9 +37,6 @@
               <p class="card-text">{{ Auth::user()->birth }}</p>
               <h3 class="card-text">Address</h3>
               <p class="card-text">{{ Auth::user()->address }}</p>
-            </div>
-            <div class="col-sm-4">
-              <a href="/user/{{Auth::user()->id}}/edit" class="button btn btn-primary">Edit Profile</a>
             </div>
           </div>        
         </div>
