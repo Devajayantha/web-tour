@@ -54,6 +54,11 @@
                 @endif
               </div>
 
+              <div class="form-group">
+                <label for="exampleProfpic1">Profile Picture</label>
+                <input type='file' name='profilepic' id='file' class='form-control' >
+              </div>
+
 	            <button type="submit"  class="btn btn-primary">
 	                Submit
 	            </button>  

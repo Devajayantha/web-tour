@@ -43,6 +43,7 @@ class UserDashboardController extends Controller
         $user->email = $request->email;
         $user->birth = $request->birth;
         $user->address = $request->address;
+        
         $user->save();
         return redirect ('/user/dashboard'); 
     }

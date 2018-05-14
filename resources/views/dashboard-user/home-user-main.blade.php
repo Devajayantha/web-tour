@@ -52,7 +52,11 @@
           <div class="row">
             <div class="col-sm-4 text-center">
               <div class="profile-userpic">
+                @if (Auth::user()->profilepic == NULL)
                 <img src="http://poolwallet.com/assets/img/default.jpg" class="img-responsive" alt="">
+               
+                
+                @endif
               </div>
               
             </div>
