@@ -33,9 +33,9 @@ class UserDashboardController extends Controller
 
     public function update(Request $request, User $user)
     {
-        $this->validate($request, [
+        $validatedData = $request->validate([
             'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
+            'email' => 'required|string|email|max:255',
             'birth' => 'required|date',
             'address' => 'required|string|max:50',
         ]);
