@@ -61,6 +61,10 @@
               <p class="card-text">{{ Auth::user()->name }}</p>
               <h3 class="card-text">E-mail</h3>
               <p class="card-text">{{ Auth::user()->email }}</p>
+              <h3 class="card-text">Birth Date</h3>
+              <p class="card-text">{{ Auth::user()->birth }}</p>
+              <h3 class="card-text">Address</h3>
+              <p class="card-text">{{ Auth::user()->address }}</p>
             </div>
             <div class="col-sm-4">
               <a href="/user/{{Auth::user()->id}}/edit" class="button btn btn-primary">Edit Profile</a>

@@ -33,8 +33,16 @@ class UserDashboardController extends Controller
 
     public function update(Request $request, User $user)
     {
+        $this->validate($request, [
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users',
+            'birth' => 'required|date',
+            'address' => 'required|string|max:50',
+        ]);
         $user->name = $request->name;
         $user->email = $request->email;
+        $user->birth = $request->birth;
+        $user->address = $request->address;
         $user->save();
         return redirect ('/user/dashboard'); 
     }

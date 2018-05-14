@@ -26,9 +26,7 @@
   width: 50%;
   height: 50%;
   border: 3px solid #eee;
-  -webkit-border-radius: 50% !important;
-  -moz-border-radius: 50% !important;
-  border-radius: 50% !important;
+
 }</style>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
