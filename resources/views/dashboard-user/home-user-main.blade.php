@@ -54,7 +54,8 @@
               <div class="profile-userpic">
                 @if (Auth::user()->profilepic == NULL)
                 <img src="http://poolwallet.com/assets/img/default.jpg" class="img-responsive" alt="">
-               
+                else
+                <img src="/upload/profile/{{ Auth::user()->profilepic }}" width="85%;" class="fotobayar">
                 
                 @endif
               </div>

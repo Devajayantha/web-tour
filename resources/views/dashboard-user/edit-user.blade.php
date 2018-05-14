@@ -9,7 +9,7 @@
         <li class="breadcrumb-item">My Dashboard</li>
         <li class="breadcrumb-item active">Edit Profile</li>
       </ol>
-      <form method="post" action="/user/{{ $user->id }}">
+      <form method="post" action="/user/{{ $user->id }}"  enctype="multipart/form-data">
             {{csrf_field()}}
             {{ method_field('PUT')}}
             <div class="card">
@@ -33,7 +33,7 @@
                         <strong>{{ $errors->first('email') }}</strong>
                     </span>
                 @endif
-				        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+				        <small id="emailHelp" class="form-text text-muted">Well never share your email with anyone else.</small>
 				      </div>
               <div class="form-group">
                 <label for="exampleInputBirth1">Birth Date</label>

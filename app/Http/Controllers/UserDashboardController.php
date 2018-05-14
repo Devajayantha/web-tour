@@ -39,12 +39,34 @@ class UserDashboardController extends Controller
             'birth' => 'required|date',
             'address' => 'required|string|max:50',
         ]);
-        $user->name = $request->name;
-        $user->email = $request->email;
-        $user->birth = $request->birth;
-        $user->address = $request->address;
-        
-        $user->save();
-        return redirect ('/user/dashboard'); 
+
+        $profilepic = $request->file('profilepic');
+
+        if(empty($profilepic)){
+            // $user = User::FindOrFail($request->$id);
+
+            $user->name = $request->name;
+            $user->email = $request->email;
+            $user->birth = $request->birth;
+            $user->address = $request->address;
+            
+            $user->save();
+            return redirect ('/user/dashboard'); 
+
+        }else{
+            $filename = $request->email. "_" . date('m-d-Y', time()) . '.' . $profilepic->getClientOriginalExtension();
+            $profilepic->move('upload/profile', $filename, file_get_contents($request->file('profilepic')->getRealPath()));
+            // $user = User::FindOrFail($request->$id);
+            $user->name = $request->name;
+            $user->email = $request->email;
+            $user->birth = $request->birth;
+            $user->address = $request->address;
+            $user->profilepic = $filename;
+            
+            $user->save();
+            return redirect ('/user/dashboard'); 
+
+        }
+
     }
 }
