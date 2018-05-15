@@ -27,7 +27,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/admin';
+    protected $redirectTo = '/admin/dashboard';
 
 
     /**
@@ -70,7 +70,7 @@ class LoginController extends Controller
         ];
 
         if (Auth::guard('admin')->attempt($credential, $request->member)) {
-            return redirect()->intended(route('admin'));
+            return redirect()->intended(route('dashboard.index'));
         }
         return redirect()->back()->withInput($request->only('email', 'remember'));
     }
