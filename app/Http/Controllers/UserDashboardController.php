@@ -37,6 +37,7 @@ class UserDashboardController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255',
             'birth' => 'required|date',
+            'gender' => 'required',
             'address' => 'required|string|max:50',
         ]);
 
@@ -48,6 +49,7 @@ class UserDashboardController extends Controller
             $user->name = $request->name;
             $user->email = $request->email;
             $user->birth = $request->birth;
+            $user->gender = $request->gender;
             $user->address = $request->address;
             
             $user->save();
@@ -60,6 +62,7 @@ class UserDashboardController extends Controller
             $user->name = $request->name;
             $user->email = $request->email;
             $user->birth = $request->birth;
+            $user->gender = $request->gender;
             $user->address = $request->address;
             $user->profilepic = $filename;
             

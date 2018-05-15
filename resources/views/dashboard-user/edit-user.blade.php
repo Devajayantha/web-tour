@@ -45,6 +45,23 @@
                 @endif
               </div>
               <div class="form-group">
+                  <div class="form-row">
+                      <label for="gender">{{ __('Gender') }}</label>
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input class="form-check-input" type="radio" name="gender" id="gender" value="Male" checked>
+                                        Male
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input class="form-check-input" type="radio" name="gender" id="gender" value="Female">
+                                        Female
+                        </label>
+                      </div>
+                  </div>
+              </div>
+              <div class="form-group">
                 <label for="exampleInputAddress1">Address</label>
                 <input type="text" class="form-control" id="exampleInputAddress1" name="address" value="{{$user->address}}">
                 @if ($errors->has('address'))
