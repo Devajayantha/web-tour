@@ -11,6 +11,8 @@ use Session;
 use DB;
 use Alert;
 use Illuminate\Http\Request;
+use App\Notifications\BookingNotification;
+use App\User;
 
 class BookingController extends Controller
 {
@@ -62,6 +64,9 @@ class BookingController extends Controller
         $booking->departure = $request->departure;
         $booking->amount = $booking->detpaket->price*$booking->person;
         $booking->save();
+
+        $user=User::find(1);
+        $user->notify(new BookingNotification($booking));
         Alert::success('You have successfully booked your trip!','Success')->persistent("OK");
         return redirect()->back();
     }
