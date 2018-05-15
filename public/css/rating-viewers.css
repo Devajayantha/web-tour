@@ -1,6 +1,10 @@
 .checked{
     color:orange;
 }
+
+.img-rating{
+    width: 70px;    
+    }
   .btn-grey{
       background-color:#D8D8D8;
       color:#FFF;

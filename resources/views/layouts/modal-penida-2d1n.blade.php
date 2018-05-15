@@ -12,7 +12,7 @@
       <div class="modal-body">
         <div class="container-fluid">
             <div class="card-container">           
-                  <form method="post" action="/nusa-penida/halfday">
+                  <form method="post" action="{{url('/booking/nusa-penida/2d1n')}}">
                     {{csrf_field()}}
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">

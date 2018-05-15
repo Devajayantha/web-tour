@@ -25,7 +25,7 @@
               <thead>
                 <tr>
                 <th scope="col">No</th>
-                <th scope="col">Rating Stars</th>
+                <th scope="col">RatingStars</th>
                 <th scope="col">Message</th>
                 <th scope="col">Status</th>
                 <th scope="col">Action</th>
@@ -62,7 +62,7 @@
                     @endif
                   </td>
                   <td>{{$r->message}}</td>
-                  <td>
+                  <td style="text-align: center;">
                     @if($r->confirm_rating == 1)
                       <i class="fas fa-check status_rating" ></i>
                     @else
@@ -121,7 +121,6 @@
             @endif
             </table>
           </div>
-          <button type="submit" class="btn btn-info"> Submit</button>
         </div>
         <div class="card-footer small text-muted">Powered By PenidaHill</div>
       </div>

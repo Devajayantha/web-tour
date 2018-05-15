@@ -68,10 +68,7 @@
                                 @endif
                             </td>
                             <td style="text-align: center;">
-                                @if ($b->confirmation == 0  && is_null($b->payment))
-                                {{--  <span>
-                                    <i class="fas fa-cloud-upload-alt"></i>
-                                </span>  --}}
+                                @if ($b->confirmation == 0  && is_null($b->payment))  
                                 <button type="button" class="btn btn-info fas fa-cloud-upload-alt" value="{{$loop->iteration}}" data-toggle="modal" data-target="#uploadModal{{$b->id}}"></button>
                                 @elseif ($b->confirmation == 0 && $b->payment=='gagal')
                                 <i class="fas fa-times-circle text-danger"></i>
@@ -110,9 +107,6 @@
                                           
                                           <input type='submit' class='btn btn-info' value='Upload' id='upload'>
                                         </form>
-                                
-                                        <!-- Preview-->
-                                        <div id='preview'></div>
                                       </div>
                                  
                                     </div>

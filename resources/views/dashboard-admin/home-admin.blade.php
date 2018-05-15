@@ -30,7 +30,7 @@
           <div class="table-responsive">
             <table class="table table-striped table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
-                    <tr>
+                    <tr class="table-success">
                     <th scope="col">No</th>
                     <th scope="col">ID</th>
                     <th scope="col">Paket</th>

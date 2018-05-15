@@ -69,4 +69,9 @@ class UserDashboardController extends Controller
         }
 
     }
+
+    public function main(){
+        
+        return view('dashboard-user.home-user-main');
+    }
 }

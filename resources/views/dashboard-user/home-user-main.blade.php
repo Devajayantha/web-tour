@@ -8,7 +8,9 @@
         </li>
         <li class="breadcrumb-item active">My Dashboard</li>
       </ol>
-
+      <div class="alert alert-primary" role="alert">
+        <strong>Welcome</strong>, you can check payment & add rating our paket
+      </div>
       <div class="card">
         <div class="card-header">
           <a href="/user/{{Auth::user()->id}}/edit" class="button btn btn-primary">
