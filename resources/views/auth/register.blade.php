@@ -39,6 +39,23 @@
                                     </span>
                                 @endif
                             </div>
+                             <div class="form-group">
+                                <div class="form-row">
+                                    <label for="gender">{{ __('Gender') }}</label>
+                                    <div class="form-check">
+                                      <label class="form-check-label">
+                                        <input class="form-check-input" type="radio" name="gender" id="gender" value="Male" checked>
+                                        Male
+                                      </label>
+                                    </div>
+                                    <div class="form-check">
+                                      <label class="form-check-label">
+                                        <input class="form-check-input" type="radio" name="gender" id="gender" value="Female">
+                                        Female
+                                      </label>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="form-group">
                                 <label for="address">{{ __('Address') }}</label>
                                 <input id="address" type="text" class="form-control{{ $errors->has('address') ? ' is-invalid' : '' }}" name="address" value="{{ old('address') }}" required>
@@ -48,7 +65,7 @@
                                         <strong>{{ $errors->first('address') }}</strong>
                                     </span>
                                 @endif
-                            </div>
+                            </div>                           
                             <div class="form-group">
                                 <div class="form-row">
                                     <div class="col-md-6">
