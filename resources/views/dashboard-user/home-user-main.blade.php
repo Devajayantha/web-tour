@@ -35,8 +35,11 @@
               <p class="card-text">{{ Auth::user()->email }}</p>
               <h3 class="card-text">Birth Date</h3>
               <p class="card-text">{{ Auth::user()->birth }}</p>
+              <h3 class="card-text">Gender</h3>
+              <p class="card-text">{{ Auth::user()->gender}}</p>
               <h3 class="card-text">Address</h3>
               <p class="card-text">{{ Auth::user()->address }}</p>
+
             </div>
           </div>        
         </div>
