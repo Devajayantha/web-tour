@@ -121,7 +121,7 @@ class PaketController extends Controller
         ->count();
         // $value_rating_4 = $stars4*100/$count_rating;
         if($count_rating>0){
-            $value_rating_4 = $stars5*100/$count_rating;
+            $value_rating_4 = $stars4*100/$count_rating;
         }else{
             $value_rating_4=0;
         }
@@ -131,7 +131,7 @@ class PaketController extends Controller
         ->count();
         // $value_rating_3 = $stars3*100/$count_rating;      
         if($count_rating>0){
-            $value_rating_3 = $stars5*100/$count_rating;
+            $value_rating_3 = $stars3*100/$count_rating;
         }else{
             $value_rating_3=0;
         }
@@ -141,7 +141,7 @@ class PaketController extends Controller
         ->count();
         // $value_rating_2 = $stars2*100/$count_rating;    
         if($count_rating>0){
-            $value_rating_2 = $stars5*100/$count_rating;
+            $value_rating_2 = $stars2*100/$count_rating;
         }else{
             $value_rating_2=0;
         }
@@ -151,7 +151,7 @@ class PaketController extends Controller
         ->count();
         // $value_rating_1 = $stars1*100/$count_rating; 
         if($count_rating>0){
-            $value_rating_1 = $stars5*100/$count_rating;
+            $value_rating_1 = $stars1*100/$count_rating;
         }else{
             $value_rating_1=0;
         }

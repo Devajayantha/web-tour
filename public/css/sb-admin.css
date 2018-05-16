@@ -2,6 +2,10 @@ html {
   position: relative;
   min-height: 100%;
 }
+
+.nav-color{
+  background-color: #b4004e;
+}
 .white-star{
   color: white;
 }
@@ -40,9 +44,11 @@ body.sticky-footer .content-wrapper {
 }
 
 body.fixed-nav {
-  padding-top: 56px;
+  padding-top: 54px;
 }
-
+body.fixed-nav2 {
+  margin-top: 33px;
+}
 .content-wrapper {
   min-height: calc(100vh - 56px);
   padding-top: 1rem;
@@ -359,7 +365,7 @@ body.sidenav-toggled .navbar-sidenav-tooltip.show {
 }
 
 #mainNav.navbar-dark .navbar-collapse .navbar-sidenav > .nav-item > .nav-link {
-  color: #868e96;
+  color: #fff;
 }
 
 #mainNav.navbar-dark .navbar-collapse .navbar-sidenav > .nav-item > .nav-link:hover {
