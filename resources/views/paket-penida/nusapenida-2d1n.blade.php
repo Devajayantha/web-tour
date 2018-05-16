@@ -275,7 +275,7 @@
 												@if (isset($pk->profilepic))
 													<img src="/upload/profile/{{ $pk->profilepic }}"  class="img-rating">
 												@else
-													<img src="http://poolwallet.com/assets/img/default.jpg" class="img-rounded" alt="">  
+													<img src="http://dummyimage.com/60x60/666/ffffff&text=No+Image" class="img-rounded">
 												@endif
 													{{-- <img src="http://dummyimage.com/60x60/666/ffffff&text=No+Image" class="img-rounded"> --}}
 													<div class="review-block-date">{{date('F j \, Y',strtotime($pk->updated_at))}}<br>{{date('h:i:s A',strtotime($pk->updated_at))}}</div>

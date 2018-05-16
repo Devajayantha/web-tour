@@ -1,4 +1,4 @@
-@section('modal')
+@section('modal-penida-hd')
 @auth
 <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="formModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
