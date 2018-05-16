@@ -141,7 +141,15 @@
     <script type="text/javascript" src="{{asset('js/map/nl-hd-map.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/map/nl-2d1n-map.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/map/nl-3d2n-map.js')}}"></script> --}}
-    <script type="text/javascript"></script>
+    <script type="text/javascript">
+        function book(){
+            var x = document.getElementById("formBook").elements;
+            if (x != ""){
+                swal("Success", "You have successfully booked your trip!", "success");
+            }
+            
+        }
+    </script>
 
 </body>
 </html>

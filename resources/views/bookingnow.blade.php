@@ -9,7 +9,7 @@
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8">
-        <form method="post" action="/booking">
+        <form method="post" action="/booking" id="formBook" onsubmit="book()">
             {{csrf_field()}}
             <div class="card-mb-3">
                 <div class="card-header">Fill Your Information Below</div>

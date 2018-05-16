@@ -260,12 +260,12 @@
                     <div class="text-subsribe">
                         <h2>Subscribe to Our newsletter</h2>
                         <p>Sign up here to get the latest news,updates and special promo in Penida Trip delivered directly to your inbox</p>
-                        <form action="/" method="post">
+                        <form action="/" method="post"id ="broadcastForm" onsubmit="broadcast()">
                             {{csrf_field()}}
                         <div class="input-group mb-3">
                             <input type="text" class="form-control"name="email" placeholder="submit your email" aria-label="Recipient's username" aria-describedby="basic-addon2">
                             <div class="input-group-append">
-                                <button class="submit btn btn-primary far fa-envelope broadcast" type="submit"></button>
+                                <button class="submit btn btn-primary far fa-envelope" type="submit" ></button>
                             </div>
                         </div>
                         </form>
@@ -285,9 +285,12 @@
         <script src="{{asset('js/main.js')}}"></script>
         <script src="{{asset('js/sweetalert2.min.js')}}"></script>
         <script type="text/javascript">
-            $('.broadcast').click(function(){
-                swal("Success!","You'll be subscribed to our newsletter"); 
-            });
+            function broadcast(){
+                var x = document.getElementById("broadcastForm").elements;
+                if (x!="") {
+                    swal("Success!","You'll be subscribed to our newsletter"); 
+                }    
+            };
         </script>
     </body>
 </html>
