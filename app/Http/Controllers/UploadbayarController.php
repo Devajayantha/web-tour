@@ -55,6 +55,7 @@ class UploadbayarController extends Controller
         if($image){
             $filename =$post->booking_no . "_" . date('m-d-Y', time()) . '.' . $image->getClientOriginalExtension();
             $post->payment = $filename;
+            // $image->move('upload/booking',$filename, file_get_contents($request->file('payment')->getRealPath()));
             $image->move(public_path('asset/images'),$filename);
         }
         $post->save();

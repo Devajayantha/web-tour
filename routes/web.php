@@ -94,3 +94,11 @@ Route::put('user/{user}',  ['as' => 'user.update', 'uses' => 'UserDashboardContr
 Route::get('admin', function(){
     return view('dashboard-admin.main-admin');
 })->name('admin')->middleware('auth:admin');
+
+
+///////////////////////test template
+Route::view('/user/test', 'dashboard-user.home-user-new')->name('/user/test');
+
+// Route::get('/user/test}', function() {
+//     return view('dashboard-user.home-user-new');
+// })->name('/user/test');

@@ -98,40 +98,63 @@ class PaketController extends Controller
         ->where('bookings.id_detpaket','=',$id_detpaket)
         ->where('confirm_rating','=','1')
         ->count();
-        
-        $rating= $value_rating/$count_rating;
+        if($count_rating>0){
+            $rating= $value_rating/$count_rating;
+        }else{
+            $rating=0;
+        }
 
         // menghitung grafik bintang yang muncul
         $stars5 = DB::table('bookings')
         ->where('bookings.id_detpaket','=',$id_detpaket)
         ->where('bookings.stars','=','5')
         ->count();
-        $value_rating_5 = $stars5*100/$count_rating;
         
+        if($count_rating>0){
+            $value_rating_5 = $stars5*100/$count_rating;
+        }else{
+            $value_rating_5=0;
+        }
         $stars4 = DB::table('bookings')
         ->where('bookings.id_detpaket','=',$id_detpaket)
         ->where('bookings.stars','=','4')
         ->count();
-        $value_rating_4 = $stars4*100/$count_rating;
-
+        // $value_rating_4 = $stars4*100/$count_rating;
+        if($count_rating>0){
+            $value_rating_4 = $stars5*100/$count_rating;
+        }else{
+            $value_rating_4=0;
+        }
         $stars3 = DB::table('bookings')
         ->where('bookings.id_detpaket','=',$id_detpaket)
         ->where('bookings.stars','=','3')
         ->count();
-        $value_rating_3 = $stars3*100/$count_rating;      
-        
+        // $value_rating_3 = $stars3*100/$count_rating;      
+        if($count_rating>0){
+            $value_rating_3 = $stars5*100/$count_rating;
+        }else{
+            $value_rating_3=0;
+        }
         $stars2 = DB::table('bookings')
         ->where('bookings.id_detpaket','=',$id_detpaket)
         ->where('bookings.stars','=','2')
         ->count();
-        $value_rating_2 = $stars2*100/$count_rating;    
-        
+        // $value_rating_2 = $stars2*100/$count_rating;    
+        if($count_rating>0){
+            $value_rating_2 = $stars5*100/$count_rating;
+        }else{
+            $value_rating_2=0;
+        }
         $stars1 = DB::table('bookings')
         ->where('bookings.id_detpaket','=',$id_detpaket)
         ->where('bookings.stars','=','1')
         ->count();
-        $value_rating_1 = $stars1*100/$count_rating; 
-        
+        // $value_rating_1 = $stars1*100/$count_rating; 
+        if($count_rating>0){
+            $value_rating_1 = $stars5*100/$count_rating;
+        }else{
+            $value_rating_1=0;
+        }
         $array = [
             'value_rating5'=> $value_rating_5,
             'value_rating4'=> $value_rating_4,
