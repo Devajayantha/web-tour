@@ -68,9 +68,9 @@
                                 {{'Berhasil'}}
                             @endif
                             </td>
-                            <td>
+                            <td style="text-align: center">
                                 {{--  <i class="far fa-eye" data-toggle="modal" data-target="#paymentModal{{$b->id}}"></i>  --}}
-                                <a href="#" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#paymentModal{{$b->id}}">
+                                <a href="#" style="color: #000" data-toggle="modal" data-target="#paymentModal{{$b->id}}">
                                     <span class="fas fa-eye"></span>
                                 </a>
                                 <div class="modal fade" id="paymentModal{{$b->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
