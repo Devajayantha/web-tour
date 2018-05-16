@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="{{asset('css/contact.css') }}">  
     <link rel="shortcut icon" href="{{asset('img/logo.png')}}">
     <link rel="stylesheet" href="{{asset('css/fontawesome-all.css')}}">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
     <link rel="stylesheet" href="{{asset('css/rating-viewers.css')}}">
+    <script src="{{asset('js/sweetalert2.min.js')}}"></script>
+    <link rel="stylesheet" href="{{asset('css/sweetalert2.min.css')}}">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -119,9 +120,7 @@
     <div>
         @yield('modal')
     </div>
-    <div>
-        @yield('modal-bank')
-    </div>
+  
         {{--  <script src="{{ asset('js/app.js') }}" defer></script>    --}}
     <script src="{{asset('js/app.js')}}"></script>
     <script src="{{asset('js/main.js')}}"></script>
@@ -141,11 +140,16 @@
     <script type="text/javascript" src="{{asset('js/map/nl-hd-map.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/map/nl-2d1n-map.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/map/nl-3d2n-map.js')}}"></script> --}}
-    
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js"></script>
-    <script type="text/javascript" src="{{asset('js/yabih.js')}}"></script>
+    <script type="text/javascript">
+        $('.book-btn').click(function(){
+            swal(
+            'Good job!',
+            'You clicked the button!',
+            'success'
+            );
+        });
+    </script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
-    @include('sweet::alert')
+
 </body>
 </html>

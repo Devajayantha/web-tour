@@ -161,7 +161,7 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         //Sweetalert
-        UxWeb\SweetAlert\SweetAlertServiceProvider::class,
+        //UxWeb\SweetAlert\SweetAlertServiceProvider::class,
         MaddHatter\LaravelFullcalendar\ServiceProvider::class,
         // form html
         // Collective\Html\HtmlServiceProvider::class,
@@ -181,7 +181,7 @@ return [
 
     'aliases' => [
         
-        'Alert' => UxWeb\SweetAlert\SweetAlert::class,
+        //'Alert' => UxWeb\SweetAlert\SweetAlert::class,
         'App' => Illuminate\Support\Facades\App::class,
         'Artisan' => Illuminate\Support\Facades\Artisan::class,
         'Auth' => Illuminate\Support\Facades\Auth::class,

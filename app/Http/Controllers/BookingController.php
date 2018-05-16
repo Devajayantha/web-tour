@@ -9,7 +9,6 @@ use App\detpakets;
 use Auth;
 use Session;
 use DB;
-use Alert;
 use Illuminate\Http\Request;
 use App\Notifications\BookingNotification;
 use App\User;
@@ -67,7 +66,6 @@ class BookingController extends Controller
 
         $user=User::find(1);
         $user->notify(new BookingNotification($booking));
-        Alert::success('You have successfully booked your trip!','Success')->persistent("OK");
         return redirect()->back();
     }
 

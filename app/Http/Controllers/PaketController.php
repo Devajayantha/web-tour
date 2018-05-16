@@ -1,7 +1,6 @@
+
 <?php
-
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use DB;
 use App\Booking;
@@ -16,7 +15,6 @@ class PaketController extends Controller
     {
         //
     }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -26,7 +24,6 @@ class PaketController extends Controller
     {
         //
     }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -37,7 +34,6 @@ class PaketController extends Controller
     {
         //
     }
-
     /**
      * Display the specified resource.
      *
@@ -48,7 +44,6 @@ class PaketController extends Controller
     {
         //
     }
-
     /**
      * Show the form for editing the specified resource.
      *
@@ -59,7 +54,6 @@ class PaketController extends Controller
     {
         //
     }
-
     /**
      * Update the specified resource in storage.
      *
@@ -71,7 +65,6 @@ class PaketController extends Controller
     {
         //
     }
-
     /**
      * Remove the specified resource from storage.
      *
@@ -87,13 +80,10 @@ class PaketController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-
      public function grafik($id_detpaket){
-
         $value_rating = DB::table('bookings')
         ->where('bookings.id_detpaket','=',$id_detpaket)
         ->sum('bookings.stars');
-
         $count_rating = DB::table('bookings')
         ->where('bookings.id_detpaket','=',$id_detpaket)
         ->where('confirm_rating','=','1')
@@ -103,7 +93,6 @@ class PaketController extends Controller
         }else{
             $rating=0;
         }
-
         // menghitung grafik bintang yang muncul
         $stars5 = DB::table('bookings')
         ->where('bookings.id_detpaket','=',$id_detpaket)
@@ -121,7 +110,7 @@ class PaketController extends Controller
         ->count();
         // $value_rating_4 = $stars4*100/$count_rating;
         if($count_rating>0){
-            $value_rating_4 = $stars5*100/$count_rating;
+            $value_rating_4 = $stars4*100/$count_rating;
         }else{
             $value_rating_4=0;
         }
@@ -131,7 +120,7 @@ class PaketController extends Controller
         ->count();
         // $value_rating_3 = $stars3*100/$count_rating;      
         if($count_rating>0){
-            $value_rating_3 = $stars5*100/$count_rating;
+            $value_rating_3 = $stars3*100/$count_rating;
         }else{
             $value_rating_3=0;
         }
@@ -141,7 +130,7 @@ class PaketController extends Controller
         ->count();
         // $value_rating_2 = $stars2*100/$count_rating;    
         if($count_rating>0){
-            $value_rating_2 = $stars5*100/$count_rating;
+            $value_rating_2 = $stars2*100/$count_rating;
         }else{
             $value_rating_2=0;
         }
@@ -151,7 +140,7 @@ class PaketController extends Controller
         ->count();
         // $value_rating_1 = $stars1*100/$count_rating; 
         if($count_rating>0){
-            $value_rating_1 = $stars5*100/$count_rating;
+            $value_rating_1 = $stars1*100/$count_rating;
         }else{
             $value_rating_1=0;
         }
@@ -184,9 +173,7 @@ class PaketController extends Controller
         ->get();
         $array=$this->grafik(1);
         return view('paket-penida.nusapenida-hd', compact('paket','array'));
-
     }
-
         /**
      * Display a listing of the resource.
      *
@@ -204,7 +191,6 @@ class PaketController extends Controller
         ->where('confirm_rating','=','1')
         ->orderBy('id', 'DESC')
         ->get();
-
         $array=$this->grafik(2);
         return view('paket-penida.nusapenida-2d1n', compact('paket','array'));
     }
@@ -225,11 +211,9 @@ class PaketController extends Controller
         ->where('confirm_rating','=','1')
         ->orderBy('id', 'DESC')
         ->get();
-
         $array=$this->grafik(3);
         return view('paket-penida.nusapenida-3d2n', compact('paket','array'));
     }
-
         /**
      * Display a listing of the resource.
      *
@@ -248,7 +232,6 @@ class PaketController extends Controller
         ->orderBy('id', 'DESC')
         // ->take(2)
         ->get();
-
         $array=$this->grafik(4);
         return view('paket-lembongan.lembongan-hd', compact('paket','array'));
     }
@@ -269,7 +252,6 @@ class PaketController extends Controller
         ->where('confirm_rating','=','1')
         ->orderBy('id', 'DESC')
         ->get();
-
         $array=$this->grafik(5);
         return view('paket-lembongan.lembongan-2d1n', compact('paket','array'));
     }
@@ -285,7 +267,6 @@ class PaketController extends Controller
         ->where('confirm_rating','=','1')
         ->orderBy('id', 'DESC')
         ->get();
-
         $array=$this->grafik(6);
         return view('paket-lembongan.lembongan-3d2n', compact('paket','array'));
     }
