@@ -76,7 +76,7 @@ Route::view('/admin/broadcast', 'dashboard-admin.broadcast-admin')->name('admin-
 Route::get('/admin/reminder', 'JadwalController@index');
 Route::get('/admin/rating', 'ShowratingController@index');
 Route::post('sendmail','SendemailController@send')->name('sendmail');
-Route::resource('/admin/dashboard','PesanadminController');//->middleware('admin');
+Route::resource('/admin/dashboard','PesanadminController')->middleware('auth:admin');
 Route::put('/admin/updatepayment/{admin}','PesanadminController@confirmationPayment');
 Route::put('/admin/update/valid','ShowratingController@updateValid');
 Route::put('/admin/update/cancel','ShowratingController@updateCancel');     
@@ -92,7 +92,7 @@ Route::put('user/{user}',  ['as' => 'user.update', 'uses' => 'UserDashboardContr
 
 
 Route::get('admin', function(){
-    return view('dashboard-admin.main-admin');
+    return redirect('/admin/dashboard');
 })->name('admin')->middleware('auth:admin');
 
 
