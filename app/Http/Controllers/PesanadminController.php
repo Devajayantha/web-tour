@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use DB;
 use App\Booking;
+use App\Notifications\BookingConfirm;
+use App\User;
 class PesanadminController extends Controller
 {
     /**
@@ -113,6 +115,8 @@ class PesanadminController extends Controller
         $payment = Booking::find($id);
         $payment->confirmation=1;
         $payment->save();
+        $user=User::find(1);
+        $user->notify(new BookingConfirm($payment));
         return redirect('/admin/dashboard')->with('success',sprintf('Berhasil melakukan verifikasi #%s',$payment->booking_no ));
     }
 }
