@@ -70,7 +70,7 @@
                             </td>
                             <td>
                                 {{--  <i class="far fa-eye" data-toggle="modal" data-target="#paymentModal{{$b->id}}"></i>  --}}
-                                <a href="#" class="btn btn-success btn-lg" data-toggle="modal" data-target="#paymentModal{{$b->id}}">
+                                <a href="#" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#paymentModal{{$b->id}}">
                                     <span class="fas fa-eye"></span>
                                 </a>
                                 <div class="modal fade" id="paymentModal{{$b->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -130,7 +130,7 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                    <button type="submit" class="btn btn-primary adm-ver">Verifikasi</button>
+                                    <button type="submit" class="btn btn-primary">Verifikasi</button>
                                 </div>
                                 </form>
                                 </div>

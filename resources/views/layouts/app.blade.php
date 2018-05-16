@@ -24,6 +24,7 @@
     <!-- Styles -->
     
     <link rel="stylesheet" href="{{asset('css/newfooter.css') }}"> 
+
 </head>
 <body>
     <nav class="navbar">
@@ -140,16 +141,7 @@
     <script type="text/javascript" src="{{asset('js/map/nl-hd-map.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/map/nl-2d1n-map.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/map/nl-3d2n-map.js')}}"></script> --}}
-    <script type="text/javascript">
-        $('.book-btn').click(function(){
-            swal(
-            'Good job!',
-            'You clicked the button!',
-            'success'
-            );
-        });
-    </script>
-
+    <script type="text/javascript"></script>
 
 </body>
 </html>

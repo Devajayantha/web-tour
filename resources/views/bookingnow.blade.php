@@ -76,7 +76,7 @@
             </div>
 
 
-            <button type="submit" class="btn btn-primary book-btn">
+            <button type="submit" class="btn btn-primary">
                 BOOKING NOW
             </button>  
         </form>

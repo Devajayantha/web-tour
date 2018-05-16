@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="{{asset('css/fontawesome-all.css')}}">
         <link rel="stylesheet" href="{{asset('css/footer.css')}}">
         <link rel="stylesheet" href="{{asset('css/newfooter.css') }}">
-
+        <link rel="stylesheet" href="{{asset('css/sweetalert2.min.css')}}">
 
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -265,7 +265,7 @@
                         <div class="input-group mb-3">
                             <input type="text" class="form-control"name="email" placeholder="submit your email" aria-label="Recipient's username" aria-describedby="basic-addon2">
                             <div class="input-group-append">
-                                <button class="submit btn btn-primary far fa-envelope" type="submit"></button>
+                                <button class="submit btn btn-primary far fa-envelope broadcast" type="submit"></button>
                             </div>
                         </div>
                         </form>
@@ -283,5 +283,11 @@
 @include('layouts.newfooter')
         <script src="{{asset('js/app.js')}}"></script>
         <script src="{{asset('js/main.js')}}"></script>
+        <script src="{{asset('js/sweetalert2.min.js')}}"></script>
+        <script type="text/javascript">
+            $('.broadcast').click(function(){
+                swal("Success!","You'll be subscribed to our newsletter"); 
+            });
+        </script>
     </body>
 </html>

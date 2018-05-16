@@ -20,7 +20,6 @@
   {{--  <link href="{{ asset('css/one-page-wonder.css') }}" rel="stylesheet">  --}}
   <link href="{{ asset('css/agenda.css') }}" rel="stylesheet">
 
-  <link rel="stylesheet" href="{{asset('css/sweetalert2.min.css')}}">
 </head>
 
 <body class="fixed-nav2 sticky-footer bg-dark" id="page-top">
@@ -93,7 +92,6 @@
     <script src="{{asset('js/sb-admin-charts.min.js') }}"></script>
     <script src="{{asset('js/rating.js')}}"></script>
 
-    <script src="{{asset('js/sweetalert2.min.js')}}"></script>
   </div>
 </body>
 
