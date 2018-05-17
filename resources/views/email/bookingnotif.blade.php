@@ -14,7 +14,7 @@ You have finished booking. Here are the details.<br>
 
 @endcomponent
 Please proceed to upload your payment below.
-@component('mail::button', ['url' => '/user/dashboard'])
+@component('mail::button', ['url' => 'http://127.0.0.1:8000/user/dashboard'])
 Upload Payment
 @endcomponent
 
