@@ -10,15 +10,15 @@ use Illuminate\Notifications\Messages\MailMessage;
 class BookingNotification extends Notification
 {
     use Queueable;
-
+    public $user;
     /**
      * Create a new notification instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($user)
     {
-        //
+        $this->user = $user;
     }
 
     /**
@@ -42,9 +42,7 @@ class BookingNotification extends Notification
     {
         return (new MailMessage)
                     ->greeting('Booking Success')
-                    ->line('Your trip has been booked. Please upload your payment proof in your dashboard.')
-                    ->action('Go to Dashboard', url('/user/dashboard'))
-                    ->line('Thank you for using our website!');
+                    ->markdown('email.bookingnotif', ['user' => $this->user]);
     }
 
     /**
