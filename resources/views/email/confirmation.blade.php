@@ -1,7 +1,7 @@
 @component('mail::message')
-# Booking Success
+# Booking Confirmation
 
-You have finished booking. Here are the details.<br>
+Your booking payment has been confirmed.
 
 @component('mail::table')
 | Detail        |  Customer Input                      |
@@ -13,9 +13,9 @@ You have finished booking. Here are the details.<br>
 | Amount        | {{$user->amount}}                     |
 
 @endcomponent
-Please proceed to upload your payment below.
+
 @component('mail::button', ['url' => 'http://127.0.0.1:8000/user/dashboard'])
-Upload Payment
+See Payment
 @endcomponent
 
 Thanks,<br>

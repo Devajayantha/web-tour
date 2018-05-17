@@ -10,15 +10,16 @@ use Illuminate\Notifications\Messages\MailMessage;
 class BookingConfirm extends Notification
 {
     use Queueable;
+    public $user;
 
     /**
      * Create a new notification instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($user)
     {
-        //
+        $this->user=$user;
     }
 
     /**
@@ -42,9 +43,10 @@ class BookingConfirm extends Notification
     {
         return (new MailMessage)
                     ->greeting('Booking Confirmation')
-                    ->line('Your booking payment has been confirmed')
-                    ->action('See payment', url('/user/dashboard'))
-                    ->line('Thank you for using our website!');
+                    ->markdown('email.confirmation', ['user' => $this->user]);
+                   // ->line('Your booking payment has been confirmed')
+                  //  ->action('See payment', url('/user/dashboard'))
+                  //  ->line('Thank you for using our website!');
     }
 
     /**

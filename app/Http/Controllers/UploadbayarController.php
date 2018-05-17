@@ -59,7 +59,7 @@ class UploadbayarController extends Controller
             $image->move(public_path('asset/images'),$filename);
         }
         $post->save();
-        return redirect()->back()->with('success','Bukti pembayaran berhasil diupload!');
+        return redirect()->back()->with('success','Payment proof has been uploaded!');
 
         // $filename = null;
         // if ($request->hasfile('payment')){
