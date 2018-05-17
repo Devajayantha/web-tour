@@ -19,5 +19,5 @@ Upload Payment
 @endcomponent
 
 Thanks,<br>
-{{ config('app.name') }}
+'Penida Hill Tour and Travel'
 @endcomponent
