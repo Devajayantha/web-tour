@@ -5,12 +5,14 @@ Your booking payment has been confirmed.
 
 @component('mail::table')
 | Detail        |  Customer Input                      |
-| ------------- | ---------------------------------:   |
+| ------------- | ---------------------------------    |
 | Booking No    | {{$user->booking_no}}                |
-| Package       | {{$user->detpaket->paket->name}}      |
-| Sub Paket     | {{$user->detpaket->subpaket->name}}   |
-| Person        | {{$user->person}}                     |
-| Amount        | {{$user->amount}}                     |
+| Package       | {{$user->detpaket->paket->name}}     |
+| Sub Paket     | {{$user->detpaket->subpaket->name}}  |
+| Departure     | {{$user->departure}}                 |
+| Time          | 07.00 am							   |
+| Person        | {{$user->person}}                    |
+| Amount        | {{$user->amount}}                    |
 
 @endcomponent
 

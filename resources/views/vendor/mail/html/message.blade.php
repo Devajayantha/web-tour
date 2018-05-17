@@ -2,7 +2,8 @@
     {{-- Header --}}
     @slot('header')
         @component('mail::header', ['url' => config('app.url')])
-            Penida Hill Tour and Travel
+            <img src="{{asset('img/penida-hill.png')}}" style="width: 200px;">
+
         @endcomponent
     @endslot
 
