@@ -72,7 +72,7 @@ Route::get('/nusa-lembongan/3d2n','PaketController@nl3d2n')->name('lembongan-3d2
 
 
 // adminnn //////////////////////////////////////////////////////////
-Route::view('/admin/broadcast', 'dashboard-admin.broadcast-admin')->name('admin-broadcast');
+Route::get('/admin/broadcast', 'SendemailController@index')->name('admin-broadcast');
 Route::get('/admin/reminder', 'JadwalController@index');
 Route::get('/admin/rating', 'ShowratingController@index');
 Route::post('sendmail','SendemailController@send')->name('sendmail');
