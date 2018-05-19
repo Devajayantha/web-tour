@@ -46,7 +46,11 @@
                 <tbody>
                 @if(count($booking))
                     @foreach($booking as $b)
+                        @if ($loop->first && is_null($b->payment))
+                        <tr class="table-warning">
+                        @else
                         <tr>
+                        @endif
                             <td>{{$loop->iteration}}</td>
                             <td>{{$b->booking_no}}</td>
                             <td>{{$b->paket}}</td>
@@ -55,6 +59,7 @@
                             <td>{{$b->departure}}</td>
                             <td>{{$b->amount}}</td>
                             <td>
+                          
                             {{--  @if($b->confirmation == 0)
                                 {{'Belum Bayar'}}
                             @else
@@ -68,7 +73,9 @@
                                 {{'Berhasil'}}
                             @endif
                             </td>
+                           
                             <td style="text-align: center">
+                          
                                 {{--  <i class="far fa-eye" data-toggle="modal" data-target="#paymentModal{{$b->id}}"></i>  --}}
                                 <a href="#" style="color: #000" data-toggle="modal" data-target="#paymentModal{{$b->id}}">
                                     <span class="fas fa-eye"></span>
@@ -101,7 +108,8 @@
                                     </div>
                                 </div>
                             </td>
-                            <td>
+                            
+                            <td>                          
                                 @if ($b->confirmation == 0)                                
                                 <a href="#" class="btn btn-info btn-lg" data-toggle="modal" data-target="#exampleModal{{$b->id}}">
                                     <span class="far fa-calendar-check"></span>
