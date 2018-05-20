@@ -12,7 +12,7 @@ class UserDashboardController extends Controller
 {
     public function index()
     {
-        $booking=Booking::where('id_user', Auth::user()->id)->get();
+        $booking=Booking::where('id_user', Auth::user()->id)->orderBy('created_at','DESC')->get();
         $confirm=DB::table('bookings')->where('confirmation','=','1')->whereNotNull('payment')->where('id_user', Auth::user()->id)->first();
         if ($confirm!=NULL){
         	return view('dashboard-user.home-user', compact('booking'),['info' => sprintf('Booking #%s payment has been verified', $confirm->booking_no) ]);

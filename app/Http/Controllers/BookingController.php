@@ -9,9 +9,10 @@ use App\detpakets;
 use Auth;
 use Session;
 use DB;
+use App\User;
 use Illuminate\Http\Request;
 use App\Notifications\BookingNotification;
-use App\User;
+
 
 class BookingController extends Controller
 {
@@ -37,8 +38,6 @@ class BookingController extends Controller
         $detpaket = detpakets::all();       
         return view('bookingnow', compact('booking', 'detpaket'));
     }
-
-
     /**
      * Store a newly created resource in storage.
      *

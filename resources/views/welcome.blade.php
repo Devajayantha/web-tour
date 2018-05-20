@@ -199,18 +199,19 @@
                                 <div class="row">
                                     <div class="easy-booking col-md-4 col-sm-12">
                                         <i class="far fa-bookmark logobook"></i>
-                                        <h3 class="logobook2">Mudah Booking</h3>
-                                        <p class="logobook3">Anda dapat melakukan booking dengan login dan mengecek status tersedianya paket</p>
+                                        <h3 class="logobook2">Payment by Cash</h3>
+                                        <p class="logobook3">Ticket purchases become more flexible with various 
+                                            payment BY Cash Transfer   </p>
                                     </div>
                                     <div class="easy-booking col-md-4 col-sm-12">
-                                            <i class="fas fa-globe logobook"></i>
-                                            <h3 class="logobook2">Mudah Booking</h3>
-                                            <p class="logobook3">Anda dapat melakukan booking dengan login dan mengecek status tersedianya paket</p>
+                                            <i class="fab fa-periscope logobook"></i>
+                                            <h3 class="logobook2">Special Promo</h3>
+                                            <p class="logobook3">Get spesial promo tour after join with us. Register now and booking our package</p>
                                     </div>
                                     <div class="easy-booking col-md-4 col-sm-12">
                                         <i class="fas fa-suitcase logobook"></i>
-                                        <h3 class="logobook2">Mudah Booking</h3>
-                                        <p class="logobook3">Anda dapat melakukan booking dengan login dan mengecek status tersedianya paket</p>
+                                        <h3 class="logobook2">Easy Booking</h3>
+                                        <p class="logobook3">Booking from website or direct booking by phone, email and facebook. Direct booking is cheaper</p>
                                     </div>
                                 </div>
                             </div>

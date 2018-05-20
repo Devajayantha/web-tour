@@ -32,10 +32,10 @@
                 <label for="exampleFormControlTextarea1">Message</label>
                 <textarea name="message_email" class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="message"></textarea>
             </div>
-             <div class="form-group">
+             {{-- <div class="form-group">
                 <label for="exampleFormControlFile1">Input Picture</label>
                 <input type="file" name="picture" class="form-control-file" id="exampleFormControlFile1">
-            </div> 
+            </div>  --}}
             <button type="submit" class="btn btn-primary mb-2">Broadcast</button>
                 
         </form>

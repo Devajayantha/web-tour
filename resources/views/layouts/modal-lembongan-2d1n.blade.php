@@ -12,7 +12,7 @@
       <div class="modal-body">
         <div class="container-fluid">
             <div class="card-container">           
-                  <form method="post" action="{{ url('booking/lembongan/2d1n')}}">
+                  <form method="post" action="{{ url('booking/nusa-lembongan/2d1n')}}">
                     {{csrf_field()}}
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">

@@ -95,10 +95,6 @@ Route::get('admin', function(){
     return redirect('/admin/dashboard');
 })->name('admin')->middleware('auth:admin');
 
-
-///////////////////////test template
-Route::view('/user/test', 'dashboard-user.home-user-new')->name('/user/test');
-
 // Route::get('/user/test}', function() {
 //     return view('dashboard-user.home-user-new');
 // })->name('/user/test');

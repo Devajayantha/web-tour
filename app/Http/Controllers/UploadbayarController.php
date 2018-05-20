@@ -142,24 +142,4 @@ class UploadbayarController extends Controller
     }
 
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function aploadfoto(Request $request)
-    {
-        // $foto = $request->file('payment');
-        // $ext = $foto->getClientOriginalExtension();
- 
-        // if($request->file('payment')->isValid()){
-        //     $namaFoto = date('YmdHis').".".$ext;
-        //     $upload_path = 'fotoUpload';
-        //     $request->file('payment')->move($upload_path,$namaFoto);
-        //     return $namaFoto;
-        // }
-        // return false;
-    }    
-    
 }
