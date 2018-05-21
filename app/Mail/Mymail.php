@@ -36,6 +36,7 @@ class Mymail extends Mailable
     {
         return $this->from('penidahill@laravel56.dev')
             //->view('email.mymail');
-            ->markdown('email.broadcast');
+            ->markdown('email.broadcast')
+            ->subject($this->email_content);
     }
 }
