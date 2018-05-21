@@ -17,6 +17,7 @@ body{
 .ul-navbar{
 	width: 90%;
 	margin: 0 auto;
+	/* padding-left: 200px; */
 	margin-left: 500px;
 	padding: 0;
 }
@@ -102,6 +103,9 @@ body{
 .promo-title{
 	padding-left: 5px;
 	padding-bottom: 5px;
+}
+.title-promo{
+	color: rgb(58, 15, 138);
 }
 
 .promo-text{
@@ -375,9 +379,10 @@ body{
 	ul{
 		width: 100%;
 		display: none;
-		margin: auto;
+		/* margin-right: 500px; */
 	}
 	ul li{
+		margin-right: 500px;
 		display: block;
 		text-align: center;
 	}
@@ -397,5 +402,8 @@ body{
 	}
 	.footer-basic-centered{
 		display: block;
+	}
+	.logo-subsribe{
+		display: none;
 	}
 }

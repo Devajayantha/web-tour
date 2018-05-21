@@ -22,7 +22,12 @@
             </div>  --}}
             <div class="form-group">
                 <label for="exampleFormControlInput1">Email</label>
-                <input type="email" name="mail" class="form-control" id="exampleFormControlInput1" rows="3" placeholder="email@example.com">
+                
+                <select class="form-control" id="exampleFormControlSelect1" name="mail">
+                  @foreach ($subsribe as $s)
+                  <option value="{{$s->email}}"> {{$s->email}} </option>
+                  @endforeach
+                </select>
             </div>
             <div class="form-group">
                 <label for="exampleFormControlInput1">Subject</label>

@@ -224,7 +224,7 @@
         {{--  start  --}}
         <div class="container">
             <div class="panel promo">
-                <h2 class="text-sm-center title-promo">Hottest Promo</h2>
+                <h2 class="text-sm-center title-promo" >Hottest Promo</h2>
                 <div class="promo-content">
                     <div class="row">
                         <div class="col-sm-2"></div>
@@ -233,9 +233,9 @@
                                 <img class="card-img-top" src="{{asset('img/paket/Promo_NP_HD.jpg')}}"> 
                                     <div class="card-body">
                                     <h5 class="card-title">HALF-DAY</h5>
-                                    <s class="card-text">Rp 500.000/orang</s>
-                                    <p class="promo-text">Rp 400.000/orang</p>
-                                    <a href="/nusa-penida/halfday" class="btn btn-primary">Lihat Selengkapnya</a>
+                                    <s class="card-text">Rp 500.000/person</s>
+                                    <p class="promo-text">Rp 400.000/person</p>
+                                    <a href="/nusa-penida/halfday" class="btn btn-primary">See Details</a>
                                 </div>
                             </div>
                         </div>
@@ -244,9 +244,9 @@
                                 <img class="card-img-top" src="{{asset('img/paket/Promo_NP_3D2N.jpg')}}"> 
                                 <div class="card-body">
                                     <h5 class="card-title">3 DAYS 2 NIGHTS</h5>
-                                    <s class="card-text">Rp 3.000.000/orang</s>
-                                    <p class="promo-text">Rp 2.500.000/orang</p>
-                                    <a href="/nusa-penida/3d2n" class="btn btn-primary">Lihat Selengkapnya</a>
+                                    <s class="card-text">Rp 3.000.000/person</s>
+                                    <p class="promo-text">Rp 2.500.000/person</p>
+                                    <a href="/nusa-penida/3d2n" class="btn btn-primary">See Details</a>
                                 </div>
                             </div>
                         </div>

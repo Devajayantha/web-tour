@@ -10,6 +10,7 @@ use Mail;
 use Image;
 use Storage;
 use Session;
+use App\Subsribe;
 class SendemailController extends Controller
 {
     /**
@@ -19,7 +20,8 @@ class SendemailController extends Controller
      */
     public function index()
     {
-        //
+        $subsribe = Subsribe::all();
+        return view('dashboard-admin.broadcast-admin',compact('subsribe'));
     }
 
     /**

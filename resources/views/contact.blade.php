@@ -28,9 +28,8 @@
       </script>
 
       <div class="more-info">
-          <h3><center>Info Mengenai Kami</center></h3>
-          <p class="info">Anda Dapat mengirimkan pesan dapat melalui e-mail maupun sms. Kami bersedia melayani anda
-              didalam memenuhi kebutuhan anda.
+          <h3><center>About Us</center></h3>
+          <p class="info">You can send your message through e-mail or sms. We are willing to serve you in fulfilling your needs.
           </p>
           <div class="row">
             <div class="col-md-1"></div>
