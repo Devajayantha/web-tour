@@ -5,7 +5,7 @@
   <div class="container">
 		<div class="row">
 			<div class="c0l-md-5">
-				<td><h1 class="display-4">Paket Half Day</h1></td>
+				<td><h1 class="display-4">Package Half Day</h1></td>
 				<p class="lead">Rp 400.000/person</p>
 			</div>
 			<div class="col-md-5">
@@ -41,14 +41,14 @@
 </div>
 <div class="panel fasilitas-tour">
 	<div class="container">
-		<h3>Facilitys</h3>
+		<h3>Facilities</h3>
 		<ul>
-			<li>Tiket Speed Boat</li>
-			<li>Akomodasi</li>
-			<li>Tiket Masuk Tempat Wisata</li>
+			<li>Ticket Speed Boat</li>
+			<li>Transport</li>
+			<li>Ticket Tourist Attraction</li>
 			<li>Private Tour</li>
 			<li>Guide</li>
-			<li>Konsumsi</li>
+			<li>Lunch</li>
 		</ul>
 	</div>
 </div>
@@ -65,47 +65,47 @@
 		  <tbody>
 		    <tr>
 		      <th scope="row">07.30</th>
-		      <td>meeting point di pelabuhan sanur</td>
+		      <td>meeting pointin Sanur Harbour</td>
 		    </tr>
 		    <tr>
 		      <th scope="row">08.00</th>
-		      <td>berangkat menuju nusa lembongan dengan speed boat</td>
+		      <td>Going to Nusa Lembongan with Speedboat</td>
 		    </tr>
 		    <tr>
 		      <th scope="row">08.30</th>
-		      <td>tiba di pulau nusa lembongan</td>
+		      <td>Arrived in nusa lembongan island</td>
 		    </tr>
 		    <tr>
 		      <th scope="row">09.30</th>
-		      <td>tiba di tempat wisata pertama Mushroom Bay Beach</td>
+		      <td>Arrived first spot in Mushroom Bay Beach</td>
 		    </tr>
 		    <tr>
 		      <th scope="row">10.30</th>
-		      <td>tiba di yellow bridge</td>
+		      <td>Arrived in yellow bridge</td>
 		    </tr>
 		    <tr>
 		      <th scope="row">11.00</th>
-		      <td>diantarkan ke lokasi makan siang</td>
+		      <td>To have a lunch</td>
 		    </tr>
 		    <tr>
 		      <th scope="row">12.00</th>
-		      <td>tiba di hutan bakau dan menikmati menggunakan perahu</td>
+		      <td>Arrived in Mangrove Forest Lembongan, enjoying with boat</td>
 		    </tr>
 		    <tr>
 		      <th scope="row">13.30</th>
-		      <td>iiba di tebing devi tears untuk mengabadikan momen</td>
+		      <td>Arrived in Devil Tears</td>
 				</tr>
 		    <tr>
-						<th scope="row">15.00</th>
-						<td> kembali ke dermaga</td>
-					</tr>
+				<th scope="row">15.00</th>
+				<td>Back to harbour</td>
+			</tr>
 		    <tr>
 		      <th scope="row">15.30</th>
-		      <td>kembali ke pantai sanur menggunakan speed boat</td>
+		      <td>Back to Sanur Beach with speedboat</td>
 		    </tr>
 		    <tr>
 		      <th scope="row">16.30</th>
-		      <td>tiba di pantai sanur</td>
+		      <td>arrived in sanur beach</td>
 		    </tr>
 		  </tbody>
 		</table>

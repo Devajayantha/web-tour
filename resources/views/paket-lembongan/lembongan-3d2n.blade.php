@@ -5,7 +5,7 @@
     <div class="container">
 	    <div class="row">
 	    	<div class="col-md-6">
-				<td><h1 class="display-4">Paket 3 Days 2 Nights</h1></td>
+				<td><h1 class="display-4">Package 3 Days 2 Nights</h1></td>
 				<p class="lead">Rp 2.500.000/Person</p>
 			</div>
 			<div class="col-md-4"></div>
@@ -29,7 +29,7 @@
 </div>
 <div class="panel tujuan-tour">
 	<div class="container">
-		<h3>Tujuan Tour</h3>
+		<h3>Destination Tour</h3>
 			<ul>
 				<li>Mushroom Bay Beach</li>
 				<li>Devil Tears Beach</li>
@@ -37,19 +37,22 @@
 				<li>Secret Beach</li>
 				<li>Blue Langoon</li>
 				<li>Mangrove Forest</li>
+				<li>Dream Beach</li>
+				<li>Ceningan Cliff</li>
+				<li>Goa Gala Gala</li>
 			</ul>
 	</div>
 </div>
 <div class="panel fasilitas-tour">
 	<div class="container">
-		<h3>Fasilitas</h3>
+		<h3>Facilities</h3>
 		<ul>
-			<li>Tiket Speed Boat</li>
-			<li>Akomodasi</li>
-			<li>Tiket Masuk Tempat Wisata</li>
+			<li>Ticket Speed Boat</li>
+			<li>Transport</li>
+			<li>Ticket Tourist Attraction</li>
 			<li>Private Tour</li>
 			<li>Guide</li>
-			<li>Konsumsi</li>
+			<li>Consume</li>
 		</ul>
 	</div>
 </div>
@@ -58,9 +61,9 @@
 		<h3>Itinerary</h3>
 		<nav>
 		  <div class="nav nav-tabs" id="nav-tab" role="tablist">
-		    <a class="nav-item nav-link active" id="nav-hari1-tab" data-toggle="tab" href="#nav-hari1" role="tab" aria-controls="nav-home" aria-selected="true">Hari 1</a>
-		    <a class="nav-item nav-link" id="nav-hari2-tab" data-toggle="tab" href="#nav-hari2" role="tab" aria-controls="nav-profile" aria-selected="false">Hari 2</a>
-		    <a class="nav-item nav-link" id="nav-hari3-tab" data-toggle="tab" href="#nav-hari3" role="tab" aria-controls="nav-contact" aria-selected="false">Hari 3</a>
+		    <a class="nav-item nav-link active" id="nav-hari1-tab" data-toggle="tab" href="#nav-hari1" role="tab" aria-controls="nav-home" aria-selected="true">Day 1</a>
+		    <a class="nav-item nav-link" id="nav-hari2-tab" data-toggle="tab" href="#nav-hari2" role="tab" aria-controls="nav-profile" aria-selected="false">Day 2</a>
+		    <a class="nav-item nav-link" id="nav-hari3-tab" data-toggle="tab" href="#nav-hari3" role="tab" aria-controls="nav-contact" aria-selected="false">Day 3</a>
 		  </div>
 		</nav>
 		<div class="tab-content" id="nav-tabContent">
@@ -68,54 +71,46 @@
 			<table class="table">
 			  <thead>
 			    <tr>
-			      <th scope="col">Jam</th>
-			      <th scope="col">Kegiatan</th>
+			      <th scope="col">Time</th>
+			      <th scope="col">Activities</th>
 			    </tr>
 			  </thead>
 			  <tbody>
 			    <tr>
 			      <th scope="row">07.30</th>
-			      <td>meeting point di pelabuhan sanur</td>
+			      <td>meeting point in Sanur Harbour</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">08.00</th>
-			      <td>berangkat menuju nusa penida dengan speed boat</td>
+			      <td>bGoing to Nusa Lembongan Island with Speedboat</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">08.30</th>
-			      <td>tiba di pulau nusa penida</td>
+			      <td>Arrived in  nusa lembongan island</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">09.00</th>
-			      <td>tiba di hotel</td>
+			      <td>Arrived in Homestay</td>
 			    </tr>
 			    <tr>
-			      <th scope="row">09.30</th>
-			      <td>tiba di spot pertama rumah pohon</td>
+			      <th scope="row">10.00</th>
+			      <td>First spot, arrived in Mushroom Beach</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">12.00</th>
-			      <td>tiba di pulau seribu</td>
-			    </tr>
-			    <tr>
-			      <th scope="row">13.00</th>
-			      <td>diantarkan ke lokasi makan siang</td>
+			      <td>Have a Lunchu</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">14.00</th>
-			      <td>tiba di atuh beach</td>
-			    </tr>
-			    <tr>
-			      <th scope="row">15.00</th>
-			      <td>tiba di bukit teletubies</td>
+			      <td>Get dissert in The Deck Cafe</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">16.00</th>
-			      <td>tiba di crystal bay beach</td>
+			      <td>Blue Langoon Cliff Nusa Kuningan</td>
 			    </tr>
 			    <tr>
-			      <th scope="row">18.30</th>
-			      <td>kembali ke hotel</td>
+			      <th scope="row">18.00</th>
+			      <td>Back to Homestay take a nap</td>
 			    </tr>
 			  </tbody>
 			</table>

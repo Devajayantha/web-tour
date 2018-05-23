@@ -4,7 +4,7 @@
   <div class="container">
 		<div class="row">
 			<div class="col-md-6">
-				<td><h1 class="display-4">Package Days 1 Night</h1></td>
+				<td><h1 class="display-4">Package 2 Days 1 Night</h1></td>
 				<p class="lead">Rp 1.000.000/Person</p>
 			</div>
 			<div class="col-md-4"></div>

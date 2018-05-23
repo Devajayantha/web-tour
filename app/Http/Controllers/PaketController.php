@@ -80,9 +80,13 @@ class PaketController extends Controller
      * @return \Illuminate\Http\Response
      */
      public function grafik($id_detpaket){
+        //  jumlah bintang keseluruhan
         $value_rating = DB::table('bookings')
         ->where('bookings.id_detpaket','=',$id_detpaket)
         ->sum('bookings.stars');
+        
+
+        // jumlah orang yang ngepost
         $count_rating = DB::table('bookings')
         ->where('bookings.id_detpaket','=',$id_detpaket)
         ->where('confirm_rating','=','1')
