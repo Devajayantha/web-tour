@@ -19,10 +19,13 @@ Route::post('/','SubscribeController@store');
 Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');
-Route::view('/test','test')->name('test');
-Route::view('/paket', 'paket')->name('paket-tour');
-Route::view('/contact', 'contact')->name('contact');
-Route::view('/gallery', 'gallery')->name('gallery');
+// Route::view('/paket', 'paket')->name('paket-tour');
+// Route::view('/contact', 'contact')->name('contact');
+// Route::view('/gallery', 'gallery')->name('gallery');
+
+Route::get('/gallery','HalamanController@gallery');
+Route::get('/paket','HalamanController@paket');
+Route::get('/contact','HalamanController@contact');
 
 //login silahkan ketik /admin/login dan register ketik /admin/register
 Route::group(['prefix' => 'admin'], function() {

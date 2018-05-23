@@ -5,7 +5,7 @@
   <div class="container">
 		<div class="row">
 			<div class="c0l-md-5">
-					<td><h1 class="display-4">Paket Half Day</h1></td>
+					<td><h1 class="display-4">Package Half Day</h1></td>
 					<s class="card-text">Rp 500.000/person</s>
 					<p class="promo-text">Rp 400.000/person</p>
 			</div>
@@ -35,7 +35,7 @@
 			<ul>
 				<li>Broken Beach</li>
 				<li>Angel Billabong</li>
-				<li>Pohon Cinta (Love Tree)</li>
+				<li>Pohon Cinta (Tree Love)</li>
 				<li>Crystal Bay Beach</li>
 			</ul>
 	</div>
@@ -44,12 +44,12 @@
 	<div class="container">
 		<h3>Facilities</h3>
 		<ul>
-			<li>Tiket Speed Boat</li>
+			<li>Ticket Speed Boat</li>
 			<li>Akomodasi</li>
-			<li>Tiket Masuk Tempat Wisata</li>
+			<li>Ticket Tourist Attraction</li>
 			<li>Private Tour</li>
 			<li>Guide</li>
-			<li>Konsumsi</li>
+			<li>Lunch</li>
 		</ul>
 	</div>
 </div>
@@ -66,43 +66,43 @@
 		  <tbody>
 		    <tr>
 		      <th scope="row">07.30</th>
-		      <td>meeting point di pelabuhan sanur</td>
+		      <td>meeting point in Sanur Harbour</td>
 		    </tr>
 		    <tr>
 		      <th scope="row">08.00</th>
-		      <td>berangkat menuju nusa penida dengan speed boat</td>
+		      <td>Going to Nusa Penida with Fastboat</td>
 		    </tr>
 		    <tr>
 		      <th scope="row">08.30</th>
-		      <td>tiba di pulau nusa penida</td>
+		      <td>Arrived in Nusa Penida Island</td>
 		    </tr>
 		    <tr>
 		      <th scope="row">09.30</th>
-		      <td>tiba di spot pertama broken beach and angels billabong</td>
+		      <td>Arrived first spot in  broken beach and angels billabong</td>
 		    </tr>
 		    <tr>
 		      <th scope="row">12.00</th>
-		      <td>tiba di pohon cinta</td>
+		      <td>Arrived in pohon cinta (Tree Love) </td>
 		    </tr>
 		    <tr>
 		      <th scope="row">13.00</th>
-		      <td>diantarkan ke lokasi makan siang</td>
+		      <td>To have a lunch</td>
 		    </tr>
 		    <tr>
 		      <th scope="row">14.00</th>
-		      <td>tiba di crystal bay dan menikmati hamparan pasir putih</td>
+		      <td>Last spot, Arrived in crystal bay </td>
 		    </tr>
 		    <tr>
 		      <th scope="row">15.00</th>
-		      <td> kembali ke dermaga</td>
+		      <td>Back to Harbour</td>
 		    </tr>
 		    <tr>
 		      <th scope="row">15.30</th>
-		      <td>kembali ke pantai sanur menggunakan speed boat</td>
+		      <td>Back to sanur beach with fastboat</td>
 		    </tr>
 		    <tr>
 		      <th scope="row">16.30</th>
-		      <td>tiba di pantai sanur</td>
+		      <td>Arrived in sanur beach</td>
 		    </tr>
 		  </tbody>
 		</table>

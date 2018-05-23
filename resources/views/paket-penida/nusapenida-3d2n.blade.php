@@ -4,7 +4,7 @@
   <div class="container">
 	    <div class="row">
 					<div class="col-md-6">
-						<td><h1 class="display-4">Paket 3 Days 2 Nights</h1></td>
+						<td><h1 class="display-4">Package 3 Days 2 Nights</h1></td>
 						<p class="lead"><s>Rp 3.000.000</s> Rp 2.500.000</p>
 					</div>
 					<div class="col-md-4"></div>
@@ -28,7 +28,7 @@
 </div>
 <div class="panel tujuan-tour">
 	<div class="container">
-		<h3>Tujuan Tour</h3>
+		<h3>Destination Tour</h3>
 			<ul>
 				<li>Atuh Beach</li>
 				<li>Broken Beach</li>
@@ -46,14 +46,15 @@
 </div>
 <div class="panel fasilitas-tour">
 	<div class="container">
-		<h3>Fasilitas</h3>
+		<h3>Facilities</h3>
 		<ul>
-			<li>Tiket Speed Boat</li>
-			<li>Akomodasi</li>
-			<li>Tiket Masuk Tempat Wisata</li>
+			<li>Ticket Speed Boat</li>
+			<li>Transport</li>
+			<li>Ticket Tourist Attraction</li>
 			<li>Private Tour</li>
 			<li>Guide</li>
-			<li>Konsumsi</li>
+			<li>HomeStay</li>
+			<li>Consume</li>
 		</ul>
 	</div>
 </div>
@@ -62,9 +63,9 @@
 		<h3>Itinerary</h3>
 		<nav>
 		  <div class="nav nav-tabs" id="nav-tab" role="tablist">
-		    <a class="nav-item nav-link active" id="nav-hari1-tab" data-toggle="tab" href="#nav-hari1" role="tab" aria-controls="nav-home" aria-selected="true">Hari 1</a>
-		    <a class="nav-item nav-link" id="nav-hari2-tab" data-toggle="tab" href="#nav-hari2" role="tab" aria-controls="nav-profile" aria-selected="false">Hari 2</a>
-		    <a class="nav-item nav-link" id="nav-hari3-tab" data-toggle="tab" href="#nav-hari3" role="tab" aria-controls="nav-contact" aria-selected="false">Hari 3</a>
+		    <a class="nav-item nav-link active" id="nav-hari1-tab" data-toggle="tab" href="#nav-hari1" role="tab" aria-controls="nav-home" aria-selected="true">Day 1</a>
+		    <a class="nav-item nav-link" id="nav-hari2-tab" data-toggle="tab" href="#nav-hari2" role="tab" aria-controls="nav-profile" aria-selected="false">Day 2</a>
+		    <a class="nav-item nav-link" id="nav-hari3-tab" data-toggle="tab" href="#nav-hari3" role="tab" aria-controls="nav-contact" aria-selected="false">Day 3</a>
 		  </div>
 		</nav>
 		<div class="tab-content" id="nav-tabContent">
@@ -72,50 +73,50 @@
 			<table class="table">
 			  <thead>
 			    <tr>
-			      <th scope="col">Jam</th>
-			      <th scope="col">Kegiatan</th>
+			      <th scope="col">Time</th>
+			      <th scope="col">Activities</th>
 			    </tr>
 			  </thead>
 			  <tbody>
 			    <tr>
 			      <th scope="row">07.30</th>
-			      <td>meeting point di pelabuhan sanur</td>
+			      <td>meeting point in Sanur Harbour</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">08.00</th>
-			      <td>berangkat menuju nusa penida dengan speed boat</td>
+			      <td>Going to Nusa Penida Island with Speedboat</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">08.30</th>
-			      <td>tiba di pulau nusa penida</td>
+			      <td>Arrived in Nusa Penida</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">09.00</th>
-			      <td>tiba di penginapan</td>
+			      <td>Arrived in HomeStay</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">09.30</th>
-			      <td>tiba di spot pertama rumah pohon</td>
+			      <td>First spot in Crystal Bay Beach</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">13.00</th>
-			      <td>diantarkan ke lokasi makan siang</td>
+			      <td>To Have a lunch</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">14.00</th>
-			      <td>tiba di atuh beach</td>
+			      <td>Arrived in atuh beach</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">15.00</th>
-			      <td>tiba di tree house</td>
+			      <td>Arrived in tree house</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">16.00</th>
-			      <td>tiba di bukit teletubis</td>
+			      <td>Arrived in teletubis hills</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">18.30</th>
-			      <td>kembali ke penginapan</td>
+			      <td>Back to HomeStay</td>
 			    </tr>
 			  </tbody>
 			</table>

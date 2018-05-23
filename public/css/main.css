@@ -375,18 +375,20 @@ body{
 	.toggle{
 		display: block;
 	}
-
 	ul{
 		width: 100%;
 		display: none;
+		margin-left: 0px;	
 		/* margin-right: 500px; */
 	}
 	ul li{
+		width: 100%;
 		margin-right: 500px;
 		display: block;
 		text-align: center;
 	}
     .active{
+		margin-left: 0px;
 		/* padding: 0; */
 		text-align: center;
 		display: block;
