@@ -76,39 +76,7 @@
                         <button type="button" class="btn btn-warning" data-toggle="modal" data-fid="{{$r->id}}" data-fconfirm="{{$r->confirm_rating}}" data-target="#cancelConfirm"><i class="fas fa-ban"></i></button>
                        
                         {{--  Modal Detail Review Rating  --}}
-                        <div class="modal fade" id="detailReview" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Detail Review Rating</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="form-group">
-                                      <label for="name">Name user</label>
-                                      <input type="text" class="form-control" id="nameuser" value="{{$r->name}}">
-                                    </div>
-                                    <div class="form-group">
-                                      <label for="name">Paket Booking</label>
-                                      <input type="text" class="form-control" id="nameuser" value="{{$r->paket}}/{{$r->subpaket}}">
-                                    </div>
-                                    <div class="form-group">
-                                      <label for="name">Date Input</label>
-                                      <input type="text" class="form-control" id="day" value="{{date('l \, jS \of F Y h:i:s A',strtotime($r->updated_at))}}">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="name">Date Paket</label>
-                                        <input type="text" class="form-control" id="day" value="{{date('l \, jS \of F Y',strtotime($r->departure))}}">
-                                      </div>                                                                         
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-                                </div>
-                                </div>
-                            </div>
-                          </div>
+                        @include('layouts.modal-detail-rating')
                           {{-- end modal    --}}                    
                       </div>
                     </a>                    
@@ -138,64 +106,6 @@
     <a class="scroll-to-top rounded" href="#page-top">
       <i class="fa fa-angle-up"></i>
     </a>
-
-
-    {{--  <!-- Modal Validasi rating -->  --}}
-    <div class="modal fade" id="validasiConfirm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-          <div class="modal-content">
-          <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Verifikasi review rating</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-              </button>
-          </div>
-        <form action="{{url('/admin/update/valid')}}" method="POST" enctype="multipart/form-data">
-          @csrf
-          {{method_field('put')}}
-          <div class="modal-body">
-            <input type="hidden" name="id" id="id">
-            <input type="hidden" name="confirm_rating" id="confirm_rating" >
-              Apakah anda yakin untuk melakukan verifikasi 
-          </div>
-          <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-              <button type="submit" class="btn btn-primary adm-ver">Verifikasi</button>
-          </div>
-          </form>
-          </div>
-      </div>
-    </div>
-    {{--  end modal  --}}
-
-    {{--  Modal Batal validasai rating  --}}
-    <div class="modal fade" id="cancelConfirm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-          <div class="modal-content">
-          <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Batal posting review rating</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-              </button>
-          </div>
-          <form action="{{url('/admin/update/cancel')}}" method="POST" enctype="multipart/form-data">
-          @csrf
-          {{method_field('put')}}
-          <div class="modal-body">
-              <input type="hidden" name="id" id="id">
-              <input type="hidden" name="confirm_rating" id="confirm_rating"> 
-              Apakah anda yakin untuk melakukan verifikasi pembatalan posting '?'
-          </div>
-          <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-              <button type="submit" class="btn btn-primary">Verifikasi</button>
-          </div>
-          </form>
-          </div>
-      </div>
-    </div>
-    {{-- end modal    --}}
-      
-
-{{--  Logout modal terdapat di layout  modal-logout-admin  --}}
+@include('layouts.modal-validasi-rating')
+@include('layouts.modal-batal-validasi-rating')      
 @include('layouts.modal-logout-admin')

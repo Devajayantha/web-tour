@@ -19,6 +19,7 @@
   <link href="{{ asset('css/rating.css') }}" rel="stylesheet">
   {{--  <link href="{{ asset('css/one-page-wonder.css') }}" rel="stylesheet">  --}}
   <link href="{{ asset('css/agenda.css') }}" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
 
 </head>
 
@@ -91,7 +92,7 @@
     <script src="{{asset('js/sb-admin-datatables.min.js') }}"></script>
     <script src="{{asset('js/sb-admin-charts.min.js') }}"></script>
     <script src="{{asset('js/rating.js')}}"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
   </div>
 </body>
 

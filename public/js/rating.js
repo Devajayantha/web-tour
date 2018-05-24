@@ -1,5 +1,6 @@
 $(document).ready(function(){
-  
+  // $('.js-example-basic-multiple').select2();
+
   $('#ModalEdit').on('show.bs.modal',function(event){
     console.log('Modal Opened');
     var button = $(event.relatedTarget)
@@ -86,6 +87,9 @@ $(document).ready(function(){
     //   }
     //   responseMessage(msg);
       
+    });
+    $(".js-example-basic-multiple-limit").select2({
+      maximumSelectionLength: 2
     });
     
     

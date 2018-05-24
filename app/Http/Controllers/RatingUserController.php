@@ -18,7 +18,7 @@ class RatingUserController extends Controller
     public function index()
     {
         $rating=Booking::where('id_user', Auth::user()->id)
-        ->where('confirmation','1')->get(); 
+        ->where('confirmation','1')->orderBy('id', 'DESC')->get(); 
         // $rating = DB::table('bookings')->join('detpakets', 'detpakets.id' , '=', 'bookings.id_detpaket' )
         // ->join('pakets', 'pakets.id', '=', 'detpakets.id_paket')
         // ->join('subpakets', 'subpakets.id', '=', 'detpakets.id_subpaket' )

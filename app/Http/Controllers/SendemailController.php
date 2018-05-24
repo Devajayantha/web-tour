@@ -21,7 +21,9 @@ class SendemailController extends Controller
     public function index()
     {
         $subsribe = Subsribe::all();
-        return view('dashboard-admin.broadcast-admin',compact('subsribe'));
+        $selectedTags = request()->get('subsribe');
+
+        return view('dashboard-admin.broadcast-admin',compact('subsribe','selectedTags'));
     }
 
     /**
@@ -97,10 +99,13 @@ class SendemailController extends Controller
      */
     public function send(Request $request)
     {
-
-        Mail::to($request->input('mail'))->send(new \App\Mail\MyMail($request->input('subject'),
-                $request->input('message_email')
-        ));
+        //$emails = $request->all();
+        //dd($request->subsribe);
+        foreach($request->subsribe as $subscribe){
+            Mail::to($subscribe)->send(new \App\Mail\MyMail($request->input('subject'),
+                    $request->input('message_email')
+            ));
+        }
         return redirect()->back();
     }
 }
