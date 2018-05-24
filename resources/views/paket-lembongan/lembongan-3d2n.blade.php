@@ -82,7 +82,7 @@
 			    </tr>
 			    <tr>
 			      <th scope="row">08.00</th>
-			      <td>bGoing to Nusa Lembongan Island with Speedboat</td>
+			      <td>Going to Nusa Lembongan Island with Speedboat</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">08.30</th>
@@ -98,7 +98,7 @@
 			    </tr>
 			    <tr>
 			      <th scope="row">12.00</th>
-			      <td>Have a Lunchu</td>
+			      <td>Have a Lunch</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">14.00</th>
@@ -119,46 +119,38 @@
 		  	<table class="table">
 			  <thead>
 			    <tr>
-			      <th scope="col">Jam</th>
-			      <th scope="col">Kegiatan</th>
+			      <th scope="col">Time</th>
+			      <th scope="col">Activities</th>
 			    </tr>
 			  </thead>
 			  <tbody>
 			    <tr>
 			      <th scope="row">07.30</th>
-			      <td>sarapan pagi</td>
+			      <td>Have a breakfast</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">08.30</th>
-			      <td>berangkat dari hotel</td>
+			      <td>Going from homestay</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">09.30</th>
-			      <td>tiba di broken beach/pasih uug</td>
-			    </tr>
-			    <tr>
-			      <th scope="row">12.00</th>
-			      <td>iba di pohon cinta</td>
+			      <td>Arrived in Yellow Brigde</td>
+					</tr>
+					<tr>
+			      <th scope="row">10.30</th>
+			      <td>Arrived in Dream Beach</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">13.00</th>
-			      <td>diantarkan ke lokasi makan siang</td>
-			    </tr>
-			    <tr>
-			      <th scope="row">14.00</th>
-			      <td>tiba di kelingking beach</td>
-			    </tr>
-			    <tr>
-			      <th scope="row">15.00</th>
-			      <td>kembali ke dermaga</td>
+			      <td>Have a lunch in The Deck Ceningan</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">15.30</th>
-			      <td>kembali ke pantai sanur menggunakan speed boat</td>
+			      <td>Arrived in Goa Gala Gala Lembongan</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">16.30</th>
-			      <td>tiba di pantai sanur</td>
+			      <td>Back to Homestay and take a nap</td>
 			    </tr>
 			  </tbody>
 			</table>
@@ -167,45 +159,38 @@
 		  			  	<table class="table">
 			  <thead>
 			    <tr>
-			      <th scope="col">Jam</th>
-			      <th scope="col">Kegiatan</th>
+			      <th scope="col">Time</th>
+			      <th scope="col">Activities</th>
 			    </tr>
 			  </thead>
 			  <tbody>
 			    <tr>
 			      <th scope="row">07.30</th>
-			      <td>sarapan pagi</td>
+			      <td>Have a Breackfast</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">08.30</th>
-			      <td>berangkat dari hotel</td>
+			      <td>Going from homestay</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">09.30</th>
-			      <td>snorkeling (pilih 3 dari lokasi berikut)
-					<ul>
-						<li>crystal bay beach</li>
-						<li>gamal bay beach</li>
-						<li>wall point</li>
-						<li>bhuda temple</li>
-						<li>manta bay (min. 5 orang)</li>
-					</ul>
+			      <td>snorkeling in dream beach
 			      </td>
 			    </tr>
 			      <th scope="row">14.00</th>
-			      <td>diantarkan ke lokasi makan siang</td>
+			      <td>Have a lunch</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">15.00</th>
-			      <td>kembali ke dermaga</td>
+			      <td>Back to Harbour</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">15.30</th>
-			      <td>kembali ke pantai sanur menggunakan speed boat</td>
+			      <td>Back to Sanur Harbour with speedboat </td>
 			    </tr>
 			    <tr>
 			      <th scope="row">16.30</th>
-			      <td>tiba di pantai sanur</td>
+			      <td>Arrive in Sanur harbour</td>
 			    </tr>
 			  </tbody>
 			</table>

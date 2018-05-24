@@ -99,9 +99,9 @@ Route::get('admin', function(){
 })->name('admin')->middleware('auth:admin');
 
 
-Route::get('test', function(){
-    return view('test');
-});
+// Route::get('test', function(){
+//     return view('test');
+// });
 // Route::get('/user/test}', function() {
 //     return view('dashboard-user.home-user-new');
 // })->name('/user/test');

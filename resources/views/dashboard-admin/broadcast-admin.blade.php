@@ -12,7 +12,7 @@
       <!-- Example DataTables Card-->
       <div class="card mb-3">
         <div class="card-header">
-          <i class="fa fa-table"></i> Data Table Example</div>
+          <i class="fa fa-table"></i>Broadcast Paket</div>
         <div class="card-body">
         <form action="{{ route('sendmail') }}" method="POST">
             {{ csrf_field() }}  

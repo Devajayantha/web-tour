@@ -19,7 +19,7 @@
 			    <li class="list-group-item">Ticket Tourist Attraction</li>
 			    <li class="list-group-item">Private Tour</li>
 			    <li class="list-group-item">Guide</li>
-			    <li class="list-group-item">consumption</li>
+			    <li class="list-group-item">Consume</li>
 			</ul>
 			<br>
 			<br>
@@ -42,7 +42,7 @@
 			    <li class="list-group-item">Ticket Tourist Attraction</li>
 			    <li class="list-group-item">Private Tour</li>
 			    <li class="list-group-item">Guide</li>
-			    <li class="list-group-item">Consumption</li>
+			    <li class="list-group-item">Consume</li>
 			</ul>
 			<br>
 	        <a href="/nusa-penida/2d1n" class="btn btn-primary">See details</a>
@@ -64,7 +64,7 @@
 			    <li class="list-group-item">Ticket Tourist Attraction</li>
 			    <li class="list-group-item">Private Tour</li>
 			    <li class="list-group-item">Guide</li>
-			    <li class="list-group-item">Comsumption</li>
+			    <li class="list-group-item">Consume</li>
 			</ul>   
 			<br>  
 	        <a href="/nusa-penida/3d2n" class="btn btn-primary">See details</a>

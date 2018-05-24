@@ -119,46 +119,46 @@
 		  	<table class="table">
 			  <thead>
 			    <tr>
-			      <th scope="col">Jam</th>
-			      <th scope="col">Kegiatan</th>
+			      <th scope="col">Time</th>
+			      <th scope="col">Activities</th>
 			    </tr>
 			  </thead>
 			  <tbody>
 			    <tr>
 			      <th scope="row">07.30</th>
-			      <td>sarapan pagi</td>
+			      <td>Have a breakfast</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">09.00</th>
-			      <td>berangkat dari hotel</td>
+			      <td>Going from Homestay</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">10.00</th>
-			      <td>Tiba di Secret Beach</td>
+			      <td>Arrived in Secret Beach</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">11.00</th>
-			      <td>Snorkling di Secret Beach</td>
+			      <td>Snorkling in Secret Beach</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">13.00</th>
-			      <td>diantarkan ke lokasi makan siang</td>
+			      <td>Have a lunch</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">14.00</th>
-			      <td>Tiba di Mushroom Bay Beach</td>
+			      <td>Arrived in Mushroom Bay Beach</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">15.00</th>
-			      <td>kembali ke dermaga</td>
+			      <td>Back to harbour</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">15.30</th>
-			      <td>kembali ke pantai sanur menggunakan speed boat</td>
+			      <td>Back to sanur harbour using speedboat</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">16.30</th>
-			      <td>tiba di pantai sanur</td>
+			      <td>Arrived in sanur beach</td>
 			    </tr>
 			  </tbody>
 			</table>

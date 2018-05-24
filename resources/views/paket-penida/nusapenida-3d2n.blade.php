@@ -125,46 +125,46 @@
 		  	<table class="table">
 			  <thead>
 			    <tr>
-			      <th scope="col">Jam</th>
-			      <th scope="col">Kegiatan</th>
+			      <th scope="col">Time</th>
+			      <th scope="col">Activities</th>
 			    </tr>
 			  </thead>
 			  <tbody>
 			    <tr>
 			      <th scope="row">07.30</th>
-			      <td>sarapan pagi</td>
+			      <td>Have a breakfast</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">08.30</th>
-			      <td>berangkat dari penginapan</td>
+			      <td>Going from homestay</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">09.30</th>
-			      <td>tiba di broken beach/pasih uug</td>
+			      <td>Arrived in pasih uug/ broken beach</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">11.00</th>
-			      <td>Tiba di Angel Bilabong</td>
+			      <td>Arrived in angel bilabong</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">13.00</th>
-			      <td>diantarkan ke lokasi makan siang</td>
+			      <td>Have a lunch</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">14.00</th>
-			      <td>tiba di kelingking beach</td>
+			      <td>Arrived in Kelingking Beach</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">15.00</th>
-			      <td>Tiba di Paluang Cliff</td>
+			      <td>Arrived in Paluang Cliff</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">16.30</th>
-			      <td>Tiba di Crystal Bay Beach</td>
+			      <td>Arrived in Crystal Bay Beach</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">17.30</th>
-			      <td>Kembali ke penginapan</td>
+			      <td>Back to homestay take a nap</td>
 			    </tr>
 			  </tbody>
 			</table>
@@ -173,37 +173,37 @@
 		  			  	<table class="table">
 			  <thead>
 			    <tr>
-			      <th scope="col">Jam</th>
-			      <th scope="col">Kegiatan</th>
+			      <th scope="col">Time</th>
+			      <th scope="col">Activities</th>
 			    </tr>
 			  </thead>
 			  <tbody>
 			    <tr>
 			      <th scope="row">07.30</th>
-			      <td>sarapan pagi</td>
+			      <td>Have a breakfast</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">08.30</th>
-			      <td>berangkat dari penginapan</td>
+			      <td>Going from homestay</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">09.30</th>
 			      <td>snorkeling Manta Point</td>
 			    </tr>
 			      <th scope="row">13.00</th>
-			      <td>diantarkan ke lokasi makan siang</td>
+			      <td>Have a lunch</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">14.00</th>
-			      <td>Tiba di Tembeling beach and Forest</td>
+			      <td>Arrived in Tembeling</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">15.30</th>
-			      <td>kembali ke pantai sanur menggunakan speed boat</td>
+			      <td>Back to Sanur Harbour using speedboat</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">16.30</th>
-			      <td>tiba di pantai sanur</td>
+			      <td>Arrived in sanur harbour</td>
 			    </tr>
 			  </tbody>
 			</table>
@@ -214,7 +214,6 @@
 		<div id="map_wrapper">
 			<div id="nusapenida-3d2n" class="mapping"></div>
 		</div>
-
 				{{--rating star  --}}
 				<div class="row">
 						<div class="col-sm-3">

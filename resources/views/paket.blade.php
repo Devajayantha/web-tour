@@ -10,7 +10,7 @@
 	      <img class="card-img-top" src="{{asset('img/paket/Paket_Penida.jpg')}}"> 
 	      <div class="card-body">
 	        <h5 class="card-title">Nusa Penida</h5>
-	        <a href="/nusa-penida" class="btn btn-primary">Lihat Selengkapnya</a>
+	        <a href="/nusa-penida" class="btn btn-primary">See details</a>
 	      </div>
 	    </div>
 	  </div>
@@ -19,7 +19,7 @@
 	      <img class="card-img-top" src="{{asset('img/paket/Paket_Lembongan.jpg')}}"> 
 	      <div class="card-body">
 	        <h5 class="card-title">Nusa Lembongan</h5>
-	        <a href="/nusa-lembongan" class="btn btn-primary">Lihat Selengkapnya</a>
+	        <a href="/nusa-lembongan" class="btn btn-primary">See details</a>
 	      </div>
 	    </div>
 	  </div>

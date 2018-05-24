@@ -5,7 +5,7 @@
 {{ $text_area }}
 
 @component('mail::button', ['url' => ''])
-Button Text
+Click Here
 @endcomponent
 
 Thanks,<br>

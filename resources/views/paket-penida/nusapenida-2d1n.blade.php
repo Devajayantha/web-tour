@@ -115,46 +115,46 @@
 		  	<table class="table">
 			  <thead>
 			    <tr>
-			      <th scope="col">Jam</th>
-			      <th scope="col">Kegiatan</th>
+			      <th scope="col">Time</th>
+			      <th scope="col">Activities</th>
 			    </tr>
 			  </thead>
 			  <tbody>
 			    <tr>
 			      <th scope="row">07.30</th>
-			      <td>sarapan pagi</td>
+			      <td>Have a breakfast</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">08.30</th>
-			      <td>berangkat dari penginapan</td>
+			      <td>Going from homestay</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">10.30</th>
-			      <td>tiba di broken beach/pasih uug</td>
+			      <td>Arrived in pasih uug/broken beach</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">12.30</th>
-			      <td>diantarkan ke lokasi makan siang</td>
+			      <td>Have a Lunch in The Deck Ceningan</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">13.00</th>
-			      <td>tiba di kelingking beach</td>
+			      <td>Arrived in Kelingking Beach</td>
 					</tr>
 			    <tr>
 			      <th scope="row">14.30</th>
-			      <td>tiba di Crystal Bay Beach</td>
+			      <td>Arived in Crystal Beach</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">15.00</th>
-			      <td>kembali ke dermaga</td>
+			      <td>Back to Harbour</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">15.30</th>
-			      <td>kembali ke pantai sanur menggunakan speed boat</td>
+			      <td>Going sanur habour using speedboat</td>
 			    </tr>
 			    <tr>
 			      <th scope="row">16.30</th>
-			      <td>tiba di pantai sanur</td>
+			      <td>arrived in sanut harbour</td>
 			    </tr>
 			  </tbody>
 			</table>

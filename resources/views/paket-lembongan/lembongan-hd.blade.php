@@ -105,7 +105,7 @@
 		    </tr>
 		    <tr>
 		      <th scope="row">16.30</th>
-		      <td>arrived in sanur beach</td>
+		      <td>Arrived in sanur beach</td>
 		    </tr>
 		  </tbody>
 		</table>
